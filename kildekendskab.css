@@ -1,0 +1,29 @@
+/******************************************************************************************************
+		Forneden er der nogle justeringer der får boilerplaten til at ligne MAMs design.
+******************************************************************************************************/
+
+h1 {
+	margin: 40px 0px; 
+	line-height: 1em;
+}
+h2 {
+	margin: 30px 0px 20px 0px; 
+	line-height: 1em;
+}
+h4 {
+	margin: 0px 0px 20px 0px; 
+	line-height: 1em;
+}
+
+#myCarousel{margin-top: 20px;}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+.TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;}
+
+.indent{margin-left: 10px}
+
+.PointFeedback{margin-top: 10px;}
