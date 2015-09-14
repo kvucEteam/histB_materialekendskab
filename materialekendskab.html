@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head> 
 		<title>Historie B - Kildekendskab</title>
 		<!-- http://www.robotstxt.org/meta.html -->
 		<meta name="robots" content="noindex, nofollow" />
@@ -9,101 +9,45 @@
 		<link rel="stylesheet" href="../library/css/styles.css" type="text/css" />
 	    <link rel="stylesheet" href="materialekendskab.css" type="text/css" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <style>
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: 70%;
-            margin: auto;
-        }
-        </style>
 	</head>
 	<body>
 		<div class="container-fluid"> 
             <div class="col-xs-12">
                 <h1>Kildekendskab</h1>
                 <h4>Instruktioner til kursisten: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...</h4>
-                
+<!--                 
                     <a class="btn btn-default" href="#">
                         Tekst på knap1
                     </a>
                     <a class="btn btn-default" href="#">
                         Tekst på knap2
                     </a>
-
+ -->
                     <!-- 
                         NOTE: 
-                        Denne version af karousellen er "tyvstjålet" fra w3schools.com :-). Hvis I har andre input/kode til karousellen er er det meget velkommen.
+                        Denne version af karousellen er "tyvstjålet" fra w3schools.com :-) : 
+
+                            http://www.w3schools.com/bootstrap/bootstrap_carousel.asp
+                        
+                        Hvis I har andre input/kode til karousellen er det meget velkommen.
                     -->
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">  <!-- data-interval="false" deaktivere slide-funktionalitetet -->
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                        </ol>
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-
-                            <div class="item active">
-                                <div class="TextHolder">
-                                    <h2>Test: Opgavetest tekst til kursisten</h2> 
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 1 </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 2 </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 3 </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 4 </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 5 </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 6 </p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <h2 class="indent">Test: Billede fra ekstern kilde</h2>
-                                <img class="img-responsive" src="http://www.danskmoent.dk/meyer/j001-c.gif" alt="Jellingsten 1 stor">
-                            </div>
-
-                            <div class="item">
-                                <h2 class="indent">Test: Billede fra egen PC/server</h2>
-                                <img class="img-responsive" src="img/Jellingsten_stor_3.jpg" alt="Jellingsten 2 stor">   
-                            </div>
-
-                            <div class="item">
-                                <h2 class="indent">Test: Youtube video indlejring</h2>
-                                <div class="col-sm-12 col-md-12 video_container">
-                                    <div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12 vid_container">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QnDUiIRUSo8?rel=0" allowfullscreen="1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                    <div id="DataInput">
                     </div>
 
-                    <div class="PointFeedback">
-                        Spørgsmål: X, Korrekt: Y, fejl: Z
-                    </div>
-                    
+
+
+                <div class="PointFeedback">
+                    <h5>Korrekte svar:<span class="QuestionCounter QuestionTask">0/10</span>Fejl: <span class="ErrorCount QuestionTask">0</span></h5>
                 </div>
+                    
+            </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- BootStrap carousel skal med... --> 
 		<script src="../library/vendor_scripts.js"></script>
-        <script src="../library/custom_scripts.js"></script>
+        <script src="../library/custom_scripts.js"></script>       
 		<script src="materialekendskab.js"></script>
         <script type="text/javascript">
+
             $(document).ready(function() {
                 one_line_footer();
             });

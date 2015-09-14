@@ -1,0 +1,46 @@
+[
+	{ 
+		"userInterface" : {
+			"btn" : ["Valg 1 (#)", "Valg 2"]
+		},
+		"quizData" : {
+			"taskText" : "Opgaveforklaring til kursist - 0",
+			"slideData" : {"type": "img", "src": "http://www.danskmoent.dk/meyer/j001-c.gif", "alt": "Eksternt billede..."},
+			"correctAnswer" : ["0"],
+			"feedbackData" : ["(1) Korrekt...", "(2) Forkert..."] 
+		}
+	},
+	{ 
+		"userInterface" : {
+			"btn" : ["Valg 1", "Valg 2 (#)", "Valg 3"]
+		},
+		"quizData" : {
+			"taskText" : "Opgaveforklaring til kursist - 1",
+			"slideData" : {"type": "img", "src": "img/Jellingsten_stor_3.jpg", "alt": "Lokalt billede..."},
+			"correctAnswer" : ["1"],
+			"feedbackData" : ["(1) Forkert...", "(2) Korrekt...", "(3) Forkert..."]
+		}
+	},
+	{ 
+		"userInterface" : {
+			"btn" : ["Valg 1", "Valg 2", "Valg 3 (#)", "Valg 4"]
+		},
+		"quizData" : {
+			"taskText" : "Opgaveforklaring til kursist - 2",
+			"slideData" : {"type": "text", "text": "<b>Citat 1:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam..."},
+			"correctAnswer" : ["2"],
+			"feedbackData" : ["(1) Forkert...", "(2) Forkert...", "(3) Korrekt...", "(4) Forkert..."]
+		}
+	},
+	{ 
+		"userInterface" : {
+			"btn" : ["Valg 1", "Valg 2", "Valg 3", "Valg 4 (#)", "Valg 5"]
+		},
+		"quizData" : {
+			"taskText" : "Opgaveforklaring til kursist - 3",
+			"slideData" : {"type": "video", "src": "https://www.youtube.com/embed/QnDUiIRUSo8?rel=0"},
+			"correctAnswer" : ["3"],
+			"feedbackData" : ["(1) Forkert...", "(2) Forkert...", "(3) Forkert...", "(4) Korrekt...", "(4) Forkert..."]
+		}
+	}
+]
