@@ -152,7 +152,7 @@ function returnCarouselHtml(questionNum, jsonData){
 
 	console.log("ReturnQustionHtml - btnHtml: " + HTML);
 
-	HTML += '<a class="btn btn-default CheckAnswer" href="#"> Tjek svar </a>';
+	HTML += '<a class="btn btn-default checkAnswer" href="#"> Tjek svar </a>';
 
 	HTML += '<div id="questionCarousel" class="carousel slide" data-ride="carousel" data-interval="false">' +
                 '<ol class="carousel-indicators">' +
@@ -176,7 +176,8 @@ function returnCarouselHtml(questionNum, jsonData){
 
 function userInterfaceChanger(jsonData){
 	var questionId, nextQuestionId;
-	$(document).on('click', ".glyphicon-chevron-left", function(event) {
+	// $(document).on('click', ".glyphicon-chevron-left", function(event) {
+    $(document).on('click', ".left", function(event) {
         questionId = parseInt($(".carousel-inner > .active").prop("id").split("_")[1]);
         nextQuestionId = ((questionId - 1) < 0) ? jsonData.length - 1 : questionId - 1;
         console.log("userInterfaceChanger - questionId: " + questionId + ", nextQuestionId: " + nextQuestionId);
@@ -186,7 +187,8 @@ function userInterfaceChanger(jsonData){
         $("#btnContainer_"+CurrentQuestionId).show();
     });
 
-    $(document).on('click', ".glyphicon-chevron-right", function(event) {
+    // $(document).on('click', ".glyphicon-chevron-right", function(event) {
+    $(document).on('click', ".right", function(event) {
         var questionId = parseInt($(".carousel-inner > .active").prop("id").split("_")[1]);
         nextQuestionId = ((questionId + 1) > jsonData.length - 1) ? 0 : questionId + 1;
         console.log("userInterfaceChanger - questionId: " + questionId + ", nextQuestionId: " + nextQuestionId);
@@ -239,7 +241,7 @@ function CheckStudentAnswers(jsonData){
 
     });
 
-    $(document).on('click', ".CheckAnswer", function(event) {
+    $(document).on('click', ".checkAnswer", function(event) {
         event.preventDefault(); // Prevents sending the user to "href".
 
         var correct = 0; var error_missed = 0; var error_wrong = 0;
@@ -262,7 +264,7 @@ function CheckStudentAnswers(jsonData){
         // $(".QuestionCounter").text(correct_total+'/'+numOfQuestions);
         // $(".ErrorCount").text(error_total);
 
-        // countCorrectAnswers(jsonData);
+        countCorrectAnswers(jsonData);
     });
 }
 
@@ -288,7 +290,7 @@ $(document).ready(function() {
 // $(window).load(function() {
 
 	// ReturnAjaxData("GET", "json/QuizData.json", false, "json");
-	ReturnAjaxData("GET", "json/QuizData.json", false, "json");
+	ReturnAjaxData("GET", "json/QuizData2.json", false, "json");
 
 	// returnCarouselHtml(0, jsonData);  // TEST
 

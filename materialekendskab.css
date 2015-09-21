@@ -38,3 +38,23 @@ h4 {
 .QuestionTask{
 	color: #000;
 }
+
+/*
+.checkAnswer {
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: auto;
+    padding: 5px;
+    right: 5%;
+    width: 100px;
+    background-color: #05a0a8;
+    border-color: #05a0a8;
+    color: #fff;
+}
+
+.checkAnswer:hover {
+	background-color: #047176;
+	border-color: #03676d;
+	color: #fff;
+}
+*/
