@@ -39,6 +39,11 @@ h4 {
 	color: #000;
 }
 
+.checkAnswer {
+	font-weight: 600;
+	font-size: 17px;
+}
+
 /*
 .checkAnswer {
     font-size: 17px;

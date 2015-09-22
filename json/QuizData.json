@@ -1,7 +1,9 @@
 [
 	{ 
 		"userInterface" : {
-			"btn" : ["Kilde?", "Fremstilling?"]
+			"header" : "Kildekendskab",
+			"subHeader" : "Instruktioner til kursisten: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
 		},
 		"quizData" : {
 			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 1",
@@ -12,7 +14,9 @@
 	},
 	{ 
 		"userInterface" : {
-			"btn" : ["Kilde?", "Fremstilling?"]
+			"header" : "Kildekendskab",
+			"subHeader" : "Instruktioner til kursisten: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"btn" : ["Kilde?", "Fremstilling? (rigtig)"]
 		},
 		"quizData" : {
 			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 2",
@@ -23,7 +27,9 @@
 	},
 	{ 
 		"userInterface" : {
-			"btn" : ["Kilde?", "Fremstilling?"]
+			"header" : "Kildekendskab",
+			"subHeader" : "Instruktioner til kursisten: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
 		},
 		"quizData" : {
 			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 3",
@@ -34,7 +40,9 @@
 	},
 	{ 
 		"userInterface" : {
-			"btn" : ["Kilde?", "Fremstilling?"]
+			"header" : "Kildekendskab",
+			"subHeader" : "Instruktioner til kursisten: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"btn" : ["Kilde?", "Fremstilling? (rigtig)"]
 		},
 		"quizData" : {
 			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 3",
