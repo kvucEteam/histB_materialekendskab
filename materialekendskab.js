@@ -3,59 +3,6 @@ var CurrentQuestionId = 0;
 var correct_total = 0;
 var error_total = 0;
 
-
-var HTML1 = '<li data-target="#questionCarousel" data-slide-to="0" class="active"></li>' +
-            '<li data-target="#questionCarousel" data-slide-to="1"></li>' +
-            '<li data-target="#questionCarousel" data-slide-to="2"></li>' +
-            '<li data-target="#questionCarousel" data-slide-to="3"></li>';
-
-var HTML2 =  '<div class="carousel-inner" role="listbox">' + 
-                '<div class="item active">' + 
-                    '<div class="TextHolder">' + 
-                        '<h2>Test: Opgavetest tekst til kursisten</h2>' +
-                        '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 1 </p>' + 
-                        '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 2 </p>' +
-                        '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 3 </p>' +
-                        '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 4 </p>' +
-                        '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 5 </p>' +
-                        '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam... 6 </p>' +
-                    '</div>' + 
-                '</div>' + 
-                '<div class="item">' + 
-                    '<h2 class="indent">Test: Billede fra ekstern kilde</h2>' + 
-                    '<img class="img-responsive" src="http://www.danskmoent.dk/meyer/j001-c.gif" alt="Jellingsten 1 stor">' + 
-                '</div>' + 
-                '<div class="item">' + 
-                    '<h2 class="indent">Test: Billede fra egen PC/server</h2>' + 
-                    '<img class="img-responsive" src="img/Jellingsten_stor_3.jpg" alt="Jellingsten 2 stor">' +    
-                '</div>' + 
-                '<div class="item">' + 
-                    '<h2 class="indent">Test: Youtube video indlejring</h2>' + 
-                    '<div class="col-sm-12 col-md-12 video_container">' + 
-                        '<div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12 vid_container">' + 
-                            '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QnDUiIRUSo8?rel=0" allowfullscreen="1"></iframe>' + 
-                        '</div>' +
-                    '</div>' +
-                '</div>' +
-            '</div>';
-
-var HTML = '<div id="questionCarousel" class="carousel slide" data-ride="carousel" data-interval="false">' +
-                '<ol class="carousel-indicators">' +
-                    HTML1 + 
-                '</ol>' +
-                '<div class="carousel-inner" role="listbox">' +
-                    HTML2 + 
-                '</div>' +
-                '<a class="left carousel-control" href="#questionCarousel" role="button" data-slide="prev">' +
-                    '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
-                    '<span class="sr-only">Previous</span>' +
-                '</a>' +
-                '<a class="right carousel-control" href="#questionCarousel" role="button" data-slide="next">' +
-                    '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
-                    '<span class="sr-only">Next</span>' +
-                '</a>' +
-            '</div>';
-
 // The function makes the carousel-indicator for the carousel:
 function returnCarouselIndicators(jsonData){
 	var HTML = '';
@@ -127,25 +74,8 @@ function returnBtnContainer(jsonData){
 }
 
 
-
-// { 
-// 	"userInterface" : {
-// 		"btn" : ["Valg 1 (#)", "Valg 2"]
-// 	},
-// 	"quizData" : {
-//		"taskText" : "Opgaveforklaring til kursist - 0",
-// 		"slideData" : {"type": "img", "src": "http://www.danskmoent.dk/meyer/j001-c.gif", "alt": "Eksternt billede..."},
-// 		"correctAnswer" : ["0"],
-// 		"feedbackData" : ["(1) Korrekt...", "(2) Forkert..."]
-// 	}
-// }
 function returnCarouselHtml(questionNum, jsonData){
-	var btnArray = jsonData[questionNum].userInterface.btn;
-	// var HTML = '<div class="btnContainer">';
-	// for(n in btnArray){
-	// 	HTML += '<a class="btn btn-default" href="#">'+btnArray[n]+'</a>';
-	// }
-	// HTML = '</div>';
+	
 	var HTML = '';
 
 	HTML += returnBtnContainer(jsonData);
@@ -156,7 +86,7 @@ function returnCarouselHtml(questionNum, jsonData){
 
 	HTML += '<div id="questionCarousel" class="carousel slide" data-ride="carousel" data-interval="false">' +
                 '<ol class="carousel-indicators">' +
-                    returnCarouselIndicators(btnArray) + 
+                    returnCarouselIndicators(jsonData) + 
                 '</ol>' +
                 '<div class="carousel-inner" role="listbox">' +
                     returnCarouseList(jsonData) + 
@@ -176,7 +106,8 @@ function returnCarouselHtml(questionNum, jsonData){
 
 function userInterfaceChanger(jsonData){
 	var questionId, nextQuestionId;
-	// $(document).on('click', ".glyphicon-chevron-left", function(event) {
+
+	// When the left carousel button is pressed...
     $(document).on('click', ".left", function(event) {
         questionId = parseInt($(".carousel-inner > .active").prop("id").split("_")[1]);
         nextQuestionId = ((questionId - 1) < 0) ? jsonData.length - 1 : questionId - 1;
@@ -190,7 +121,7 @@ function userInterfaceChanger(jsonData){
         $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the next button container.
     });
 
-    // $(document).on('click', ".glyphicon-chevron-right", function(event) {
+    // When the right carousel button is pressed...
     $(document).on('click', ".right", function(event) {
         var questionId = parseInt($(".carousel-inner > .active").prop("id").split("_")[1]);
         nextQuestionId = ((questionId + 1) > jsonData.length - 1) ? 0 : questionId + 1;
@@ -203,7 +134,31 @@ function userInterfaceChanger(jsonData){
         $(".btnContainer").hide();                                                  // Hides all the button containers.
         $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the previous button container.
     });
+
+    // // When a carousel-indicator button is pressed... 
+    $(document).on('click', ".carousel-indicators > li", function(event) {
+        var Index = $(".carousel-indicators > li").index( this );  // Get the zero-based li number.
+        console.log("Index: " + Index);
+
+        CurrentQuestionId = Index;
+
+        $("#header").text(jsonData[CurrentQuestionId].userInterface.header);        // Shows the requested heading.
+        $("#subHeader").text(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the requested subheading.
+
+        $(".btnContainer").hide();                                                  // Hides all the button containers.
+        $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the requested button container.
+    });
 }
+
+function elementInArray(tArray, element){
+    for (x in tArray){
+        if (tArray[x] == element) return true 
+    }
+    return false;
+}
+console.log("elementInArray - true: " + elementInArray([1,2,3,4,5], 3));
+console.log("elementInArray - false: " + elementInArray([1,2,3,4,5], 6));
+
 
 
 function countCorrectAnswers(jsonData){
@@ -217,26 +172,27 @@ function countCorrectAnswers(jsonData){
 	    var numOfSrudentAnswers = $("#btnContainer_"+k+" > .btnPressed").length;
 	    var numOfCorrectAnswers = answerArray.length;
 	    for (var n in answerArray){
-	    	if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed"))
-	    		correct++;   // Counting correct answers.
-	    	else
+	       if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
+	           correct++;   // Counting correct answers.
+               $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
+	       } else {
 	    		error_missed++;  // Counting missed correct answers, eg. if there are two or more correct answers and the student does not answer all of the answers, then this counter counts the missed correct answers.
-	    
-	    	error_wrong += numOfSrudentAnswers - (correct + error_missed); // Counts all the wrong answers chosen by the student. 
-	    	error_wrong = (error_wrong < 0) ?  0 : error_wrong;
+	       }
+            error_wrong += numOfSrudentAnswers - (correct + error_missed); // Counts all the wrong answers chosen by the student. 
+            error_wrong = (error_wrong < 0) ?  0 : error_wrong;
 
-		    console.log("countCorrectAnswers - CurrentQuestionId: " + CurrentQuestionId + 
-		    	"\nnumOfSrudentAnswers: " + numOfSrudentAnswers + ", numOfCorrectAnswers: " + numOfCorrectAnswers + 
-		    	"\ncorrect: " + correct  + ", error_missed: " + error_missed  + ", error_wrong: " + error_wrong);
-
-            if ($("#btnContainer_"+k+" > .btnPressed").length > 0){
-                if ($("#btnContainer_"+k+" > .StudentAnswer").not(":eq("+answerArray[n]+")").hasClass("btnPressed"))
-                    error_displayed += $("#btnContainer_"+k+" > .StudentAnswer").not(":eq("+answerArray[n]+")").length;
-                //     ++error_displayed;
-            }
+            console.log("countCorrectAnswers - CurrentQuestionId: " + CurrentQuestionId + 
+            "\nnumOfSrudentAnswers: " + numOfSrudentAnswers + ", numOfCorrectAnswers: " + numOfCorrectAnswers + 
+            "\ncorrect: " + correct  + ", error_missed: " + error_missed  + ", error_wrong: " + error_wrong);
 		}
 
-	    correct_total += correct;
+        $("#btnContainer_"+k+" > .StudentAnswer").each(function( index, element ) {
+            if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index)))
+                ++error_displayed;
+        });
+
+        // correct_total += (correct  // <-------------------------   IMPORTANT: THIS WILL GIVE TWO POINTS IF TWO CORRECT ANSWERS ARE GIVEN IN ONE QUESTION!!!
+	    correct_total += (correct >= 1)? 1 : 0;   // <-------------------------   IMPORTANT: THIS ENFORCES _ONE_ POINT IF THERE ARE TWO OR MORE CORRECT ANSWERS!!!!!
 	    error_total += error_wrong + error_missed - correct;
         error_displayed_total += error_displayed;
 
@@ -264,34 +220,13 @@ function giveFeedback(jsonData, questionNum){
 }
 
 
-// BLIVER PT IKKE BRUGT:
-function ShowStudentScore(Use_UserMsgBox){
-    var HTML = '';  
-
-    if (Use_UserMsgBox) 
-        // UserMsgBox("body", "Du klarede det med " + TotScoreObj.TotNumOfWrongAnswers + " fejl Se resultaterne her <br/>");
-        UserMsgBox("body", "<span class='feedbackbox_txtstyle_overskrift'>Flot</span><br/>Du har lavet "+MaxNumOfElements+" opgaver korrekt. <br/> Du havde " + TotScoreObj.NewTotNumOfWrongAnswers + ' fejl undervejs. <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.');
-    else
-        $(".ShowStudentScore").html( HTML );
-
-    // Update numbers:
-    $(".ScoreAttempts").text( TotScoreObj.TotNumOfAttempts ); 
-    $(".ScoreCorrect").text( TotScoreObj.TotNumOfCorrectAnswers );
-    $(".ScoreFail").text( TotScoreObj.TotNumOfWrongAnswers );
-    $(".ScoreStat").text( (TotScoreObj.TotNumOfCorrectAnswers/(TotScoreObj.TotNumOfAttempts + ReturnTotNumOfAnswers("#") - ReturnNumOfQuestions() )*100).toFixed(2) + "%" ); 
-
-    if (Use_UserMsgBox) 
-        return 0;
-}
-
-
 function CheckStudentAnswers(jsonData){
 
-    // This is a bad solution - a better one would be to let CSS handle the color-changes...
     $(document).on('click', ".StudentAnswer", function(event) {
     	event.preventDefault(); // Prevents sending the user to "href". 
         $(this).toggleClass("btnPressed");
 
+        // This is a bad solution - a better one would be to let CSS handle the color-changes...
         if ($(this).hasClass("btnPressed"))
         	$(this).css({backgroundColor: "#1da6db", color: "#fff" });
         else
@@ -303,6 +238,14 @@ function CheckStudentAnswers(jsonData){
         event.preventDefault(); // Prevents sending the user to "href".
 
         countCorrectAnswers(jsonData);
+
+        // DOES NOT WORK: Gives the right answer a green color:
+        // $("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").each(function( index, element ) {
+        //     if ($(element).hasClass("CorrectAnswer"))
+        //         $(element).css({backgroundColor: "#0F0", color: "#fff" });
+        //     else
+        //         $(element).css({backgroundColor: "transparent", color: "#000" });
+        // });
 
         giveFeedback(jsonData, CurrentQuestionId);
     });
@@ -348,20 +291,20 @@ function ReturnURLPerameters(UlrVarObj){
 // file:///Users/THAN/main-gulp-folder/objekter/kemi_drag/builds/development/index.html?pn=1&dm=1    NOTE: 0 = false, 1 = true
 // file:///Users/THAN/main-gulp-folder/objekter/kemi_drag/builds/development/index.html?pn=1&dm=0    NOTE: 0 = false, 1 = true
 function SetProgramPerameter(UlrVarObj, file){
-    if (UlrVarObj.hasOwnProperty("file") && ((1 <= parseInt(UlrVarObj["file"])) || (parseInt(UlrVarObj["file"]) <= 10))) file = UlrVarObj["file"];  // PrincipleNum  =  pn
+    if (UlrVarObj.hasOwnProperty("file") && ((1 <= parseInt(UlrVarObj["file"])) || (parseInt(UlrVarObj["file"]) <= 10000))) file = UlrVarObj["file"];  // PrincipleNum  =  pn
     console.log("SetProgramPerameter - ReturnURLPerameters - Level: " + Level ); 
 }
+
+
+// MARK 
 
 $(document).ready(function() {
 // $(window).load(function() {
 
-    var UlrVarObj = {"file" : ""};
-    UlrVarObj = ReturnURLPerameters(UlrVarObj);
-    // SetProgramPerameter(UlrVarObj);
+    var UlrVarObj = {"file" : ""};   // Define a default file-refrence (empty) ---> "QuizData.json"
+    UlrVarObj = ReturnURLPerameters(UlrVarObj);  // Get URL file perameter.
     console.log("UlrVarObj: " + JSON.stringify(UlrVarObj) );
 
-
-	// ReturnAjaxData("GET", "json/QuizData.json", false, "json");
 	ReturnAjaxData("GET", "json/QuizData"+UlrVarObj.file+".json", false, "json");
 
 	// returnCarouselHtml(0, jsonData);  // TEST
@@ -370,8 +313,7 @@ $(document).ready(function() {
 
 	// returnCarouseList(jsonData);      // TEST
 
-    // $("#DataInput").html(HTML);
-    $("#DataInput").html(returnCarouselHtml(0, jsonData));
+    $("#DataInput").html(returnCarouselHtml(0, jsonData));  // Insert carousel HTML
 
     console.log("jsonData: " + JSON.stringify(jsonData) );
 

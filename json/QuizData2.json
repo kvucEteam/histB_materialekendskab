@@ -1,19 +1,6 @@
 [
 	{ 
 		"userInterface" : {
-			"header" : "Overskrift - X",
-			"subHeader" : "Instruktioner til kursisten - X : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
-			"btn" : ["Valg 1 (rigtig)", "Valg 2", "Valg 3"]
-		},
-		"quizData" : {
-			"taskText" : "Opgaveforklaring til kursist - X",
-			"slideData" : {"type": "img", "src": "http://www.danskmoent.dk/meyer/j001-c.gif", "alt": "Eksternt billede..."},
-			"correctAnswer" : ["0"],
-			"feedbackData" : ["(Valg 1) Korrekt...", "(Valg 2) Forkert...", "(Valg 3) Forkert..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
 			"header" : "Overskrift - 0",
 			"subHeader" : "Instruktioner til kursisten - 0 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
 			"btn" : ["Valg 1 (rigtig)", "Valg 2"]
@@ -39,7 +26,7 @@
 		}
 	},
 	{ 
-		"userInterface" : {
+		"userInterface" : { 
 			"header" : "Overskrift - 2",
 			"subHeader" : "Instruktioner til kursisten - 2 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
 			"btn" : ["Valg 1", "Valg 2", "Valg 3 (rigtig)", "Valg 4"]
@@ -62,6 +49,19 @@
 			"slideData" : {"type": "video", "src": "https://www.youtube.com/embed/QnDUiIRUSo8?rel=0"},
 			"correctAnswer" : ["3"],
 			"feedbackData" : ["(Valg 1) Forkert...", "(Valg 2) Forkert...", "(Valg 3) Forkert...", "(Valg 4) Korrekt...", "(Valg 5) Forkert..."]
+		}
+	},
+	{ 
+		"userInterface" : {
+			"header" : "Overskrift - 4",
+			"subHeader" : "Instruktioner til kursisten - 4 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"btn" : ["Valg 1 (rigtig)", "Valg 2 (rigtig)", "Valg 3"]
+		},
+		"quizData" : {
+			"taskText" : "Opgaveforklaring til kursist - 4: <span style='color: #0F0;'> der er mulighed for flere rigtige svar... </span> ",
+			"slideData" : {"type": "img", "src": "http://www.historiefaget.dk/uploads/tx_cliopolaroidphotoflex/Lille_Jellingsten.jpg", "alt": "Eksternt billede..."},
+			"correctAnswer" : ["0", "1"],
+			"feedbackData" : ["(Valg 1) Korrekt...", "(Valg 2) Korrekt...", "(Valg 3) Forkert..."] 
 		}
 	}
 ]

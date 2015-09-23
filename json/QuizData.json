@@ -1,6 +1,6 @@
 [
 	{ 
-		"userInterface" : {
+		"userInterface" : { 
 			"header" : "Kildekendskab",
 			"subHeader" : "Instruktioner til kursisten: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
 			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
