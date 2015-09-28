@@ -2,6 +2,7 @@ var jsonData = "<h1>OK</h1>";
 var CurrentQuestionId = 0;
 var correct_total = 0;
 var error_total = 0;
+// var CssObj = {};
 
 // The function makes the carousel-indicator for the carousel:
 function returnCarouselIndicators(jsonData){
@@ -82,7 +83,7 @@ function returnCarouselHtml(questionNum, jsonData){
 
 	console.log("ReturnQustionHtml - btnHtml: " + HTML);
 
-	HTML += '<a class="btn btn-default checkAnswer" href="#"> Tjek svar </a>';
+	// HTML += '<a class="btn btn-default checkAnswer" href="#"> Tjek svar </a>';
 
 	HTML += '<div id="questionCarousel" class="carousel slide" data-ride="carousel" data-interval="false">' +
                 '<ol class="carousel-indicators">' +
@@ -114,8 +115,8 @@ function userInterfaceChanger(jsonData){
         console.log("userInterfaceChanger - questionId: " + questionId + ", nextQuestionId: " + nextQuestionId);
         CurrentQuestionId = nextQuestionId;
 
-        $("#header").text(jsonData[CurrentQuestionId].userInterface.header);        // Shows the next heading.
-        $("#subHeader").text(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the next subheading.
+        $("#header").html(jsonData[CurrentQuestionId].userInterface.header);        // Shows the next heading.
+        $("#subHeader").html(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the next subheading.
 
         $(".btnContainer").hide();                                                  // Hides all the button containers.
         $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the next button container.
@@ -128,8 +129,8 @@ function userInterfaceChanger(jsonData){
         console.log("userInterfaceChanger - questionId: " + questionId + ", nextQuestionId: " + nextQuestionId);
         CurrentQuestionId = nextQuestionId;
 
-        $("#header").text(jsonData[CurrentQuestionId].userInterface.header);        // Shows the previous heading.
-        $("#subHeader").text(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the previous subheading.
+        $("#header").html(jsonData[CurrentQuestionId].userInterface.header);        // Shows the previous heading.
+        $("#subHeader").html(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the previous subheading.
 
         $(".btnContainer").hide();                                                  // Hides all the button containers.
         $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the previous button container.
@@ -142,8 +143,8 @@ function userInterfaceChanger(jsonData){
 
         CurrentQuestionId = Index;
 
-        $("#header").text(jsonData[CurrentQuestionId].userInterface.header);        // Shows the requested heading.
-        $("#subHeader").text(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the requested subheading.
+        $("#header").html(jsonData[CurrentQuestionId].userInterface.header);        // Shows the requested heading.
+        $("#subHeader").html(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the requested subheading.
 
         $(".btnContainer").hide();                                                  // Hides all the button containers.
         $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the requested button container.
@@ -187,8 +188,10 @@ function countCorrectAnswers(jsonData){
 		}
 
         $("#btnContainer_"+k+" > .StudentAnswer").each(function( index, element ) {
-            if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index)))
+            if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index))){
                 ++error_displayed;
+                $(element).toggleClass("WrongAnswer");
+            }
         });
 
         // correct_total += (correct  // <-------------------------   IMPORTANT: THIS WILL GIVE TWO POINTS IF TWO CORRECT ANSWERS ARE GIVEN IN ONE QUESTION!!!
@@ -217,37 +220,76 @@ function giveFeedback(jsonData, questionNum){
     console.log("giveFeedback - CurrentQuestionId: " + ", HTML: " + JSON.stringify(HTML));
 
     UserMsgBox("body", HTML);
+    UserMsgBox_SetWidth(".container-fluid", 0.7);
 }
+
 
 
 function CheckStudentAnswers(jsonData){
 
     $(document).on('click', ".StudentAnswer", function(event) {
     	event.preventDefault(); // Prevents sending the user to "href". 
-        $(this).toggleClass("btnPressed");
 
-        // This is a bad solution - a better one would be to let CSS handle the color-changes...
-        if ($(this).hasClass("btnPressed"))
-        	$(this).css({backgroundColor: "#1da6db", color: "#fff" });
-        else
-        	$(this).css({backgroundColor: "transparent", color: "#000" });
+        if (jsonData[CurrentQuestionId].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
+            UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
+            UserMsgBox_SetWidth(".container-fluid", 0.7);
+        } else {
+            $(this).toggleClass("btnPressed");
+
+            // var CssGet = ["background-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "color"];
+            // var CssSet = {
+            //     "background-color": "#1da6db",
+            //     "border-top-color": "#1da6db",
+            //     "border-right-color": "#1da6db",
+            //     "border-bottom-color": "#1da6db",
+            //     "border-left-color": "#1da6db",
+            //     "color": "#FFF"
+            // };
+
+            // // Get 
+            // if ($.isEmptyObject(CssObj)) {
+            //     CssObj.StudentAnswer = $(".StudentAnswer").css(CssGet);
+            // }
+            // console.log("GivePosetiveFeedback - CssObj: " + JSON.stringify(CssObj));
+
+            // This is a bad solution - a better one would be to let CSS handle the color-changes...
+            // if ($(this).hasClass("btnPressed"))
+            //     $(this).css(CssSet);
+            // else
+            //     $(this).css(CssObj.StudentAnswer);
+
+            if ($(this).hasClass("btnPressed"))
+            	$(this).css(CSS_OBJECT.btnPressed);
+            else
+                $(this).css(CSS_OBJECT.StudentAnswer);
+
+
+        }
 
     });
 
     $(document).on('click', ".checkAnswer", function(event) {
         event.preventDefault(); // Prevents sending the user to "href".
 
-        countCorrectAnswers(jsonData);
+        if (jsonData[CurrentQuestionId].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
+            UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
+            UserMsgBox_SetWidth(".container-fluid", 0.7);
+        } else {
+            countCorrectAnswers(jsonData);
 
-        // DOES NOT WORK: Gives the right answer a green color:
-        // $("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").each(function( index, element ) {
-        //     if ($(element).hasClass("CorrectAnswer"))
-        //         $(element).css({backgroundColor: "#0F0", color: "#fff" });
-        //     else
-        //         $(element).css({backgroundColor: "transparent", color: "#000" });
-        // });
-
-        giveFeedback(jsonData, CurrentQuestionId);
+            // Gives the right answer a green color, and display a list of feedback:
+            $("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").each(function( index, element ) {
+                if ($(element).hasClass("CorrectAnswer"))
+                    $(element).css(CSS_OBJECT.CorrectAnswer); // Sets the color to the style of .CorrectAnswer which is green...
+        
+                if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
+                    jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
+                    if (!$(element).hasClass("CorrectAnswer"))
+                        $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongtAnswer which is red...
+                    giveFeedback(jsonData, CurrentQuestionId);   // Give feedback
+                }
+            });
+        }
     });
 }
 
@@ -296,10 +338,42 @@ function SetProgramPerameter(UlrVarObj, file){
 }
 
 
-// MARK 
+// Controles til width of the UserMsgBox
+function UserMsgBox_SetWidth(TargetSelector, WidthPercent){
+    var Width = $(TargetSelector).width();
+    $("#UserMsgBox").width(WidthPercent*Width);
+}
+
+// MARK - 2 - 3 -
+
+function getCss(selectorArray, CssProp){
+    var sa = selectorArray;
+    window.CSS_OBJECT = {};  // Set global object.
+    var HTML = '<div id="CSS_OBJECT">';
+    for (n in selectorArray){
+        HTML += '<span '+((sa[n].indexOf("#")!==-1)?' id="'+sa[n].replace("#","")+'" ':' class="'+((sa[n].indexOf(".")!==-1)?sa[n].replace(".",""):sa[n])+'"')+'>XXX</span>';
+    }
+    HTML += '</div>';
+    console.log("getCss - HTML: " + HTML);
+    $("body").append(HTML);
+    for (n in selectorArray){
+        CSS_OBJECT[sa[n].replace("#","").replace(".","").replace(" ","")] = $(((sa[n].indexOf("#")!==-1)?sa[n]:((sa[n].indexOf(".")!==-1)?sa[n]:'.'+sa[n].replace(" "," .")))).css(CssProp);
+        // console.log('XXXX: '+((sa[n].indexOf("#")!==-1)?sa[n]:((sa[n].indexOf(".")!==-1)?sa[n]:'.'+sa[n].replace(" "," ."))));
+    }
+    console.log("getCss - CSS_OBJECT: " + JSON.stringify(CSS_OBJECT) );
+    $("#CSS_OBJECT").remove();
+}
+
+
+
 
 $(document).ready(function() {
 // $(window).load(function() {
+
+    var CssProp = ["background-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "color"];
+    getCss([".StudentAnswer", ".CorrectAnswer", ".WrongAnswer", ".btnPressed", ".WrongAnswer_hover"], CssProp);
+    console.log("CSS_OBJECT: " + CSS_OBJECT);
+
 
     var UlrVarObj = {"file" : ""};   // Define a default file-refrence (empty) ---> "QuizData.json"
     UlrVarObj = ReturnURLPerameters(UlrVarObj);  // Get URL file perameter.
@@ -317,8 +391,8 @@ $(document).ready(function() {
 
     console.log("jsonData: " + JSON.stringify(jsonData) );
 
-    $("#header").text(jsonData[0].userInterface.header);   // Shows the initial heading.
-    $("#subHeader").text(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
+    $("#header").html(jsonData[0].userInterface.header);   // Shows the initial heading.
+    $("#subHeader").html(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
 
     $(".btnContainer").hide();      // Hides all button containers.
     $("#btnContainer_"+0).show();   // Shows the first button container.

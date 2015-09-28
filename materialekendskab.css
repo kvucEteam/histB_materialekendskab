@@ -1,6 +1,7 @@
-/******************************************************************************************************
-		Forneden er der nogle justeringer der får boilerplaten til at ligne MAMs design.
-******************************************************************************************************/
+
+.container-fluid:nth-of-type(2) {
+    margin-top: 0px;
+}
 
 h1 {
 	margin: 40px 0px; 
@@ -18,7 +19,7 @@ h4 {
 #questionCarousel{margin-top: 20px;}
 
 
-.TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;}
+.TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;} 
 
 .indent{margin-left: 10px}
 
@@ -40,13 +41,39 @@ h4 {
 }
 
 .checkAnswer {
-	font-weight: 600;
-	font-size: 17px;
+	background-color: #0dcea0;
+	color: #FFF;
+	border-style: none;
+}
+.checkAnswer:hover{
+	background-color: #0ddea0;
+	color: #FFF;
+	border-style: none;
 }
 
-.CorrectAnswer{
-	background-color: #0F0;
+/*
+.MarkedAnswer{
+	background-color: #1da6db;
+	color: #FFF;
 }
+*/
+
+.CorrectAnswer{
+	background-color: #0dcea0;
+	color: #FFF;
+}
+
+
+.WrongAnswer{
+	background-color: #ed3e3a;
+	color: #FFF;
+}
+
+.WrongAnswer_hover{
+	background-color: #000;
+	color: #FFF;
+}
+
 
 /*
 .checkAnswer {

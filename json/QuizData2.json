@@ -2,7 +2,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 0",
-			"subHeader" : "Instruktioner til kursisten - 0 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1 (rigtig)", "Valg 2"]
 		},
 		"quizData" : {
@@ -15,7 +15,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 1",
-			"subHeader" : "Instruktioner til kursisten - 1 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1", "Valg 2 (rigtig)", "Valg 3"]
 		},
 		"quizData" : {
@@ -28,7 +28,7 @@
 	{ 
 		"userInterface" : { 
 			"header" : "Overskrift - 2",
-			"subHeader" : "Instruktioner til kursisten - 2 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1", "Valg 2", "Valg 3 (rigtig)", "Valg 4"]
 		},
 		"quizData" : {
@@ -41,7 +41,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 3",
-			"subHeader" : "Instruktioner til kursisten - 3 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1", "Valg 2", "Valg 3", "Valg 4 (rigtig)", "Valg 5"]
 		},
 		"quizData" : {
@@ -54,7 +54,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 4",
-			"subHeader" : "Instruktioner til kursisten - 4 : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...",
+			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1 (rigtig)", "Valg 2 (rigtig)", "Valg 3"]
 		},
 		"quizData" : {
