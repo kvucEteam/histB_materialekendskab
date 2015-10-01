@@ -19,7 +19,8 @@ h4 {
 #questionCarousel{margin-top: 20px;}
 
 
-.TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;} 
+.TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;}
+.resultTable  .TextHolder{min-height: 0px;}
 
 .indent{margin-left: 10px}
 
@@ -85,6 +86,27 @@ h4 {
 	border: 1px solid #ff5e5a;
 	color: #FFF;
 }
+
+
+.StudentCorrect{
+	background-color: #00cb60;
+	border: 1px solid #00cb60;
+	color: #FFF;
+}
+.StudentCorrect:hover{
+
+}
+
+
+.StudentWrong{
+	background-color: #ea3b36;
+	border: 1px solid #ea3b36;
+	color: #FFF;
+}
+.StudentWrong:hover{
+
+}
+
 
 .checkAllAnswers{
 	background-color: #0dcea0;
@@ -155,10 +177,14 @@ html, body, .container-fluid, .col-xs-12, #DataInput, .SourcePage, .SourceAndNot
 }
 
 .tth{
+	display: inline-block;	/* TEST */
+	width: 19%; 			/* TEST */
 	/*border: 1px solid #C0C0C0;*/
 }
 
 .ttd{
+	display: inline-block; 	/* TEST */
+	width: 19%; 			/* TEST */
 	text-align: center;
 	border: 1px solid #C0C0C0;
 }
