@@ -62,6 +62,17 @@ function UserMsgBox_SetWidth(TargetSelector, WidthPercent){
 // ================================================================================================
 
 
+function hastagStrToArray(hastagStr){
+    // jsonData[n].userInterface.btnHastagStr.split(",")
+    var btnArray = hastagStr.split(",");
+    console.log("hastagStrToArray - btnArray: " + btnArray);
+    for (n in btnArray){
+        btnArray[n] = btnArray[n].trim().replace("#","");
+    }
+    return btnArray;
+}
+console.log("hastagStrToArray: " + hastagStrToArray("#Ungdomsoprør, #Kvindebevægelsen, #Rødstrømper, #Kønsroller, #Individ, #Familie"));
+console.log("hastagStrToArray: " + hastagStrToArray("#Tag1 a b, #Tag2 a b, #Tag3 a b"));
 
 
 function returnSourcePages(jsonData){
