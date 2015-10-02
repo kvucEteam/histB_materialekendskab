@@ -229,7 +229,7 @@ function returnDivTable_row(tableSelector, headerArray, bodyArray2D){
     
     if (headerArray.length > 0){  // Content in headerArray is not required - just an empty array 
         for (var y = 0; y < headerArray.length; y++) {
-            HTML += '<div class="tth">'+headerArray[y]+'</div>';
+            HTML += '<div class="ttd">'+headerArray[y]+'</div>';
         };
     }
     
@@ -294,16 +294,36 @@ function makeEndGameSenario(jsonData){
 function makeEndGameSenario_2(jsonData){
     var sourceArray = [];
     var correctAnswerMatrix = [];  // 2 dimensional array!
+    var MaxLength = 0; var Length;
+    for (n in jsonData) {
+        Length = jsonData[n].userInterface.btn.length;
+        if (Length > MaxLength) MaxLength = Length;
+    }
+    console.log("makeEndGameSenario - MaxLength: " + MaxLength);
     for (n in jsonData) {
         sourceArray.push(returnSourcelItem(n, jsonData));
         var rowArray = [];
         // correctAnswerMatrix.push(jsonData[n].userInterface.btn);  // Pushing array of correct answers into correctAnswerMatrix, which becomes 2 dimensional.
-        for (k in jsonData[n].userInterface.btn){
-            rowArray.push('<div class="'+((elementInArray(jsonData[n].quizData.correctAnswer, k))?'CorrectAnswer ':'')+
-                                         ((elementInArray(jsonData[n].StudentAnswers.Correct, k))?'StudentCorrect ':'')+
-                                         ((elementInArray(jsonData[n].StudentAnswers.Wrong, k))?'StudentWrong ':'')+'">'
-                                         +jsonData[n].userInterface.btn[k]+
-                          '</div>');  // Pushing array of correct answers into correctAnswerMatrix, which becomes 2 dimensional.
+        
+        // for (k in jsonData[n].userInterface.btn){
+        //     rowArray.push('<div class="'+((elementInArray(jsonData[n].quizData.correctAnswer, k))?'CorrectAnswer ':'')+
+        //                                  ((elementInArray(jsonData[n].StudentAnswers.Correct, k))?'StudentCorrect ':'')+
+        //                                  ((elementInArray(jsonData[n].StudentAnswers.Wrong, k))?'StudentWrong ':'')+'">'
+        //                                  +jsonData[n].userInterface.btn[k]+
+        //                   '</div>');  // Pushing array of correct answers into correctAnswerMatrix, which becomes 2 dimensional.
+        // }
+
+        for (var k = 0; k < MaxLength; k++) {
+        // for (k in jsonData[n].userInterface.btn){
+            if (typeof(jsonData[n].userInterface.btn[k]) !== "undefined"){
+                rowArray.push('<div class="'+((elementInArray(jsonData[n].quizData.correctAnswer, k))?'CorrectAnswer ':'')+
+                                             ((elementInArray(jsonData[n].StudentAnswers.Correct, k))?'StudentCorrect ':'')+
+                                             ((elementInArray(jsonData[n].StudentAnswers.Wrong, k))?'StudentWrong ':'')+'">'
+                                             +jsonData[n].userInterface.btn[k]+
+                              '</div>');  // Pushing array of correct answers into correctAnswerMatrix, which becomes 2 dimensional.
+            } else {
+                rowArray.push('<div class="Empty">&nbsp;</div>');
+            }
         }
         correctAnswerMatrix.push(rowArray);
     }
@@ -325,6 +345,7 @@ function makeEndGameSenario_2(jsonData){
     // $("#DataInput").append(HTML);
 
     // $("#EndGameSenario th").css("width", String(100/sourceArray.length)+'%');
+    $("#EndGameSenario .ttd").css("width", String(Math.floor(100/jsonData.length)-0.1)+'%');
 
 }
 
