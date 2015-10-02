@@ -1,0 +1,96 @@
+
+.container-fluid:nth-of-type(2) {
+    margin-top: 0px;
+}
+
+h1 {
+	margin: 40px 0px; 
+	line-height: 1em;
+}
+h2 {
+	margin: 30px 0px 20px 0px; 
+	line-height: 1em; 
+}
+h4 {
+	margin: 0px 0px 20px 0px; 
+	line-height: 1em;
+}
+
+#questionCarousel{margin-top: 20px;}
+
+
+.TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;} 
+
+.indent{margin-left: 10px}
+
+.PointFeedback{margin-top: 10px;}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+.btnPressed{
+    background-color: #1da6db;
+    border: 1px solid #1da6db;
+    color: #fff;
+}
+
+.QuestionTask{
+	color: #000;
+}
+
+.checkAnswer {
+	background-color: #0dcea0;
+	color: #FFF;
+	border-style: none;
+}
+.checkAnswer:hover{
+	background-color: #0ddea0;
+	color: #FFF;
+	border-style: none;
+}
+
+/*
+.MarkedAnswer{
+	background-color: #1da6db;
+	color: #FFF;
+}
+*/
+
+.CorrectAnswer{
+	background-color: #0dcea0;
+	color: #FFF;
+}
+
+
+.WrongAnswer{
+	background-color: #ed3e3a;
+	color: #FFF;
+}
+
+.WrongAnswer_hover{
+	background-color: #000;
+	color: #FFF;
+}
+
+
+/*
+.checkAnswer {
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: auto;
+    padding: 5px;
+    right: 5%;
+    width: 100px;
+    background-color: #05a0a8;
+    border-color: #05a0a8;
+    color: #fff;
+}
+
+.checkAnswer:hover {
+	background-color: #047176;
+	border-color: #03676d;
+	color: #fff;
+}
+*/
