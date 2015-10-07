@@ -75,7 +75,7 @@ function returnBtnContainer(jsonData){
 }
 
 
-function returnCarouselHtml(questionNum, jsonData){
+function returnCarouselHtml(questionNum, jsonData, UlrVarObj){
 	
 	var HTML = '';
 
@@ -85,7 +85,7 @@ function returnCarouselHtml(questionNum, jsonData){
 
 	// HTML += '<a class="btn btn-default checkAnswer" href="#"> Tjek svar </a>';
 
-	HTML += '<div id="questionCarousel" class="carousel slide" data-ride="carousel" data-interval="false">' +
+	HTML += '<div id="questionCarousel" class="carousel slide'+((parseInt(UlrVarObj.file) == 3)?" QuizData3_exception":"")+'" data-ride="carousel" data-interval="false">' +
                 '<ol class="carousel-indicators">' +
                     returnCarouselIndicators(jsonData) + 
                 '</ol>' +
@@ -283,7 +283,7 @@ function CheckStudentAnswers(jsonData){
                     $(element).css(CSS_OBJECT.CorrectAnswer); // Sets the color to the style of .CorrectAnswer which is green...
         
                 if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
-                    jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
+                    // jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
                     if (!$(element).hasClass("CorrectAnswer"))
                         $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongtAnswer which is red...
                     giveFeedback(jsonData, CurrentQuestionId);   // Give feedback
@@ -422,13 +422,13 @@ $(document).ready(function() {
 
 	ReturnAjaxData("GET", "json/QuizData"+UlrVarObj.file+".json", false, "json");
 
-	// returnCarouselHtml(0, jsonData);  // TEST
+	// returnCarouselHtml(0, jsonData, UlrVarObj);  // TEST
 
 	// returnCarouselItem(3, jsonData);  // TEST
 
 	// returnCarouseList(jsonData);      // TEST
 
-    $("#DataInput").html(returnCarouselHtml(0, jsonData));  // Insert carousel HTML
+    $("#DataInput").html(returnCarouselHtml(0, jsonData, UlrVarObj));  // Insert carousel HTML
 
     console.log("jsonData: " + JSON.stringify(jsonData) );
 
