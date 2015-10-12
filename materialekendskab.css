@@ -19,7 +19,7 @@ h4 {
 #questionCarousel{margin-top: 20px; }
 
 
-.btn-default {
+.StudentAnswer {
     background-color: #e7e6e2;
     border: 1px solid #e7e6e2;
     color: #000;
@@ -97,12 +97,6 @@ h4 {
     color: #fff;
 }
 
-/*
-.MarkedAnswer{
-	background-color: #1da6db;
-	color: #FFF;
-}
-*/
 
 .CorrectAnswer{
 	background-color: #0dcea0;
@@ -132,23 +126,3 @@ h4 {
     color: #FFF;
 }
 
-
-/*
-.checkAnswer {
-    font-size: 17px;
-    font-weight: 500;
-    margin-right: auto;
-    padding: 5px;
-    right: 5%;
-    width: 100px;
-    background-color: #05a0a8;
-    border-color: #05a0a8;
-    color: #fff;
-}
-
-.checkAnswer:hover {
-	background-color: #047176;
-	border-color: #03676d;
-	color: #fff;
-}
-*/
