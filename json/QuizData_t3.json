@@ -1,0 +1,31 @@
+[{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Kvinder blev langt op i 1800-tallet betragtet som værende uden en kønsdrift, det vil sige uden seksuelle lyster og drifter. Opfattelsen af kvindens (manglende) seksualitet betød, at kvinder i store dele af 1800-tallet relativt uproblematisk kunne leve sammen, fordi de i fællesskab forenede og sublimerede de feminine, aseksuelle og åndelige dyder. Periodens borgerlige kvinder, som boede sammen med en anden borgerlig kvinde, opfattede ikke sig selv som homoseksuelle, fordi de gik med på den præmis, at de ingen seksualitet havde. Under disse forudsætninger kunne de leve et respektabelt liv sammen med en anden kvinde."
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["(Redegørende) Korrekt... <br/>Redegørende niveau indeholder ofte ordene ditten og datten.... ", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Marie Christensen (1871-1945) blev født i Kregme ved Frederiksværk som datter af landarbejdere. Hun blev som 15-årig sendt ud for at arbejde som tjenestepige, hvor hun havde adskillige dårlige oplevelser. Hun sov i en kasse som seng i et lille loftskammer uden kakkelovn, var plaget af frost i fingrene, og arbejdsdagen var fra 6 morgen til 22 aften. Oftest gik hun sulten i seng, og aldrig var der tid til at hvile ud. Sådan var hverdagen ofte for 1800-tallets tjenestepige. Som 23-årig begyndte Marie Christensen at sætte ord på sine tanker og skrev i 1894: ”Gid jeg en Dag kunde løsne Danmarks Slavinders Lænker.” Hun ophørte i 1895 sit arbejde som tjenestepige og ernærede sig i nogle år ved at undervise. Hun fulgte samtidig selv kurser på handelsskole og højskole.  I 1899 blev hun på ny ansat som tjenestepige i København. Hendes indignation over arbejdsforholdene voksede og motiverede hende til i 1899 at stifte et fagforbund for tjenestepigerne, Københavns Tjenestepigeforening."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}]

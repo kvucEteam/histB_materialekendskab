@@ -1,67 +1,181 @@
-[
-	{ 
-		"userInterface" : {
-			"header" : "Terminologi og taksonomi",
-			"subHeader" : "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-			"btn" : ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
-		},
-		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "text", "text": "<b>Redegørende:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "},
-			"correctAnswer" : ["0"],
-			"feedbackData" : ["(Redegørende) Korrekt... <br/>Redegørende niveau indeholder ofte ordene ditten og datten.... ", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Terminologi og taksonomi",  
-			"subHeader" : "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-			"btn" : ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
-		},
-		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "text", "text": "<b>Analyserende:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-			"correctAnswer" : ["1"],
-			"feedbackData" : ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."] 
-		}
-	},
-	{ 
-		"userInterface" : { 
-			"header" : "Terminologi og taksonomi",
-			"subHeader" : "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-			"btn" : ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
-		},
-		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "text", "text": "<b>Diskuterende:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-			"correctAnswer" : ["2"],
-			"feedbackData" : ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Korrekt...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Terminologi og taksonomi",
-			"subHeader" : "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-			"btn" : ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
-		},
-		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "text", "text": "<b>Vurderende:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-			"correctAnswer" : ["3"],
-			"feedbackData" : ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Korrekt...", "(Perspektiverende) Forkert..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Terminologi og taksonomi",
-			"subHeader" : "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-			"btn" : ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
-		},
-		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "text", "text": "<b>Perspektiverende:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-			"correctAnswer" : ["4"],
-			"feedbackData" : ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Korrekt..."] 
-		}
-	}
-]
+[{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Middelalderens ægteskaber var et samarbejde mellem mand og kvinde. Udover moderrollen havde kvinden ansvar for husholdet, herunder madlavning, vask, produktion af tøj m.m. Andre sysler kunne være brodering, og der er fundet fingerbøl fra middelalderen netop til dette formål. Inden for samfundets øverste lag samarbejdede det adelige ægtepar om administrationen af godser. Der var også egentlige erhverv, der blev anset for at være kvindehverv. Det var eksempelvis kvinderne, der bryggede øllet. På de mange kroer var der krokoner, og kvinder har formentlig i nogle tilfælde selv drevet kroer. I byerne fandt man desuden småhandlende kvinder i boder."
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["(Redegørende) Korrekt... <br/>Redegørende niveau indeholder ofte ordene ditten og datten.... ", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Fra omkring 1870 begyndte danske arbejdere at organisere sig på socialistisk grundlag efter inspiration fra udviklingen i andre lande i Europa. Bevægelsen byggede på Karl Marx’ idéer og var organiseret som en sektion af Første Internationale (IAA). I spidsen for processen stod den velformulerede, intellektuelle Louis Pio. Trods voldsom fordømmelse i pressen fik den danske afdeling af Internationale i løbet af et halvt år 4-5000 medlemmer i København og halvt så mange i de større provinsbyer. I maj 1872 indkaldte Louis Pio til et møde for arbejdere i Fælledparken i København. Politiet forbød mødet, og Pio blev sammen med de to andre ledere i arbejderbevægelsen, Harald Brix og Paul Geleff, arresteret og idømt lange fængselsdomme, mens Internationale blev forbudt. Dette knækkede dog ikke bevægelsen, og i sommeren 1875 blev de tre ledere benådet, mens udviklingen kulminerede året efter med vedtagelsen af program og love for Det Socialdemokratiske Arbejderparti. I 1876 blev det første partiprogram vedtaget, og i 1884 lykkedes det at få to socialdemokrater valgt ind i Folketinget. Socialdemokratiet blev dermed det første 'moderne' parti med program, presse og basisforeninger og konsoliderede sig i de følgende årtier sammen med fagbevægelsen som en af de bedst organiserede arbejderbevægelser i verden."
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["(Redegørende) Korrekt... <br/>Redegørende niveau indeholder ofte ordene ditten og datten.... ", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Kvinder blev langt op i 1800-tallet betragtet som værende uden en kønsdrift, det vil sige uden seksuelle lyster og drifter. Opfattelsen af kvindens (manglende) seksualitet betød, at kvinder i store dele af 1800-tallet relativt uproblematisk kunne leve sammen, fordi de i fællesskab forenede og sublimerede de feminine, aseksuelle og åndelige dyder. Periodens borgerlige kvinder, som boede sammen med en anden borgerlig kvinde, opfattede ikke sig selv som homoseksuelle, fordi de gik med på den præmis, at de ingen seksualitet havde. Under disse forudsætninger kunne de leve et respektabelt liv sammen med en anden kvinde."
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["(Redegørende) Korrekt... <br/>Redegørende niveau indeholder ofte ordene ditten og datten.... ", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Den danske politiker og jurisk A.F. Krieger var medlem af grundlovsudvalget i 1849. I forbindelse med dette arbejde udtalte han 'Overalt erkender man jo saaledes, at umyndige, børn, fruentimmere, forbrydere ikke bør have valgret'. Dette citat understreger den tids opfattelse af kvinden, som værende ude af stand til at deltage i demokratiet på lige fod med mænd."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Kvinder i vikingetiden nød til en vis grad mere frihed end kvinder andre steder i samtidens middelalderlige Europa. Skriftlige kilder præsenterer vikingetidens kvinder som selvstændige og med rettigheder. Runeindskrifter, særligt fra Midtsverige, vidner om kvindens ret til at disponere over sin ejendom samt arveret. Ægteparret var i fællesskab ansvarlige for husholdningen og måtte fæste lid til partnerens samarbejdsvillighed. Et tilsyneladende særlig godt forhold herskede mellem det svenske ægtepar Holmgaut og Odendisa, da Holmgaut med runer lod riste en mindeindskrift efter sin hustru: “Ingen bedre husfrue vil komme til Hassmyra, at se efter gården”. Denne indskrift vidner om kvindens rolle for driften af gården, organiseringen af husholdning og måske kontrol over mennesker, dyr og ressourcer. Var husbonden ude på vikingetogt, kunne ansvaret for gården tilfalde kvinden."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Marie Christensen (1871-1945) blev født i Kregme ved Frederiksværk som datter af landarbejdere. Hun blev som 15-årig sendt ud for at arbejde som tjenestepige, hvor hun havde adskillige dårlige oplevelser. Hun sov i en kasse som seng i et lille loftskammer uden kakkelovn, var plaget af frost i fingrene, og arbejdsdagen var fra 6 morgen til 22 aften. Oftest gik hun sulten i seng, og aldrig var der tid til at hvile ud. Sådan var hverdagen ofte for 1800-tallets tjenestepige. Som 23-årig begyndte Marie Christensen at sætte ord på sine tanker og skrev i 1894: ”Gid jeg en Dag kunde løsne Danmarks Slavinders Lænker.” Hun ophørte i 1895 sit arbejde som tjenestepige og ernærede sig i nogle år ved at undervise. Hun fulgte samtidig selv kurser på handelsskole og højskole.  I 1899 blev hun på ny ansat som tjenestepige i København. Hendes indignation over arbejdsforholdene voksede og motiverede hende til i 1899 at stifte et fagforbund for tjenestepigerne, Københavns Tjenestepigeforening."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "”Allerede i en Tid af 6 á 7 Aar er jeg af min Mand Slagtermester Johan Georg Lödel paa den mest foragtelige Maade bleven mishandlet og ilde tracteret uden at jeg med mit vidende dertil har givet ham nogen Anledning og jeg har i denne Tid flere Gange havt i sinde at søge Skilsmisse fra ham i Henseende til Bord og Seng.” Sådan skriver Catrine Lödel i sin anmodning om separation til Københavns Magistrat tidligt i januar 1810. Men hun trækker sin anmodning tilbage i håb om, at manden ville forbedre sig. Det sker åbenbart ikke. For allerede året efter foreligger der endnu en anmodning fra Catrine Lödel om separation. Begrundelsen er den samme som sidst: fysisk mishandling. Men også denne gang vælger hun at blive hos sin voldelige mand."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+},{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Det er sikkert, at kalkmalerierne i langt de fleste danske kirker på et tidspunkt er blevet kalket over. Men skete det i forbindelse med Reformationen, som traditionen lyder – og som det stadig fremgår af mange bøger og beskrivelser? Grundlæggende lyder det mest sandsynligt, at man i forbindelse med Reformationen fjernede i hvert fald de billeder, der havde med katolske helgener at gøre, for nu var det slut med helgendyrkelse. I bredere forstand skulle det også være slut med at dyrke billeder af hellige personer som værende hellige i sig selv. Så det er ikke svært at forstå den sejlivede myte om kalkmaleriernes overkalkning efter Reformationen. Især ikke, når man også ved, at nyfundne middelalderlige kalkmalerier altid dukker op under flere lag kalk. Imidlertid findes der i enkelte kirker kalkmalerier, som aldrig har været overkalkede, og i ganske mange kirker findes der kalkmalerier, som er malede efter Reformationen. Disse findes fortrinsvis i kirker, som ikke havde fået (nye) kalkmalerier i tiden op mod Reformationen. Sagen forstås vist bedst, hvis man gør sig klart, at kalkmalerierne langt op i tiden blev anset som en selvfølge. Det var noget, der hørte sig til, og helt op til begyndelsen af 1800-tallet blev der malet nye kalkmalerier - ofte oven på gamle malerier, som så først blev overhvidtede. I øvrigt blev der også lavet kalkmalede dekorationer på væggene på mange slotte og herregårde."
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+},{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Ungdomsoprøret havde tre drivkræfter: et generationsoprør mod forældrene og senere mod det politiske og den kapitalistiske private sektor med kravet om ligestilling, seksuel frigørelse og større medarbejderindflydelse i virksomhederne, men ikke mindst i uddannelsesinstitutionerne.For det andet fascinationen af en politisk ideologi – her de socialistiske og kommunistiske tankesystemer som det nye svar på fremtidens samfund med regimerne i USSR, DDR, Cuba og Kina som forbilleder."
+        },
+        "correctAnswer": ["3"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+},{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Internationale begivenheder og erfaringer kom til at påvirke den danske debat om kvinders valgret. Gennemførelse af valgretten i andre lande fungerede som ’eksemplets magt’ og banede vej for, at man kunne forstille sig, at både kvinder og mænd deltog i politik. Desuden kom der fra den internationale bevægelse stærk inspiration til valgretsbevægelsens argumentation, retorik, pressestrategi og mobilisering. Den danske vej mod kvindelig valgret, der blev gennemført på kommunalt plan i 1908 og til Rigsdagen med grundlovsændringen i 1915, er derfor også et led i en samtidig international udvikling og gensidig påvirkning."
+        },
+        "correctAnswer": ["3"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Den nye socialreform markerede et vigtigt skift i forhold til tidligere tiders syn på og håndtering af mindrebemidlede og arbejdsløse. De første spadestik til den velfærdsstat, vi kender i dag, var således taget. Men det var ikke kun disse mere langsigtede perspektiver, der kendetegnede den nye socialreform. Socialreformen var også sat i verden for at skulle virke på lidt kortere sigt, da hensigten med den var at afbøde nogle af de konsekvenser, den store arbejdsløshed havde. Trods dette var årtiet præget af store uroligheder med demonstrationer til gavn for de arbejdsløse og en storlockout i 1936, som Stauning havde forsøgt undgået ved forhandlingerne i Kanslergade i 1933."
+        },
+        "correctAnswer": ["4"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Korrekt...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "I dag er centrale værdier fra ungdomsoprøret en naturlig del af hele samfundets værdier. Det gælder ligestilling på arbejdsmarkedet og i uddannelserne, seksuel frigørelse, medindflydelse på arbejdspladsen og uddannelsesinstitutionerne. Det gælder de nye boligformer – især bofællesskaberne – og ikke mindst en omfattende velfærdsstat, som i dag har bred politisk opbakning, men ikke så meget hos de liberale. Især de nye kollektive boligformer er i dag markante i byggeri for børnefamilierne."
+        },
+        "correctAnswer": ["4"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Korrekt...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}]
