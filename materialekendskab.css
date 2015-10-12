@@ -19,6 +19,13 @@ h4 {
 #questionCarousel{margin-top: 20px; }
 
 
+.StudentAnswer {
+    background-color: #e7e6e2;
+    border: 1px solid #e7e6e2;
+    color: #000;
+}
+
+
 /*******************  QuizData3_exception is added for materialekendskab.html?file=3  ******************************/
 .QuizData3_exception{
 	border-radius: 8px;
@@ -62,10 +69,16 @@ h4 {
     width: 70%;
     margin: auto;
 }
-
+/*
 .btnPressed{
     background-color: #1da6db;
     border: 1px solid #1da6db;
+    color: #fff;
+}
+*/
+.btnPressed{
+	background-color: #666666;
+    border: 1px solid #666666;
     color: #fff;
 }
 
@@ -74,22 +87,16 @@ h4 {
 }
 
 .checkAnswer {
-	background-color: #0dcea0;
-	color: #FFF;
-	border-style: none;
+	background-color: #05a0a8;
+    border-color: #05a0a8;
+    color: #fff
 }
 .checkAnswer:hover{
-	background-color: #0ddea0;
-	color: #FFF;
-	border-style: none;
+	background-color: #047176;
+    border-color: #047176;
+    color: #fff;
 }
 
-/*
-.MarkedAnswer{
-	background-color: #1da6db;
-	color: #FFF;
-}
-*/
 
 .CorrectAnswer{
 	background-color: #0dcea0;
@@ -108,22 +115,14 @@ h4 {
 }
 
 
-/*
-.checkAnswer {
-    font-size: 17px;
-    font-weight: 500;
-    margin-right: auto;
-    padding: 5px;
-    right: 5%;
-    width: 100px;
-    background-color: #05a0a8;
-    border-color: #05a0a8;
+.btn-primary{
+	background-color: #666666;
+    border: 1px solid #666666;
     color: #fff;
 }
-
-.checkAnswer:hover {
-	background-color: #047176;
-	border-color: #03676d;
-	color: #fff;
+.btn-primary:hover{
+	background-color: #969696;
+    border: 1px solid #969696;
+    color: #FFF;
 }
-*/
+

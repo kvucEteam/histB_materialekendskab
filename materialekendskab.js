@@ -175,7 +175,8 @@ function countCorrectAnswers(jsonData){
 	    for (var n in answerArray){
 	       if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
 	           correct++;   // Counting correct answers.
-               $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
+               // $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
+               $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").addClass("CorrectAnswer");
 	       } else {
 	    		error_missed++;  // Counting missed correct answers, eg. if there are two or more correct answers and the student does not answer all of the answers, then this counter counts the missed correct answers.
 	       }
@@ -190,7 +191,8 @@ function countCorrectAnswers(jsonData){
         $("#btnContainer_"+k+" > .StudentAnswer").each(function( index, element ) {
             if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index))){
                 ++error_displayed;
-                $(element).toggleClass("WrongAnswer");
+                // $(element).toggleClass("WrongAnswer");
+                $(element).addClass("WrongAnswer");
             }
         });
 
@@ -227,6 +229,10 @@ function giveFeedback(jsonData, questionNum){
 
 function CheckStudentAnswers(jsonData){
 
+    $(document).on('click', ".btnPressed", function(event) {
+        $(this).removeClass("CorrectAnswer WrongAnswer");
+    });
+
     $(document).on('click', ".StudentAnswer", function(event) {
     	event.preventDefault(); // Prevents sending the user to "href". 
 
@@ -234,29 +240,8 @@ function CheckStudentAnswers(jsonData){
             UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
             UserMsgBox_SetWidth(".container-fluid", 0.7);
         } else {
+
             $(this).toggleClass("btnPressed");
-
-            // var CssGet = ["background-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "color"];
-            // var CssSet = {
-            //     "background-color": "#1da6db",
-            //     "border-top-color": "#1da6db",
-            //     "border-right-color": "#1da6db",
-            //     "border-bottom-color": "#1da6db",
-            //     "border-left-color": "#1da6db",
-            //     "color": "#FFF"
-            // };
-
-            // // Get 
-            // if ($.isEmptyObject(CssObj)) {
-            //     CssObj.StudentAnswer = $(".StudentAnswer").css(CssGet);
-            // }
-            // console.log("GivePosetiveFeedback - CssObj: " + JSON.stringify(CssObj));
-
-            // This is a bad solution - a better one would be to let CSS handle the color-changes...
-            // if ($(this).hasClass("btnPressed"))
-            //     $(this).css(CssSet);
-            // else
-            //     $(this).css(CssObj.StudentAnswer);
 
             if ($(this).hasClass("btnPressed"))
             	$(this).css(CSS_OBJECT.btnPressed);
@@ -285,8 +270,10 @@ function CheckStudentAnswers(jsonData){
                 if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
                     // jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
                     if (!$(element).hasClass("CorrectAnswer"))
-                        $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongtAnswer which is red...
+                        $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongAnswer which is red...
                     giveFeedback(jsonData, CurrentQuestionId);   // Give feedback
+                } else {
+                    $(element).removeClass("CorrectAnswer WrongAnswer");
                 }
             });
         }
