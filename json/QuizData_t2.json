@@ -1,0 +1,60 @@
+[{  "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Fra omkring 1870 begyndte danske arbejdere at organisere sig på socialistisk grundlag efter inspiration fra udviklingen i andre lande i Europa. Bevægelsen byggede på Karl Marx’ idéer og var organiseret som en sektion af Første Internationale (IAA). I spidsen for processen stod den velformulerede, intellektuelle Louis Pio. Trods voldsom fordømmelse i pressen fik den danske afdeling af Internationale i løbet af et halvt år 4-5000 medlemmer i København og halvt så mange i de større provinsbyer. I maj 1872 indkaldte Louis Pio til et møde for arbejdere i Fælledparken i København. Politiet forbød mødet, og Pio blev sammen med de to andre ledere i arbejderbevægelsen, Harald Brix og Paul Geleff, arresteret og idømt lange fængselsdomme, mens Internationale blev forbudt. Dette knækkede dog ikke bevægelsen, og i sommeren 1875 blev de tre ledere benådet, mens udviklingen kulminerede året efter med vedtagelsen af program og love for Det Socialdemokratiske Arbejderparti. I 1876 blev det første partiprogram vedtaget, og i 1884 lykkedes det at få to socialdemokrater valgt ind i Folketinget. Socialdemokratiet blev dermed det første 'moderne' parti med program, presse og basisforeninger og konsoliderede sig i de følgende årtier sammen med fagbevægelsen som en af de bedst organiserede arbejderbevægelser i verden."
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["(Redegørende) Korrekt... <br/>Redegørende niveau indeholder ofte ordene ditten og datten.... ", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Kvinder i vikingetiden nød til en vis grad mere frihed end kvinder andre steder i samtidens middelalderlige Europa. Skriftlige kilder præsenterer vikingetidens kvinder som selvstændige og med rettigheder. Runeindskrifter, særligt fra Midtsverige, vidner om kvindens ret til at disponere over sin ejendom samt arveret. Ægteparret var i fællesskab ansvarlige for husholdningen og måtte fæste lid til partnerens samarbejdsvillighed. Et tilsyneladende særlig godt forhold herskede mellem det svenske ægtepar Holmgaut og Odendisa, da Holmgaut med runer lod riste en mindeindskrift efter sin hustru: “Ingen bedre husfrue vil komme til Hassmyra, at se efter gården”. Denne indskrift vidner om kvindens rolle for driften af gården, organiseringen af husholdning og måske kontrol over mennesker, dyr og ressourcer. Var husbonden ude på vikingetogt, kunne ansvaret for gården tilfalde kvinden."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+},{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Internationale begivenheder og erfaringer kom til at påvirke den danske debat om kvinders valgret. Gennemførelse af valgretten i andre lande fungerede som ’eksemplets magt’ og banede vej for, at man kunne forstille sig, at både kvinder og mænd deltog i politik. Desuden kom der fra den internationale bevægelse stærk inspiration til valgretsbevægelsens argumentation, retorik, pressestrategi og mobilisering. Den danske vej mod kvindelig valgret, der blev gennemført på kommunalt plan i 1908 og til Rigsdagen med grundlovsændringen i 1915, er derfor også et led i en samtidig international udvikling og gensidig påvirkning."
+        },
+        "correctAnswer": ["3"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+},{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "I dag er centrale værdier fra ungdomsoprøret en naturlig del af hele samfundets værdier. Det gælder ligestilling på arbejdsmarkedet og i uddannelserne, seksuel frigørelse, medindflydelse på arbejdspladsen og uddannelsesinstitutionerne. Det gælder de nye boligformer – især bofællesskaberne – og ikke mindst en omfattende velfærdsstat, som i dag har bred politisk opbakning, men ikke så meget hos de liberale. Især de nye kollektive boligformer er i dag markante i byggeri for børnefamilierne."
+        },
+        "correctAnswer": ["4"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Korrekt...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}]
