@@ -419,7 +419,10 @@ $(document).ready(function() {
 
     console.log("jsonData: " + JSON.stringify(jsonData) );
 
+    $("title").html(jsonData[0].userInterface.header);
     $("#header").html(jsonData[0].userInterface.header);   // Shows the initial heading.
+    if (jsonData[0].userInterface.hasOwnProperty("taskNumber")) 
+        $("#header").append('<img class="TaskNumberImg" src="../library/img/TaskNumbers_'+jsonData[0].userInterface.taskNumber+'.svg">');
     $("#subHeader").html(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
 
     $(".btnContainer").hide();      // Hides all button containers.

@@ -2,6 +2,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 0",
+			"taskNumber" : "1",
 			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1 (rigtig)", "Valg 2"]
 		},
@@ -15,6 +16,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 1",
+			"taskNumber" : "1",
 			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1", "Valg 2 (rigtig)", "Valg 3"]
 		},
@@ -28,6 +30,7 @@
 	{ 
 		"userInterface" : { 
 			"header" : "Overskrift - 2",
+			"taskNumber" : "1",
 			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1", "Valg 2", "Valg 3 (rigtig)", "Valg 4"]
 		},
@@ -41,6 +44,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 3",
+			"taskNumber" : "1",
 			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1", "Valg 2", "Valg 3", "Valg 4 (rigtig)", "Valg 5"]
 		},
@@ -54,6 +58,7 @@
 	{ 
 		"userInterface" : {
 			"header" : "Overskrift - 4",
+			"taskNumber" : "1",
 			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
 			"btn" : ["Valg 1 (rigtig)", "Valg 2 (rigtig)", "Valg 3"]
 		},
