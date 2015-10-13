@@ -1,4 +1,19 @@
-[{  "userInterface": {
+[{
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Internationale begivenheder og erfaringer kom til at påvirke den danske debat om kvinders valgret. Gennemførelse af valgretten i andre lande fungerede som ’eksemplets magt’ og banede vej for, at man kunne forstille sig, at både kvinder og mænd deltog i politik. Desuden kom der fra den internationale bevægelse stærk inspiration til valgretsbevægelsens argumentation, retorik, pressestrategi og mobilisering. Den danske vej mod kvindelig valgret, der blev gennemført på kommunalt plan i 1908 og til Rigsdagen med grundlovsændringen i 1915, er derfor også et led i en samtidig international udvikling og gensidig påvirkning."
+        },
+        "correctAnswer": ["3"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+},{  "userInterface": {
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
         "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
@@ -25,21 +40,6 @@
             "text": "Kvinder i vikingetiden nød til en vis grad mere frihed end kvinder andre steder i samtidens middelalderlige Europa. Skriftlige kilder præsenterer vikingetidens kvinder som selvstændige og med rettigheder. Runeindskrifter, særligt fra Midtsverige, vidner om kvindens ret til at disponere over sin ejendom samt arveret. Ægteparret var i fællesskab ansvarlige for husholdningen og måtte fæste lid til partnerens samarbejdsvillighed. Et tilsyneladende særlig godt forhold herskede mellem det svenske ægtepar Holmgaut og Odendisa, da Holmgaut med runer lod riste en mindeindskrift efter sin hustru: “Ingen bedre husfrue vil komme til Hassmyra, at se efter gården”. Denne indskrift vidner om kvindens rolle for driften af gården, organiseringen af husholdning og måske kontrol over mennesker, dyr og ressourcer. Var husbonden ude på vikingetogt, kunne ansvaret for gården tilfalde kvinden."
         },
         "correctAnswer": ["1"],
-        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
-    }
-},{
-    "userInterface": {
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
-    },
-    "quizData": {
-        "taskText": "",
-        "slideData": {
-            "type": "text",
-            "text": "Internationale begivenheder og erfaringer kom til at påvirke den danske debat om kvinders valgret. Gennemførelse af valgretten i andre lande fungerede som ’eksemplets magt’ og banede vej for, at man kunne forstille sig, at både kvinder og mænd deltog i politik. Desuden kom der fra den internationale bevægelse stærk inspiration til valgretsbevægelsens argumentation, retorik, pressestrategi og mobilisering. Den danske vej mod kvindelig valgret, der blev gennemført på kommunalt plan i 1908 og til Rigsdagen med grundlovsændringen i 1915, er derfor også et led i en samtidig international udvikling og gensidig påvirkning."
-        },
-        "correctAnswer": ["3"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
     }
 },{
