@@ -1,54 +1,63 @@
-[
-	{ 
-		"userInterface" : { 
-			"header" : "Kildekendskab",
-			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
-			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
-		},
-		"quizData" : {
-			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 1",
-			"slideData" : {"type": "img", "src": "https://da.wikipedia.org/wiki/The_Beatles#/media/File:The_Beatles_arrive_at_JFK_Airport.jpg", "alt": "Eksternt billede..."},
-			"correctAnswer" : ["1"],
-			"feedbackData" : ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Kildekendskab",
-			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
-			"btn" : ["Kilde?", "Fremstilling? (rigtig)"]
-		},
-		"quizData" : {
-			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 2",
-			"slideData" : {"type": "img", "src": "http://www.aargang0.dk/media/d758f72c-a90a-4a64-ab8c-adc7a6cda900/d7YTVw/Kilder/Elna/06_Elna,%20Statistisk%20%C3%85rbog%201920,%20side%2027_js.jpg", "alt": "Lokalt billede..."},
-			"correctAnswer" : ["0"],
-			"feedbackData" : ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..." ] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Kildekendskab",
-			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
-			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
-		},
-		"quizData" : {
-			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 3",
-			"slideData" : {"type": "text", "text": "<b>Mødeindkaldelse ledsaget af artikel skrevet af Louis Pio trykt i 'Socialisten' 2. maj 1872:</b> <br/> <br/> <i> <p>Førstkommende Søndag d. 5te Maj Eftermiddag Kl. 4 afholdes paa Nørrefælled, efter Opfordring fra Arbejdere i alle Fag, et Folkemøde, hvortil alle Københavns og Omegns Arbejdere indbydes. København, d. 1ste Maj 1872. </i> <h3 class='txt_title'><strong> Maalet er fuldt!</strong> </h3> <i> <p> </p> <p>Snart dages det, Brødre, det lysner i Øst! </p> <p>Til Arbejdet fremad i Kor! </p> <p>Løgn og Bagtalelser i Bladene, ulovlig Fremfærd af Avtoriteterne, Had og Forfølgelse fra Kapitalisternes Side, det er den „Imødekommen“, der er vist vore smaa og billige Fordringer af de idiotiske Magthavere. Denne Lejlighed burde gribes, sagde de, for ret at vise Arbejderen, hvor afhængig han er af Kapitalens Naade og Barmhjertighed, for at lade ham føle, hvor let det er for den lille herskende Klike, <em>paa aldeles storborger-lovlig Maade</em> at sulte ham ihjel, hvis han ikke bøjer Nakken under Aaget, hvis han ikke kryber til Korset og beder om den Naade, at maatte slide som sædvanligt for at forøge Indholdet af Storborgernes velspækkede Pengepunge. </p> <p>Og hvor ypperligt forstaar vore Modstandere ikke at enes, naar det gælder en saadan Sag! Ministre, Magistrat, Politidirektør, Grundejere og Pengeposemænd, — alle har de faaet travlt med at sammensværge dem mod <em>Folket;</em> alle føler de, at nu gælder det at kvæle Frihedsspiren, ligegyldigt om det skal ske <em>„med</em> eller <em>uden</em> Loven“. Derfor løser Ministeriet Murmesteren, der har det kgl. Teater, fra hans Forpligtelser; derfor opkalder Crone hver Dag Mursvende, omendskønt de ikke har forset sig; derfor udsætter Magistraten Murerlærlingenes Prøver, og har endog den Frækhed at ville røve Laugenes Penge og gøre Københavns Haandværkere og Arbejdere <em>umyndige;</em> derfor overfalder Ligningskommissionen Mursvendene med Breve; derfor inddriver Grundejerne ubarmhjertigt Huslejen hos de Strikende; derfor skælder Friskolelærerne deres uskyldige Børn ud; derfor nægter Understøttelsesforeningerne at hjælpe de Nødlidende blandt dem; derfor falder endelig hele Pressen over dem med Løgn og Skældsord, med Haan og Trusler. </p> <p>Københavns Arbejdere! </p> <p>Vor ivrigste og mest hadefulde Modstander, Redaktør C. Ploug, erklærer i „Fædrelandet“, at „Samfundets Tarv fordrer paa det bestemteste, at dette Forsøg (Murerskruen) falder saaledes ud, at Arbejderne kommer til bedre Erkendelse af deres egen Interesse“, det vil med andre Ord sige, at han opfordrer Murmestrene til at sulte deres Svende ud, for at ikke de andre Haandværkere og Arbejdere ogsaa skal faa Mod til at forsøge at forbedre deres Kaar! </p> <p>Skal vi da som Lam lade os føre til Kapitalens Slagterbænk? Skal vi taale, at vore Fjender maaske for flere Aar stanser vor Fremgang? <strong>Nej, det kan Københavns Arbejdere ikke være bekendt!</strong> Lad os derfor samle os; Regeringerne plejer jo hvert Øjeblik at holde Revu over de af deres Undersaatter, som de ved første givne Lejlighed vil ofre paa Krigsgalskabens Alter for at tilfredsstille deres Ærgerrighed. Lad os da engang holde Mandtal over <strong>alle frie Arbejdere,</strong> over Alle, som vil hjælpe os i Kampen mod Kapitalen; vi vil da faa at kende vor egen Magt og vore Fjenders Svaghed; samlede i tusindvis vil vi stille vore Fordringer og love hverandre at staa Last og Brast indtil Sejren er vor! </p> <p>Men Jer, I Guldets Dyrkere! I, de Fattiges Udsugere! Eder vil vi endnu <strong>en</strong> Gang tilraabe: „I har i Aartusinder iskænket os en bitter Livsdrik; vogt Jer nu, <strong>Maalet er fuldt!</strong> Lad der ikke komme en eneste Draabe til, eller — <strong>det flyder over!</strong></p></i>"},
-			"correctAnswer" : ["0"],
-			"feedbackData" : ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Kildekendskab",
-			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
-			"btn" : ["Kilde", "Fremstilling"]
-		},
-		"quizData" : {
-			"taskText" : "Svar på om der er tale om en kilde eller en fremstilling - 3",
-			"slideData" : {"type": "video", "src": "https://www.youtube.com/embed/q5-6V_Ur084?rel=0"},
-			"correctAnswer" : ["1"],
-			"feedbackData" : ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."] 
-		}
-	}
-]
+[{
+    "userInterface": {
+        "header": "Kildekendskab",
+        "subHeader": "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
+        "btn": ["Kilde", "Fremstilling"]
+    },
+    "quizData": {
+        "taskText": "Svar på om der er tale om en kilde eller en fremstilling - 1",
+        "slideData": {
+            "type": "img",
+            "src": "https://upload.wikimedia.org/wikipedia/commons/6/61/The_Beatles_arrive_at_JFK_Airport.jpg",
+            "alt": "Eksternt billede..."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Kildekendskab",
+        "subHeader": "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
+        "btn": ["Kilde", "Fremstilling"]
+    },
+    "quizData": {
+        "taskText": "Svar på om der er tale om en kilde eller en fremstilling - 2",
+        "slideData": {
+            "type": "img",
+            "src": "http://www.aargang0.dk/media/d758f72c-a90a-4a64-ab8c-adc7a6cda900/d7YTVw/Kilder/Elna/06_Elna,%20Statistisk%20%C3%85rbog%201920,%20side%2027_js.jpg",
+            "alt": "Lokalt billede..."
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Kildekendskab",
+        "subHeader": "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
+        "btn" : ["Kilde", "Fremstilling"]
+    },
+    "quizData": {
+        "taskText": "Svar på om der er tale om en kilde eller en fremstilling - 3",
+        "slideData": {
+            "type": "text",
+            "text": "<b>Mødeindkaldelse ledsaget af artikel skrevet af Louis Pio trykt i 'Socialisten' 2. maj 1872:</b> <br/> <br/> <i> <p>Førstkommende Søndag d. 5te Maj Eftermiddag Kl. 4 afholdes paa Nørrefælled, efter Opfordring fra Arbejdere i alle Fag, et Folkemøde, hvortil alle Københavns og Omegns Arbejdere indbydes. København, d. 1ste Maj 1872. </i> <h3 class='txt_title'><strong> Maalet er fuldt!</strong> </h3> <i> <p> </p> <p>Snart dages det, Brødre, det lysner i Øst! </p> <p>Til Arbejdet fremad i Kor! </p> <p>Løgn og Bagtalelser i Bladene, ulovlig Fremfærd af Avtoriteterne, Had og Forfølgelse fra Kapitalisternes Side, det er den „Imødekommen“, der er vist vore smaa og billige Fordringer af de idiotiske Magthavere. Denne Lejlighed burde gribes, sagde de, for ret at vise Arbejderen, hvor afhængig han er af Kapitalens Naade og Barmhjertighed, for at lade ham føle, hvor let det er for den lille herskende Klike, <em>paa aldeles storborger-lovlig Maade</em> at sulte ham ihjel, hvis han ikke bøjer Nakken under Aaget, hvis han ikke kryber til Korset og beder om den Naade, at maatte slide som sædvanligt for at forøge Indholdet af Storborgernes velspækkede Pengepunge. </p> <p>Og hvor ypperligt forstaar vore Modstandere ikke at enes, naar det gælder en saadan Sag! Ministre, Magistrat, Politidirektør, Grundejere og Pengeposemænd, — alle har de faaet travlt med at sammensværge dem mod <em>Folket;</em> alle føler de, at nu gælder det at kvæle Frihedsspiren, ligegyldigt om det skal ske <em>„med</em> eller <em>uden</em> Loven“. Derfor løser Ministeriet Murmesteren, der har det kgl. Teater, fra hans Forpligtelser; derfor opkalder Crone hver Dag Mursvende, omendskønt de ikke har forset sig; derfor udsætter Magistraten Murerlærlingenes Prøver, og har endog den Frækhed at ville røve Laugenes Penge og gøre Københavns Haandværkere og Arbejdere <em>umyndige;</em> derfor overfalder Ligningskommissionen Mursvendene med Breve; derfor inddriver Grundejerne ubarmhjertigt Huslejen hos de Strikende; derfor skælder Friskolelærerne deres uskyldige Børn ud; derfor nægter Understøttelsesforeningerne at hjælpe de Nødlidende blandt dem; derfor falder endelig hele Pressen over dem med Løgn og Skældsord, med Haan og Trusler. </p> <p>Københavns Arbejdere! </p> <p>Vor ivrigste og mest hadefulde Modstander, Redaktør C. Ploug, erklærer i „Fædrelandet“, at „Samfundets Tarv fordrer paa det bestemteste, at dette Forsøg (Murerskruen) falder saaledes ud, at Arbejderne kommer til bedre Erkendelse af deres egen Interesse“, det vil med andre Ord sige, at han opfordrer Murmestrene til at sulte deres Svende ud, for at ikke de andre Haandværkere og Arbejdere ogsaa skal faa Mod til at forsøge at forbedre deres Kaar! </p> <p>Skal vi da som Lam lade os føre til Kapitalens Slagterbænk? Skal vi taale, at vore Fjender maaske for flere Aar stanser vor Fremgang? <strong>Nej, det kan Københavns Arbejdere ikke være bekendt!</strong> Lad os derfor samle os; Regeringerne plejer jo hvert Øjeblik at holde Revu over de af deres Undersaatter, som de ved første givne Lejlighed vil ofre paa Krigsgalskabens Alter for at tilfredsstille deres Ærgerrighed. Lad os da engang holde Mandtal over <strong>alle frie Arbejdere,</strong> over Alle, som vil hjælpe os i Kampen mod Kapitalen; vi vil da faa at kende vor egen Magt og vore Fjenders Svaghed; samlede i tusindvis vil vi stille vore Fordringer og love hverandre at staa Last og Brast indtil Sejren er vor! </p> <p>Men Jer, I Guldets Dyrkere! I, de Fattiges Udsugere! Eder vil vi endnu <strong>en</strong> Gang tilraabe: „I har i Aartusinder iskænket os en bitter Livsdrik; vogt Jer nu, <strong>Maalet er fuldt!</strong> Lad der ikke komme en eneste Draabe til, eller — <strong>det flyder over!</strong></p></i>"
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Kildekendskab",
+        "subHeader": "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
+        "btn": ["Kilde", "Fremstilling"]
+    },
+    "quizData": {
+        "taskText": "Svar på om der er tale om en kilde eller en fremstilling - 3",
+        "slideData": {
+            "type": "video",
+            "src": "https://www.youtube.com/embed/q5-6V_Ur084?rel=0"
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]
+    }
+}]
