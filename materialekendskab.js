@@ -85,7 +85,8 @@ function returnCarouselHtml(questionNum, jsonData, UlrVarObj){
 
 	// HTML += '<a class="btn btn-default checkAnswer" href="#"> Tjek svar </a>';
 
-	HTML += '<div id="questionCarousel" class="carousel slide'+((parseInt(UlrVarObj.file) == 3)?" QuizData3_exception":"")+'" data-ride="carousel" data-interval="false">' +
+	// HTML += '<div id="questionCarousel" class="carousel slide'+((parseInt(UlrVarObj.file) == 3)?" CSS_exception":"")+'" data-ride="carousel" data-interval="false">' +
+    HTML += '<div id="questionCarousel" class="carousel slide CSS_exception" data-ride="carousel" data-interval="false">' +
                 '<ol class="carousel-indicators">' +
                     returnCarouselIndicators(jsonData) + 
                 '</ol>' +
