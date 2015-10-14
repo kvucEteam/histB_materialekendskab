@@ -26,34 +26,34 @@ h4 {
 }
 
 
-/*******************  QuizData3_exception is added for materialekendskab.html?file=3  ******************************/
-.QuizData3_exception{
+/*******************  CSS_exception is now in use for all filenames. previously only for materialekendskab.html?file=3  ******************************/
+.CSS_exception{
 	border-radius: 8px;
 	background-color: #FFF;
 }
-.QuizData3_exception .carousel-indicators{
+.CSS_exception .carousel-indicators{
 	bottom: -5px;
 }
-.QuizData3_exception .carousel-indicators li{
+.CSS_exception .carousel-indicators li{
 	border: 1px solid #000;
 }
-.QuizData3_exception .carousel-indicators .active{
+.CSS_exception .carousel-indicators .active{
 	background-color: #000;
 }
-.QuizData3_exception .left, .QuizData3_exception .right{
+.CSS_exception .left, .CSS_exception .right{
 	background-image: none;
 	color: #000;
 }
-.QuizData3_exception .carousel-control{
+.CSS_exception .carousel-control{
 	opacity: 0.7;
 }
-.QuizData3_exception .carousel-control:hover{
+.CSS_exception .carousel-control:hover{
 	opacity: 1;
 }
-.QuizData3_exception .TextHolder{
+.CSS_exception .TextHolder{
 	margin-bottom: 20px;
 }
-/******************************************************************************************************************/
+/***************************************************************************************************************************************************/
 
 
 .MsgBox_bgr{z-index: 20;}  /* Dette fixer problemet med at .carousel-indicators har z-index: 15 */
