@@ -23,9 +23,54 @@
         "taskText": "",
         "slideData": {
             "type": "text",
-            "text": "Marie Christensen (1871-1945) blev født i Kregme ved Frederiksværk som datter af landarbejdere. Hun blev som 15-årig sendt ud for at arbejde som tjenestepige, hvor hun havde adskillige dårlige oplevelser. Hun sov i en kasse som seng i et lille loftskammer uden kakkelovn, var plaget af frost i fingrene, og arbejdsdagen var fra 6 morgen til 22 aften. Oftest gik hun sulten i seng, og aldrig var der tid til at hvile ud. Sådan var hverdagen ofte for 1800-tallets tjenestepige. Som 23-årig begyndte Marie Christensen at sætte ord på sine tanker og skrev i 1894: ”Gid jeg en Dag kunde løsne Danmarks Slavinders Lænker.” Hun ophørte i 1895 sit arbejde som tjenestepige og ernærede sig i nogle år ved at undervise. Hun fulgte samtidig selv kurser på handelsskole og højskole.  I 1899 blev hun på ny ansat som tjenestepige i København. Hendes indignation over arbejdsforholdene voksede og motiverede hende til i 1899 at stifte et fagforbund for tjenestepigerne, Københavns Tjenestepigeforening."
+            "text": "Som Gallup selv anførte i denne meningsmåling fra 1960, så er det almindeligt kendt, at hver generation har det med at opfatte de efterfølgende generationer som uopdragne og dovne... I meningsmålingen spurgte Gallup danskerne om deres holdning til mængden af ungdommens fritid, lommepenge og moral. Overodnet set var danskerne noget kritisk over for ungdommen. Således mente over halvdelen, at de unge havde for meget fritid og for mange lommepenge. 40 % mente at de havde lav moral, mens kun 11 % mente moralen var høj blandt de unge. Gallup opdelte også svarene efter bopæl, køn og alder. Det mest bemærkelsesværdige ved denne opdeling er måske, at danskernes svar ikke varierede særligt meget ud fra disse parametre."
         },
         "correctAnswer": ["1"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Ungdommens udvikling fra 1945-1965 kan betegnes som et ikke-politisk ungdomsoprør. Det skal ikke forveksles med det politiske ungdomsoprør i slutningen af 1960´erne, da det var en udvikling uden politiske formål. De unge i efterkrigstiden blev til en ny samfundsgruppe, fordi de kom til at dele mange af de samme trends, interesser og forbrugsvaner."
+        },
+        "correctAnswer": ["3"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Korrekt...", "(Perspektiverende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "Med parlamentarismens indførelse og Venstres fremgang både i Folketinget og Landstinget blev det sværere og sværere for Højre at opretholde den privilegerede valgret til Landstinget. Med Estrups død juleaftensdag 1913 mistede man det konservative flertal i Landstinget, og vejen lå nu åben for en ændring af Grundloven. Efter grundlovsændringen i 1915 blev Landstinget således sammensat med lige og almindelig valgret som Folketinget – dog med den forskel, at man for at have valgret til Landstinget skulle være 35 år mod Folketingets 25. Med tiden blev Landstinget imidlertid i alt væsentligt sammensat som Folketinget, og ved grundlovsændringen i 1953 indførtes etkammersystemet samtidig med, at parlamentarismen blev indskrevet i grundloven (§15)."
+        },
+        "correctAnswer": ["4"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Korrekt..."]
+    }
+}, {
+    "userInterface": {
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+    },
+    "quizData": {
+        "taskText": "",
+        "slideData": {
+            "type": "text",
+            "text": "”Hvis Slaget på Fælleden virkelig havde fundet sted, skal han (Jens Engberg, red.) forklare, hvorfor Krieger i sin dagbog noterede: Mange Mennesker ere samlede, men noget Sammenstød fandt ei Sted. For det andet er det tidligere påvist, at den detalje, der udpeger den store gruppe, der i samlet trop trænger ind på Blegdamsfælleden som socialister, er afsyngelsen af Internationale, men denne oplysning stammer fra Justitsministeriets fremstilling, der bygger på Clausens rapport, idet tilføjelsen om, at de afsynger Internationale, er gjort for at udpege socialisterne som ansvarlige for balladen.”"
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Korrekt...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
     }
 }]
