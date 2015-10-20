@@ -1,5 +1,6 @@
 [{
     "userInterface": {
+        "taskNumber" : "3",
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
         "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
@@ -15,6 +16,7 @@
     }
 }, {
     "userInterface": {
+        "taskNumber" : "3",
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
         "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
@@ -30,6 +32,7 @@
     }
 }, {
     "userInterface": {
+        "taskNumber" : "3",
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
         "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
@@ -45,6 +48,7 @@
     }
 }, {
     "userInterface": {
+        "taskNumber" : "3",
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
         "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
@@ -60,6 +64,7 @@
     }
 }, {
     "userInterface": {
+        "taskNumber" : "3",
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
         "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]

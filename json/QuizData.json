@@ -52,7 +52,7 @@
         "btn": ["Kilde", "Fremstilling"]
     },
     "quizData": {
-        "taskText": "Svar på om der er tale om en kilde eller en fremstilling - 3",
+        "taskText": "Svar på om der er tale om en kilde eller en fremstilling - 4",
         "slideData": {
             "type": "video",
             "src": "https://www.youtube.com/embed/q5-6V_Ur084?rel=0"

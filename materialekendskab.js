@@ -21,8 +21,8 @@ function returnCarouselIndicators(jsonData){
 function returnCarouselItem(questionNum, jsonData){
 	var itemData = jsonData[questionNum].quizData;
 
-	var HTML = '<div id="question_'+questionNum+'" class="item'+((questionNum==0)?' active':'')+'">' +
-					'<h2 class="indent">'+itemData.taskText+'</h2>';
+	// var HTML = '<div id="question_'+questionNum+'" class="item'+((questionNum==0)?' active':'')+'">' + '<h2 class="indent">'+itemData.taskText+'</h2>';
+    var HTML = '<div id="question_'+questionNum+'" class="item'+((questionNum==0)?' active':'')+'">';
 
 	switch(itemData.slideData.type) {
 	    case "img":
@@ -66,6 +66,7 @@ function returnBtnContainer(jsonData){
 	for (k in jsonData){
 		var btnArray = jsonData[k].userInterface.btn;
 		HTML += '<span id="btnContainer_'+k+'" class="btnContainer">';
+        HTML += (( (jsonData[k].quizData.hasOwnProperty("taskText")) && (jsonData[k].quizData.taskText !='') )?'<h4>'+jsonData[k].quizData.taskText+'</h4>':'');
 		for (n in btnArray){
 			HTML += '<a class="btn btn-default StudentAnswer" href="#">'+btnArray[n]+'</a>';
 		}
@@ -103,6 +104,18 @@ function returnCarouselHtml(questionNum, jsonData, UlrVarObj){
                 '</a>' +
             '</div>';
 	return HTML;
+}
+
+
+function ReturnTaskNumberImg(){
+    var Num = 0;
+    if (UlrVarObj.file = "_t1") Num = 1;
+    if (UlrVarObj.file = "_t2") Num = 2;
+    if (UlrVarObj.file = "_t3") Num = 3;
+    if (Num !== 0)
+        return '<img class="TaskNumberImg" src="../library/img/TaskNumbers_'+String(Num)+'.svg">';
+    else
+        return '';
 }
 
 
@@ -164,7 +177,8 @@ console.log("elementInArray - false: " + elementInArray([1,2,3,4,5], 6));
 
 
 function countCorrectAnswers(jsonData){
-	correct_total = 0;
+	// correct_total = 0;
+    window.FirstTime = true;
 	error_total = 0;
     var error_displayed_total = 0;
     var numOfQuestions = 0;
@@ -173,11 +187,14 @@ function countCorrectAnswers(jsonData){
 	    var answerArray = jsonData[k].quizData.correctAnswer;
 	    var numOfSrudentAnswers = $("#btnContainer_"+k+" > .btnPressed").length;
 	    var numOfCorrectAnswers = answerArray.length;
+        jsonData[k].StudentAnswers = {Correct : [], Wrong: []};
 	    for (var n in answerArray){
 	       if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
-	           correct++;   // Counting correct answers.
-               // $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
-               $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").addClass("CorrectAnswer");
+                // if ((typeof jsonData_old !== "undefined") && ())
+	            correct++;   // Counting correct answers.
+                jsonData[k].StudentAnswers.Correct.push(n);
+                // $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
+                $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").addClass("CorrectAnswer");
 	       } else {
 	    		error_missed++;  // Counting missed correct answers, eg. if there are two or more correct answers and the student does not answer all of the answers, then this counter counts the missed correct answers.
 	       }
@@ -192,13 +209,15 @@ function countCorrectAnswers(jsonData){
         $("#btnContainer_"+k+" > .StudentAnswer").each(function( index, element ) {
             if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index))){
                 ++error_displayed;
+                jsonData[k].StudentAnswers.Wrong.push(index);
                 // $(element).toggleClass("WrongAnswer");
                 $(element).addClass("WrongAnswer");
             }
         });
 
         // correct_total += (correct  // <-------------------------   IMPORTANT: THIS WILL GIVE TWO POINTS IF TWO CORRECT ANSWERS ARE GIVEN IN ONE QUESTION!!!
-	    correct_total += (correct >= 1)? 1 : 0;   // <-------------------------   IMPORTANT: THIS ENFORCES _ONE_ POINT IF THERE ARE TWO OR MORE CORRECT ANSWERS!!!!!
+        if ( (typeof jsonData_old !== "undefined") && (!CompareArrays(jsonData[k].StudentAnswers.Correct, jsonData_old[k].StudentAnswers.Correct)) )
+	       correct_total += (correct >= 1)? 1 : 0;   // <-------------------------   IMPORTANT: THIS ENFORCES _ONE_ POINT IF THERE ARE TWO OR MORE CORRECT ANSWERS!!!!!
 	    error_total += error_wrong + error_missed - correct;
         error_displayed_total += error_displayed;
 
@@ -208,7 +227,24 @@ function countCorrectAnswers(jsonData){
     $(".QuestionCounter").text(correct_total+'/'+numOfQuestions);
     $(".ErrorCount").text(error_displayed_total);
 	console.log("countCorrectAnswers - correct_total: " + correct_total + ", error_total: " + error_total + ", error_displayed_total: " + error_displayed_total);
+
+    // if (typeof jsonData_old !== "undefined") {
+       window.jsonData_old = JSON.parse(JSON.stringify(jsonData));
+        console.log("jsonData_old: " + JSON.stringify(jsonData_old));
+    // }
 }
+
+
+function CompareArrays(Array1, Array2){ 
+    if (Array1.length != Array2.length) return false;
+    for (var n in Array1){
+        if (Array1[n] !== Array2[n]) return false;
+    }
+    return true;
+}
+console.log("CompareArrays: " + CompareArrays([1,2,3,4,5], [1,2,3,4]));
+console.log("CompareArrays: " + CompareArrays([1,2,3,4,5], [1,2,3,4,100]));
+console.log("CompareArrays: " + CompareArrays([1,2,3,4,5], [1,2,3,4,5]));
 
 
 function giveFeedback(jsonData, questionNum){
@@ -230,9 +266,20 @@ function giveFeedback(jsonData, questionNum){
 
 function CheckStudentAnswers(jsonData){
 
-    $(document).on('click', ".btnPressed", function(event) {
-        $(this).removeClass("CorrectAnswer WrongAnswer");
-    });
+    // $(document).on('click', ".CorrectAnswer", function(event) {
+    //     $(this).removeClass("CorrectAnswer btnPressed");
+    //     console.log("btnPressed BOOL: " + $(this).hasClass("btnPressed") );
+    // });
+
+    // $(document).on('click', ".WrongAnswer", function(event) {
+    //     $(this).removeClass("WrongAnswer btnPressed");
+    //     console.log("btnPressed BOOL: " + $(this).hasClass("btnPressed") );
+    // });
+
+    // $(document).on('click', ".btnPressed", function(event) {
+    //     $(this).removeClass("CorrectAnswer WrongAnswer");
+    //     console.log("btnPressed BOOL: " + $(this).hasClass("btnPressed") );
+    // });
 
     $(document).on('click', ".StudentAnswer", function(event) {
     	event.preventDefault(); // Prevents sending the user to "href". 
@@ -242,14 +289,25 @@ function CheckStudentAnswers(jsonData){
             UserMsgBox_SetWidth(".container-fluid", 0.7);
         } else {
 
-            $(this).toggleClass("btnPressed");
+            // $(this).toggleClass("btnPressed");
 
-            if ($(this).hasClass("btnPressed"))
-            	$(this).css(CSS_OBJECT.btnPressed);
-            else
-                $(this).css(CSS_OBJECT.StudentAnswer);
+            var ParentObj = $(this).parent();
+            console.log("CheckStudentAnswers XXX: " + $(ParentObj).prop("id"));
+            $(".btn", ParentObj).removeClass("btnPressed CorrectAnswer WrongAnswer"); // 19-10-2015
+            $(this).toggleClass("btnPressed");                 // 19-10-2015
+            $(this).css(CSS_OBJECT.StudentAnswer);          // 19-10-2015
 
+            // if ($(this).hasClass("btnPressed"))
+            // 	$(this).css(CSS_OBJECT.btnPressed);
+            // else
+            //     $(this).css(CSS_OBJECT.StudentAnswer);
 
+            $(".StudentAnswer").each(function( index, element ) {
+                if ($(element).hasClass("btnPressed"))           // 19-10-2015
+                    $(element).css(CSS_OBJECT.btnPressed);       // 19-10-2015
+                else                                             // 19-10-2015
+                    $(element).css(CSS_OBJECT.StudentAnswer);    // 19-10-2015
+            });
         }
 
     });
@@ -257,14 +315,35 @@ function CheckStudentAnswers(jsonData){
     $(document).on('click', ".checkAnswer", function(event) {
         event.preventDefault(); // Prevents sending the user to "href".
 
+        if (!$("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").hasClass("btnPressed")) {
+            UserMsgBox("body", "Du skal svare på et spørgsmål før du tjekker svar.");
+            UserMsgBox_SetWidth(".container-fluid", 0.7);
+            return 0;
+        }
+
         if (jsonData[CurrentQuestionId].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
             UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
             UserMsgBox_SetWidth(".container-fluid", 0.7);
         } else {
             countCorrectAnswers(jsonData);
 
+            // // Gives the right answer a green color, and display a list of feedback:
+            // $("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").each(function( index, element ) {
+            //     if ($(element).hasClass("CorrectAnswer"))
+            //         $(element).css(CSS_OBJECT.CorrectAnswer); // Sets the color to the style of .CorrectAnswer which is green...
+        
+            //     if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
+            //         // jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
+            //         if (!$(element).hasClass("CorrectAnswer"))
+            //             $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongAnswer which is red...
+            //         giveFeedback(jsonData, CurrentQuestionId);   // Give feedback
+            //     } else {
+            //         $(element).removeClass("CorrectAnswer WrongAnswer");
+            //     }
+            // });
+
             // Gives the right answer a green color, and display a list of feedback:
-            $("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").each(function( index, element ) {
+            $(".btnContainer > .StudentAnswer").each(function( index, element ) {
                 if ($(element).hasClass("CorrectAnswer"))
                     $(element).css(CSS_OBJECT.CorrectAnswer); // Sets the color to the style of .CorrectAnswer which is green...
         

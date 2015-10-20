@@ -16,13 +16,14 @@ h4 {
 	line-height: 1em;
 }
 
-#questionCarousel{margin-top: 20px; }
+#questionCarousel{margin-top: 10px; }
 
 
 .StudentAnswer {
     background-color: #e7e6e2;
     border: 1px solid #e7e6e2;
     color: #000;
+    margin-bottom: 10px;
 }
 
 
