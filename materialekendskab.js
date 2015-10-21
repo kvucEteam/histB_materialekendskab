@@ -291,7 +291,8 @@ function CheckStudentAnswers(jsonData){
                 console.log("CheckStudentAnswers XXX 2: " + $(this).text());
                 console.log("CheckStudentAnswers XXX 3: " + $(this).prop("class"));
                 // $(".btn", ParentObj).removeClass("btnPressed CorrectAnswer WrongAnswer"); // 19-10-2015
-                $(".btn", ParentObj).removeClass("btnPressed"); // 19-10-2015
+                // $(".btn", ParentObj).removeClass("btnPressed"); // 19-10-2015
+                $(".btn", ParentObj).removeClass("CorrectAnswer WrongAnswer"); // 21-10-2015
                 $(this).addClass("btnPressed");                 // 19-10-2015
                 // $(this).css(CSS_OBJECT.StudentAnswer);          // 19-10-2015  <------------ XXXXXXXX!!!!
             }
@@ -345,20 +346,22 @@ function CheckStudentAnswers(jsonData){
             // Gives the right answer a green color, and display a list of feedback:
             $(".btnContainer > .StudentAnswer").each(function( index, element ) {
                 if ($(element).hasClass("CorrectAnswer")){
+                    console.log("TEST -1- " + $(element).prop("class"));
                     $(element).css(CSS_OBJECT.CorrectAnswer); // Sets the color to the style of .CorrectAnswer which is green...
                     // $(element).removeClass("btnPressed");
                 }
         
-                if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
+                // if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
                     // jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
                     if ($(element).hasClass("WrongAnswer")){
                         $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongAnswer which is red...
+                        console.log("TEST -2- " + $(element).prop("class"));
                         // $(element).removeClass("btnPressed");
                     }
                     // giveFeedback(jsonData, CurrentQuestionId);   // Give feedback
-                } else {
-                    $(element).removeClass("CorrectAnswer WrongAnswer");
-                }
+                // } else {
+                //     $(element).removeClass("CorrectAnswer WrongAnswer");
+                // }
             });
         }
     });
