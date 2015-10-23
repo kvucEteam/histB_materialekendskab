@@ -2,8 +2,8 @@
     "userInterface": {
         "taskNumber" : "2",
         "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
     "quizData": {
         "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
@@ -11,15 +11,15 @@
             "type": "text",
             "text": "Internationale begivenheder og erfaringer kom til at påvirke den danske debat om kvinders valgret. Gennemførelse af valgretten i andre lande fungerede som ’eksemplets magt’ og banede vej for, at man kunne forstille sig, at både kvinder og mænd deltog i politik. Desuden kom der fra den internationale bevægelse stærk inspiration til valgretsbevægelsens argumentation, retorik, pressestrategi og mobilisering. Den danske vej mod kvindelig valgret, der blev gennemført på kommunalt plan i 1908 og til Rigsdagen med grundlovsændringen i 1915, er derfor også et led i en samtidig international udvikling og gensidig påvirkning."
         },
-        "correctAnswer": ["3"],
+        "correctAnswer": ["2"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Korrekt...", "(Perspektiverende) Forkert..."]
     }
 }, {
     "userInterface": {
         "taskNumber" : "2",
         "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
     "quizData": {
         "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
@@ -34,8 +34,8 @@
     "userInterface": {
         "taskNumber" : "2",
         "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
     "quizData": {
         "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
@@ -50,8 +50,8 @@
     "userInterface": {
         "taskNumber" : "2",
         "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
     "quizData": {
         "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
@@ -66,8 +66,8 @@
     "userInterface": {
         "taskNumber" : "2",
         "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende, diskuterende, vurderende eller perspektiverende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Diskuterende?", "Vurderende?", "Perspektiverende?"]
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
     "quizData": {
         "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
@@ -75,7 +75,7 @@
             "type": "text",
             "text": "I dag er centrale værdier fra ungdomsoprøret en naturlig del af hele samfundets værdier. Det gælder ligestilling på arbejdsmarkedet og i uddannelserne, seksuel frigørelse, medindflydelse på arbejdspladsen og uddannelsesinstitutionerne. Det gælder de nye boligformer – især bofællesskaberne – og ikke mindst en omfattende velfærdsstat, som i dag har bred politisk opbakning, men ikke så meget hos de liberale. Især de nye kollektive boligformer er i dag markante i byggeri for børnefamilierne."
         },
-        "correctAnswer": ["4"],
+        "correctAnswer": ["2"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Korrekt..."]
     }
 }]
