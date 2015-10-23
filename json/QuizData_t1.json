@@ -9,10 +9,10 @@
         "taskText": "",
         "slideData": {
             "type": "text",
-            "text": "Den danske politiker og jurisk A.F. Krieger var medlem af grundlovsudvalget i 1849. I forbindelse med dette arbejde udtalte han 'Overalt erkender man jo saaledes, at umyndige, børn, fruentimmere, forbrydere ikke bør have valgret'. Dette citat understreger den tids opfattelse af kvinden, som værende ude af stand til at deltage i demokratiet på lige fod med mænd."
+            "text": "Den danske politiker og jurist A.F. Krieger var medlem af grundlovsudvalget i 1849. I forbindelse med dette arbejde udtalte han 'Overalt erkender man jo saaledes, at umyndige, børn, fruentimmere, forbrydere ikke bør have valgret'. <br/>Dette citat understreger den tids opfattelse af kvinden, som værende ude af stand til at deltage i demokratiet på lige fod med mænd."
         },
         "correctAnswer": ["1"],
-        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt... Teksten er analyserende fordi der anvendes et citat fra en kilde til at sige noget generelt om et emne på en bestemt tid.", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
     }
 }, {
     "userInterface": {
@@ -28,7 +28,7 @@
             "text": "Middelalderens ægteskaber var et samarbejde mellem mand og kvinde. Udover moderrollen havde kvinden ansvar for husholdet, herunder madlavning, vask, produktion af tøj m.m. Andre sysler kunne være brodering, og der er fundet fingerbøl fra middelalderen netop til dette formål. Inden for samfundets øverste lag samarbejdede det adelige ægtepar om administrationen af godser. Der var også egentlige erhverv, der blev anset for at være kvindehverv. Det var eksempelvis kvinderne, der bryggede øllet. På de mange kroer var der krokoner, og kvinder har formentlig i nogle tilfælde selv drevet kroer. I byerne fandt man desuden småhandlende kvinder i boder."
         },
         "correctAnswer": ["0"],
-        "feedbackData": ["(Redegørende) Korrekt... <br/>Redegørende niveau indeholder ofte ordene ditten og datten.... ", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+        "feedbackData": ["(Redegørende) Korrekt... <br/>Teksten er redegørende, fordi den gengiver, beskriver og ikke argumenterer. Her er det arbejdsfordelingen mellem kvinder og mænd i middelalderen der beskrives.", "(Analyserende) Forkert...<br/>Det analyserende niveau indeholder ofte ordene x og x....", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
     }
 }, {
     "userInterface": {
@@ -41,10 +41,10 @@
         "taskText": "",
         "slideData": {
             "type": "text",
-            "text": "Ungdomsoprøret havde tre drivkræfter: et generationsoprør mod forældrene og senere mod det politiske og den kapitalistiske private sektor med kravet om ligestilling, seksuel frigørelse og større medarbejderindflydelse i virksomhederne, men ikke mindst i uddannelsesinstitutionerne.For det andet fascinationen af en politisk ideologi – her de socialistiske og kommunistiske tankesystemer som det nye svar på fremtidens samfund med regimerne i USSR, DDR, Cuba og Kina som forbilleder."
+            "text": "Ungdomsoprøret havde tre drivkræfter: et generationsoprør mod forældrene og senere mod det politiske og den kapitalistiske private sektor med kravet om ligestilling, seksuel frigørelse og større medarbejderindflydelse i virksomhederne, men ikke mindst i uddannelsesinstitutionerne. For det andet fascinationen af en politisk ideologi – her de socialistiske og kommunistiske tankesystemer som det nye svar på fremtidens samfund med regimerne i USSR, DDR, Cuba og Kina som forbilleder."
         },
         "correctAnswer": ["3"],
-        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Korrekt...", "(Perspektiverende) Forkert..."]
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende)  ...", "(Vurderende) Korrekt... På det vurderende niveau bliver der tolket og prioriteret med henblik på at give en vurdering af årsager, sammenhænge og konsekvenser. Teksten her er vurderende fordi, der fremhæves tre årsagsforklaringer (drivkræfter) for ungdomsoprøret. På den måde udelukkes andre mulige forklaringer.", "(Perspektiverende) Forkert..."]
     }
 }, {
     "userInterface": {
@@ -57,10 +57,10 @@
         "taskText": "",
         "slideData": {
             "type": "text",
-            "text": "Det er sikkert, at kalkmalerierne i langt de fleste danske kirker på et tidspunkt er blevet kalket over. Men skete det i forbindelse med Reformationen, som traditionen lyder – og som det stadig fremgår af mange bøger og beskrivelser? Grundlæggende lyder det mest sandsynligt, at man i forbindelse med Reformationen fjernede i hvert fald de billeder, der havde med katolske helgener at gøre, for nu var det slut med helgendyrkelse. I bredere forstand skulle det også være slut med at dyrke billeder af hellige personer som værende hellige i sig selv. Så det er ikke svært at forstå den sejlivede myte om kalkmaleriernes overkalkning efter Reformationen. Især ikke, når man også ved, at nyfundne middelalderlige kalkmalerier altid dukker op under flere lag kalk. Imidlertid findes der i enkelte kirker kalkmalerier, som aldrig har været overkalkede, og i ganske mange kirker findes der kalkmalerier, som er malede efter Reformationen. Disse findes fortrinsvis i kirker, som ikke havde fået (nye) kalkmalerier i tiden op mod Reformationen. Sagen forstås vist bedst, hvis man gør sig klart, at kalkmalerierne langt op i tiden blev anset som en selvfølge. Det var noget, der hørte sig til, og helt op til begyndelsen af 1800-tallet blev der malet nye kalkmalerier - ofte oven på gamle malerier, som så først blev overhvidtede. I øvrigt blev der også lavet kalkmalede dekorationer på væggene på mange slotte og herregårde."
+            "text": "Det er sikkert, at kalkmalerierne i langt de fleste danske kirker på et tidspunkt er blevet kalket over. <br/>Men skete det i forbindelse med Reformationen, som traditionen lyder – og som det stadig fremgår af mange bøger og beskrivelser? Grundlæggende lyder det mest sandsynligt, at man i forbindelse med Reformationen fjernede i hvert fald de billeder, der havde med katolske helgener at gøre, for nu var det slut med helgendyrkelse. <br/>I bredere forstand skulle det også være slut med at dyrke billeder af hellige personer som værende hellige i sig selv. Så det er ikke svært at forstå den sejlivede myte om kalkmaleriernes overkalkning efter Reformationen. <br/>Især ikke, når man også ved, at nyfundne middelalderlige kalkmalerier altid dukker op under flere lag kalk. Imidlertid findes der i enkelte kirker kalkmalerier, som aldrig har været overkalkede, og i ganske mange kirker findes der kalkmalerier, som er malede efter Reformationen. <br/>Disse findes fortrinsvis i kirker, som ikke havde fået (nye) kalkmalerier i tiden op mod Reformationen. Sagen forstås vist bedst, hvis man gør sig klart, at kalkmalerierne langt op i tiden blev anset som en selvfølge. Det var noget, der hørte sig til, og helt op til begyndelsen af 1800-tallet blev der malet nye kalkmalerier - ofte oven på gamle malerier, som så først blev overhvidtede. I øvrigt blev der også lavet kalkmalede dekorationer på væggene på mange slotte og herregårde."
         },
         "correctAnswer": ["2"],
-        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Korrekt...", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Korrekt... På det diskuterende niveau bliver der fremlagt flere mulige forklaringsmodeller, uden der tages endelig stilling til det rigtige svar. Teksten her sætter spørgsmålstegn ved myten om, at alle kalkmalerier blev overmalet i forbindelse med reformationen. ", "(Vurderende) Forkert...", "(Perspektiverende) Forkert..."]
     }
 }, {
     "userInterface": {
@@ -76,6 +76,6 @@
             "text": "Den nye socialreform markerede et vigtigt skift i forhold til tidligere tiders syn på og håndtering af mindrebemidlede og arbejdsløse. De første spadestik til den velfærdsstat, vi kender i dag, var således taget. Men det var ikke kun disse mere langsigtede perspektiver, der kendetegnede den nye socialreform. Socialreformen var også sat i verden for at skulle virke på lidt kortere sigt, da hensigten med den var at afbøde nogle af de konsekvenser, den store arbejdsløshed havde. Trods dette var årtiet præget af store uroligheder med demonstrationer til gavn for de arbejdsløse og en storlockout i 1936, som Stauning havde forsøgt undgået ved forhandlingerne i Kanslergade i 1933."
         },
         "correctAnswer": ["4"],
-        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Korrekt..."]
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Diskuterende) Forkert...", "(Vurderende) Forkert...", "(Perspektiverende) Korrekt... Når man arbejder perspektiverende, undersøger man et fænomens placering i andre sammenhænge, man laver f.eks. en sammenligning i tid eller geografiske områder. Her er det socialreformen i 1936 og dens betydning for velfærdsstaten idag, der er perspektiveringen. Man forstår nutiden på baggrund af fortiden."]
     }
 }]
