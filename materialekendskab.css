@@ -23,38 +23,28 @@ h4 {
     background-color: #e7e6e2;
     border: 1px solid #e7e6e2;
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
-/*******************  CSS_exception is now in use for all filenames. previously only for materialekendskab.html?file=3  ******************************/
-.CSS_exception{
-	border-radius: 8px;
-	background-color: #FFF;
+.SourcePage{/*border: 1px solid #C0C0C0;*/ /*padding: 10px 10px 0px 10px;*/ display: none;}
+
+.SourcePage > h5 {
+	display: inline-block;
 }
-.CSS_exception .carousel-indicators{
-	bottom: -5px;
+
+.Source{
+	margin-top: 30px;
 }
-.CSS_exception .carousel-indicators li{
-	border: 1px solid #000;
-}
-.CSS_exception .carousel-indicators .active{
-	background-color: #000;
-}
-.CSS_exception .left, .CSS_exception .right{
-	background-image: none;
-	color: #000;
-}
-.CSS_exception .carousel-control{
-	opacity: 0.7;
-}
-.CSS_exception .carousel-control:hover{
-	opacity: 1;
-}
-.CSS_exception .TextHolder{
-	margin-bottom: 20px;
-}
-/***************************************************************************************************************************************************/
+
+.PagerClass{display: inline-block; margin-bottom: 0px;}
+#PagerContainer{display: inline-block;}
+#PagerContainer ul {padding: 0px;}
+#PagerContainer ul li {display: inline;}
+
+.PagerButton{margin-right: 10px;}
+
+.dshow{display: block}
 
 
 .MsgBox_bgr{z-index: 20;}  /* Dette fixer problemet med at .carousel-indicators har z-index: 15 */
@@ -63,39 +53,33 @@ h4 {
 .TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;} 
 
 .indent{margin-left: 10px}
-
-.PointFeedback{margin-top: 10px;}
-
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 70%;
-    margin: auto;
-}
 /*
-.btnPressed{
-    background-color: #1da6db;
-    border: 1px solid #1da6db;
-    color: #fff;
-}
+.PointFeedback{margin-top: 10px;}
 */
+.PagerHeader{
+	font-weight: 700;
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 0px;
+}
+
+.btnContainer > h4{
+	margin-top: 30px;
+}
+
 .btnPressed{
 	background-color: #666666;
     border: 1px solid #666666;
     color: #fff;
 }
+.btnPressed:hover{
+	background-color: #969696;
+    border: 1px solid #969696;
+    color: #FFF;
+}
 
 .QuestionTask{
 	color: #000;
-}
-
-.checkAnswer {
-	background-color: #05a0a8;
-    border-color: #05a0a8;
-    color: #fff
-}
-.checkAnswer:hover{
-	background-color: #047176;
-    border-color: #047176;
-    color: #fff;
 }
 
 
@@ -115,7 +99,7 @@ h4 {
 	color: #FFF;
 }
 
-/*
+
 .btn-primary{
 	background-color: #666666;
     border: 1px solid #666666;
@@ -126,7 +110,19 @@ h4 {
     border: 1px solid #969696;
     color: #FFF;
 }
-*/
+
+.checkAnswer {
+	background-color: #05a0a8;
+    border-color: #05a0a8;
+    color: #fff
+}
+.checkAnswer:hover{
+	background-color: #047176;
+    border-color: #047176;
+    color: #fff;
+}
+
+
 .TaskNumberImg {
     height: 20px;
     width: 20px;
@@ -137,3 +133,4 @@ h4 {
     width: 20px;
 }
 
+.mb10{margin-bottom: 10px;}

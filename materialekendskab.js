@@ -2,160 +2,27 @@ var jsonData = "<h1>OK</h1>";
 var CurrentQuestionId = 0;
 var correct_total = 0;
 var error_total = 0;
-// var CssObj = {};
 
-// The function makes the carousel-indicator for the carousel:
-function returnCarouselIndicators(jsonData){
+
+
+function returnBtnContainer(jsonData, SourceId){
+    var Num = parseInt(ActiveLinkNum) - 1;
 	var HTML = '';
-	for (var i = 0; i < jsonData.length; i++) {
-		HTML += '<li data-target="#questionCarousel" data-slide-to="'+i+'"'+((i==0)?' class="active"':'')+'></li>';
-	};
-	console.log("returnCarouselIndicators: " + HTML);
-
-	return HTML;
-}
-// XXX = [{1:1},{2:2},{3:3},{4:4},{5:5}];
-// returnCarouselIndicators(XXX);
-
-
-function returnCarouselItem(questionNum, jsonData){
-	var itemData = jsonData[questionNum].quizData;
-
-	// var HTML = '<div id="question_'+questionNum+'" class="item'+((questionNum==0)?' active':'')+'">' + '<h2 class="indent">'+itemData.taskText+'</h2>';
-    var HTML = '<div id="question_'+questionNum+'" class="item'+((questionNum==0)?' active':'')+'">';
-
-	switch(itemData.slideData.type) {
-	    case "img":
-	        HTML += '<img class="img-responsive" src="'+itemData.slideData.src+'" alt="'+itemData.slideData.alt+'"/>';
-	        break;
-	    case "text":
-	        HTML += '<div class="TextHolder">'+itemData.slideData.text+'</div>';
-	        break;
-	    case "video":
-	        HTML += '<div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
-                        '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
-                    '</div>';
-	        break;
-	    default:
-	        alert('Invalid "type"');
-	}
-
-	HTML += '</div>';
-	
-	console.log("returnCarouselItem: " + HTML);
-
-	return HTML;
-}
-
-
-function returnCarouseList(jsonData){
-	var HTML = '';
-	for (n in jsonData){
-		HTML += returnCarouselItem(n, jsonData);
-	}
-
-	console.log("returnCarouseList: " + HTML);
-	
-	return HTML;
-}
-
-
-
-function returnBtnContainer(jsonData){
-	var HTML = '';
-	for (k in jsonData){
-		var btnArray = jsonData[k].userInterface.btn;
-		HTML += '<span id="btnContainer_'+k+'" class="btnContainer">';
-        HTML += (( (jsonData[k].quizData.hasOwnProperty("taskText")) && (jsonData[k].quizData.taskText !='') )?'<h4>'+jsonData[k].quizData.taskText+'</h4>':'');
+	// for (k in jsonData){
+		var btnArray = jsonData[SourceId].userInterface.btn;   // ActiveLinkNum
+		HTML += '<div id="btnContainer_'+String(SourceId)+'" class="btnContainer">';
+        HTML += (( (jsonData[SourceId].quizData.hasOwnProperty("taskText")) && (jsonData[SourceId].quizData.taskText !='') )?'<h4>'+jsonData[SourceId].quizData.taskText+'</h4>':'');
 		for (n in btnArray){
-			HTML += '<a class="btn btn-default StudentAnswer" href="#">'+btnArray[n]+'</a>';
+			HTML += '<span class="btn btn-default StudentAnswer" href="#">'+btnArray[n]+'</span>';
 		}
-		HTML += '</span>';
-	}
+		HTML += '</div>';
+	// }
+    HTML += '<span class="checkAnswer btn btn-primary" href="#"> Tjek svar </span>';
+    HTML += '<h5>Korrekte svar: <span class="QuestionCounter QuestionTask">0/0</span> Fejl: <span class="ErrorCount QuestionTask">0</span> </h5>';
 	return HTML;
 }
 
 
-function returnCarouselHtml(questionNum, jsonData, UlrVarObj){
-	
-	var HTML = '';
-
-	HTML += returnBtnContainer(jsonData);
-
-	console.log("ReturnQustionHtml - btnHtml: " + HTML);
-
-	// HTML += '<a class="btn btn-default checkAnswer" href="#"> Tjek svar </a>';
-
-	// HTML += '<div id="questionCarousel" class="carousel slide'+((parseInt(UlrVarObj.file) == 3)?" CSS_exception":"")+'" data-ride="carousel" data-interval="false">' +
-    HTML += '<div id="questionCarousel" class="carousel slide CSS_exception" data-ride="carousel" data-interval="false">' +
-                '<ol class="carousel-indicators">' +
-                    returnCarouselIndicators(jsonData) + 
-                '</ol>' +
-                '<div class="carousel-inner" role="listbox">' +
-                    returnCarouseList(jsonData) + 
-                '</div>' +
-                '<a class="left carousel-control" href="#questionCarousel" role="button" data-slide="prev">' +
-                    '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
-                    '<span class="sr-only">Previous</span>' +
-                '</a>' +
-                '<a class="right carousel-control" href="#questionCarousel" role="button" data-slide="next">' +
-                    '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
-                    '<span class="sr-only">Next</span>' +
-                '</a>' +
-            '</div>';
-	return HTML;
-}
-
-
-function userInterfaceChanger(jsonData){
-	var questionId, nextQuestionId;
-
-	// When the left carousel button is pressed...
-    $(document).on('click', "#questionCarousel .left", function(event) {
-        event.preventDefault(); // Prevents sending the user to "href". 
-
-        questionId = parseInt($(".carousel-inner > .active").prop("id").split("_")[1]);
-        nextQuestionId = ((questionId - 1) < 0) ? jsonData.length - 1 : questionId - 1;
-        console.log("userInterfaceChanger - questionId: " + questionId + ", nextQuestionId: " + nextQuestionId);
-        CurrentQuestionId = nextQuestionId;
-
-        $("#header").html(jsonData[CurrentQuestionId].userInterface.header);        // Shows the next heading.
-        $("#subHeader").html(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the next subheading.
-
-        $(".btnContainer").hide();                                                  // Hides all the button containers.
-        $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the next button container.
-    });
-
-    // When the right carousel button is pressed...
-    $(document).on('click', "#questionCarousel .right", function(event) {
-        event.preventDefault(); // Prevents sending the user to "href". 
-
-        var questionId = parseInt($(".carousel-inner > .active").prop("id").split("_")[1]);
-        nextQuestionId = ((questionId + 1) > jsonData.length - 1) ? 0 : questionId + 1;
-        console.log("userInterfaceChanger - questionId: " + questionId + ", nextQuestionId: " + nextQuestionId);
-        CurrentQuestionId = nextQuestionId;
-
-        $("#header").html(jsonData[CurrentQuestionId].userInterface.header);        // Shows the previous heading.
-        $("#subHeader").html(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the previous subheading.
-
-        $(".btnContainer").hide();                                                  // Hides all the button containers.
-        $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the previous button container.
-    });
-
-    // // When a carousel-indicator button is pressed... 
-    $(document).on('click', ".carousel-indicators > li", function(event) {
-        var Index = $(".carousel-indicators > li").index( this );  // Get the zero-based li number.
-        console.log("Index: " + Index);
-
-        CurrentQuestionId = Index;
-
-        $("#header").html(jsonData[CurrentQuestionId].userInterface.header);        // Shows the requested heading.
-        $("#subHeader").html(jsonData[CurrentQuestionId].userInterface.subHeader);  // Shows the requested subheading.
-
-        $(".btnContainer").hide();                                                  // Hides all the button containers.
-        $("#btnContainer_"+CurrentQuestionId).show();                               // Shows the requested button container.
-    });
-}
 
 function elementInArray(tArray, element){
     for (x in tArray){
@@ -181,7 +48,9 @@ function countCorrectAnswers(jsonData){
 	    var numOfCorrectAnswers = answerArray.length;
         jsonData[k].StudentAnswers = {Correct : [], Wrong: []};
 	    for (var n in answerArray){
-	       if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
+	        // if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
+            if ( ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")) || 
+                  $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("CorrectAnswer")){  // NY
                 // if ((typeof jsonData_old !== "undefined") && ())
 	            correct++;   // Counting correct answers.
                 jsonData[k].StudentAnswers.Correct.push(n);
@@ -199,7 +68,8 @@ function countCorrectAnswers(jsonData){
 		}
 
         $("#btnContainer_"+k+" > .StudentAnswer").each(function( index, element ) {
-            if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index))){
+            // if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index))){
+            if ((($(element).hasClass("btnPressed")) || ($(element).hasClass("WrongAnswer"))) && !(elementInArray(answerArray, index))){  // NY
                 ++error_displayed;
                 jsonData[k].StudentAnswers.Wrong.push(index);
                 // $(element).toggleClass("WrongAnswer");
@@ -256,118 +126,6 @@ function giveFeedback(jsonData, questionNum){
 }
 
 
-
-function CheckStudentAnswers(jsonData){
-
-    // $(document).on('click', ".CorrectAnswer", function(event) {
-    //     $(this).removeClass("CorrectAnswer btnPressed");
-    //     console.log("btnPressed BOOL: " + $(this).hasClass("btnPressed") );
-    // });
-
-    // $(document).on('click', ".WrongAnswer", function(event) {
-    //     $(this).removeClass("WrongAnswer btnPressed");
-    //     console.log("btnPressed BOOL: " + $(this).hasClass("btnPressed") );
-    // });
-
-    // $(document).on('click', ".btnPressed", function(event) {
-    //     $(this).removeClass("CorrectAnswer WrongAnswer");
-    //     console.log("btnPressed BOOL: " + $(this).hasClass("btnPressed") );
-    // });
-
-    $(document).on('click', ".StudentAnswer", function(event) {
-    	event.preventDefault(); // Prevents sending the user to "href". 
-
-        if (jsonData[CurrentQuestionId].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
-            UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
-            UserMsgBox_SetWidth(".container-fluid", 0.7);
-        } else {
-
-            // $(this).toggleClass("btnPressed");
-
-            // if ( (!$(this).hasClass("CorrectAnswer")) && !$(this).hasClass("WrongAnswer") ) {
-            if ( !$(this).hasClass("btnPressed") ) {
-                var ParentObj = $(this).parent();
-                console.log("CheckStudentAnswers XXX 1: " + $(ParentObj).prop("id"));
-                console.log("CheckStudentAnswers XXX 2: " + $(this).text());
-                console.log("CheckStudentAnswers XXX 3: " + $(this).prop("class"));
-                // $(".btn", ParentObj).removeClass("btnPressed CorrectAnswer WrongAnswer"); // 19-10-2015
-                // $(".btn", ParentObj).removeClass("btnPressed"); // 19-10-2015
-                $(".btn", ParentObj).removeClass("CorrectAnswer WrongAnswer"); // 21-10-2015
-                $(this).addClass("btnPressed");                 // 19-10-2015
-                // $(this).css(CSS_OBJECT.StudentAnswer);          // 19-10-2015  <------------ XXXXXXXX!!!!
-            }
-
-            // if ($(this).hasClass("btnPressed"))
-            // 	$(this).css(CSS_OBJECT.btnPressed);
-            // else
-            //     $(this).css(CSS_OBJECT.StudentAnswer);
-
-            $(".StudentAnswer").each(function( index, element ) {
-                if ($(element).hasClass("btnPressed") && !($(element).hasClass("CorrectAnswer") || $(element).hasClass("CorrectAnswer")))           // 19-10-2015
-                    $(element).css(CSS_OBJECT.btnPressed);       // 19-10-2015
-                else                                             // 19-10-2015
-                    $(element).css(CSS_OBJECT.StudentAnswer);    // 19-10-2015
-            });
-        }
-
-    });
-
-    $(document).on('click', ".checkAnswer", function(event) {
-        event.preventDefault(); // Prevents sending the user to "href".
-
-        if (!$("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").hasClass("btnPressed")) {
-            UserMsgBox("body", "Du skal svare på et spørgsmål før du tjekker svar.");
-            UserMsgBox_SetWidth(".container-fluid", 0.7);
-            return 0;
-        }
-
-        if (jsonData[CurrentQuestionId].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
-            UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
-            UserMsgBox_SetWidth(".container-fluid", 0.7);
-        } else {
-            countCorrectAnswers(jsonData);
-            giveFeedback(jsonData, CurrentQuestionId);
-
-            // // Gives the right answer a green color, and display a list of feedback:
-            // $("#btnContainer_"+CurrentQuestionId+" > .StudentAnswer").each(function( index, element ) {
-            //     if ($(element).hasClass("CorrectAnswer"))
-            //         $(element).css(CSS_OBJECT.CorrectAnswer); // Sets the color to the style of .CorrectAnswer which is green...
-        
-            //     if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
-            //         // jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
-            //         if (!$(element).hasClass("CorrectAnswer"))
-            //             $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongAnswer which is red...
-            //         giveFeedback(jsonData, CurrentQuestionId);   // Give feedback
-            //     } else {
-            //         $(element).removeClass("CorrectAnswer WrongAnswer");
-            //     }
-            // });
-
-            // Gives the right answer a green color, and display a list of feedback:
-            $(".btnContainer > .StudentAnswer").each(function( index, element ) {
-                if ($(element).hasClass("CorrectAnswer")){
-                    console.log("TEST -1- " + $(element).prop("class"));
-                    $(element).css(CSS_OBJECT.CorrectAnswer); // Sets the color to the style of .CorrectAnswer which is green...
-                    // $(element).removeClass("btnPressed");
-                }
-        
-                // if ($(element).hasClass("btnPressed")){  // Only if the student has marked an answer as correct, do...
-                    // jsonData[CurrentQuestionId].answered = true; // Locks the student question for further answers/alterations to their first/initial answer.
-                    if ($(element).hasClass("WrongAnswer")){
-                        $(element).css(CSS_OBJECT.WrongAnswer); // Sets the color to the style of .WrongAnswer which is red...
-                        console.log("TEST -2- " + $(element).prop("class"));
-                        // $(element).removeClass("btnPressed");
-                    }
-                    // giveFeedback(jsonData, CurrentQuestionId);   // Give feedback
-                // } else {
-                //     $(element).removeClass("CorrectAnswer WrongAnswer");
-                // }
-            });
-        }
-    });
-}
-
-
 function ReturnAjaxData(Type, Url, Async, DataType) {
     $.ajax({
         type: Type,
@@ -402,92 +160,208 @@ function ReturnURLPerameters(UlrVarObj){
 }
 
 
-
-// TEST URL:
-// file:///Users/THAN/main-gulp-folder/objekter/kemi_drag/builds/development/index.html?pn=1&dm=1    NOTE: 0 = false, 1 = true
-// file:///Users/THAN/main-gulp-folder/objekter/kemi_drag/builds/development/index.html?pn=1&dm=0    NOTE: 0 = false, 1 = true
-function SetProgramPerameter(UlrVarObj, file){
-    if (UlrVarObj.hasOwnProperty("file") && ((1 <= parseInt(UlrVarObj["file"])) || (parseInt(UlrVarObj["file"]) <= 10000))) file = UlrVarObj["file"];  // PrincipleNum  =  pn
-    console.log("SetProgramPerameter - ReturnURLPerameters - Level: " + Level ); 
-}
-
-
 // Controles til width of the UserMsgBox
 function UserMsgBox_SetWidth(TargetSelector, WidthPercent){
     var Width = $(TargetSelector).width();
     $("#UserMsgBox").width(WidthPercent*Width);
 }
 
-// MARK - 2 -
 
-function getCss(selectorArray, CssProp){
-    var sa = selectorArray;
-    window.CSS_OBJECT = {};  // Set global object.
-    var HTML = '<div id="CSS_OBJECT">';
-    for (n in selectorArray){
-        HTML += '<span '+((sa[n].indexOf("#")!==-1)?' id="'+sa[n].replace("#","")+'" ':' class="'+((sa[n].indexOf(".")!==-1)?sa[n].replace(".",""):sa[n])+'"')+'>XXX</span>';
+// ==============================================================================
+
+function returnSourcePages(jsonData){
+    var HTML = '';
+    for (n in jsonData) {
+        HTML += '<div class="SourcePage">';
+        HTML += returnBtnContainer(jsonData, n);
+        HTML +=     '<div class="Source">'+returnSourcelItem(n, jsonData)+'</div>';
+        // HTML +=     '<div id="btnContainer_'+n+'" class="BtnContainer">';
+        // HTML += returnBtnContainer(jsonData);
+        // HTML +=     '</div>';
+        HTML += '</div>';
     }
-    HTML += '</div>';
-    console.log("getCss - HTML: " + HTML);
-    $("body").append(HTML);
-    for (n in selectorArray){
-        CSS_OBJECT[sa[n].replace("#","").replace(".","").replace(" ","")] = $(((sa[n].indexOf("#")!==-1)?sa[n]:((sa[n].indexOf(".")!==-1)?sa[n]:'.'+sa[n].replace(" "," .")))).css(CssProp);
-        // console.log('XXXX: '+((sa[n].indexOf("#")!==-1)?sa[n]:((sa[n].indexOf(".")!==-1)?sa[n]:'.'+sa[n].replace(" "," ."))));
+    return HTML;
+}
+
+function returnSourcelItem(questionNum, jsonData){
+    var itemData = jsonData[questionNum].quizData;
+    var HTML = '';
+    switch(itemData.slideData.type) {
+        case "img":
+            // HTML += '<div class="SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.kildeData.src+'" alt="'+itemData.kildeData.alt+'"/> </div>';
+            HTML += '<div class="SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.slideData.src+'" alt="'+itemData.slideData.alt+'"/> </div>';
+            break;
+        case "text":
+            HTML += '<div class="TextHolder SourceWrapper">'+itemData.slideData.text+'</div>';
+            break;
+        case "video":
+            HTML += '<div class="SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
+                        '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
+                    '</div>';
+            break;
+        default:
+            alert('Invalid "type"');
     }
-    console.log("getCss - CSS_OBJECT: " + JSON.stringify(CSS_OBJECT) );
-    $("#CSS_OBJECT").remove();
+    console.log("returnSourcelItem: " + HTML);
+    return HTML;
 }
 
 
-function hoverCss(selectorHoverArray){
-    console.log("hoverCss - selectorHoverArray 1: " + selectorHoverArray);
+// DETTE HAR INGEN FUNKTIONALITET ENDNU
+$( document ).on('click', ".PagerButton", function(event){
+    var PagerNum = $(this).text().replace("kilde","").trim();
+    
+    console.log("interfaceChanger - PagerNum: " + PagerNum); // + ' - ' + jsonData[parseInt(PagerNum)-1].userInterface.header);
 
-    for (n in selectorHoverArray){
-        selectorHoverArray[n] = selectorHoverArray[n].split("_hover")[0];
+    console.log("interfaceChanger - ActiveLinkNum: " + ActiveLinkNum);
+
+});
+
+
+$( document ).on('click', ".StudentAnswer", function(event){
+    var ParentObj = $(this).parent();
+    $(".StudentAnswer", ParentObj).removeClass("btnPressed CorrectAnswer WrongAnswer"); // Removes all previous answers in the view
+    $(this).toggleClass("btnPressed");                                                  // Marks the pressed button as selected.
+    console.log("interfaceChanger - ActiveLinkNum: " + ActiveLinkNum);
+});
+
+
+$(document).on('click', ".checkAnswer", function(event) {
+    event.preventDefault(); // Prevents sending the user to "href".
+
+    if (!$("#btnContainer_"+String(ActiveLinkNum-1)+" > .StudentAnswer").hasClass("btnPressed")) {
+        UserMsgBox("body", "Du skal svare på et spørgsmål før du tjekker svar.");
+        UserMsgBox_SetWidth(".container-fluid", 0.7);
+        return 0;
     }
-    console.log("hoverCss - selectorHoverArray 2: " + selectorHoverArray);
 
-    Selector = selectorHoverArray.join();
-    console.log("hoverCss - Selector 1: " + Selector);
+    if (jsonData[ActiveLinkNum-1].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
+        UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
+        UserMsgBox_SetWidth(".container-fluid", 0.7);
+    } else {
+        countCorrectAnswers(jsonData);
+        giveFeedback(jsonData, ActiveLinkNum-1);
+    }
+});
 
-    // return 0;
 
-    Selector = selectorHoverArray.join();
-    console.log("hoverCss - Selector 2: " + Selector);
+// $( document ).on('click', ".StudentAnswer", function(event){
+//     $(this).addClass("btnPressed");
+//     console.log("interfaceChanger - ActiveLinkNum: " + ActiveLinkNum);
+// });
 
-    $( Selector ).hover(
-        function() {
-            $( this ).addClass( "hover" );
-            // $( this ).css(CSS_OBJECT[returnHoverSelector(selectorArray, this) + "_hover"]);
 
-        }, function() {
-            $( this ).removeClass( "hover" );
-            // $( this ).css(CSS_OBJECT[returnHoverSelector(selectorArray, this)]);
-        }
-    );
+// ================================
+//      Pager
+// ================================
 
-    function returnHoverSelector(selectorArray, thisObj){
-        for (n in selectorArray){
-            if (selectorArray[n].indexOf(".")!==-1){
-                if ($(thisObj).hasClass(selectorArray[n]))
-                    return selectorArray[n];
-            }
-            if (selectorArray[n].indexOf("#")!==-1){
-                if ($(thisObj).prop("id") == selectorArray[n])
-                    return selectorArray[n];
-            }
+
+var Range = 9;
+var ActiveLinkNum = 1;
+
+// Pager("#PagerContainer", "#FormsContainer > div", "Pager");
+function Pager(PagerSelector, TargetSelectorChild, CssId) {
+
+    var NumOfPages = 0;
+    $(TargetSelectorChild).each(function(index, element) {
+        ++NumOfPages;
+    });
+    console.log("NumOfPages : " + NumOfPages);
+
+
+    var HTML = '<ul id="' + CssId + '" class="PagerClass">';
+
+    // MARK XXX
+
+    if (NumOfPages == 1) {
+        // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li>';
+        HTML += '<li><a href="#" class="PagerButton btn btn-default"> 1 </a></li>';
+    }
+
+    if ((1 < NumOfPages) && (NumOfPages <= Range + 1)) {
+        for (var i = 1; i <= NumOfPages; i++) {
+            // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + i + '</a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-default">' + i + '</a></li>';
         }
     }
+
+    if (NumOfPages > Range + 1) {
+        var StartIndex = ActiveLinkNum - Math.round((Range - 1) / 2); // Find the startindex based on ActiveLinkNum
+        if (StartIndex < 1) StartIndex = 1; // Ajust startindex for low ActiveLinkNum
+        if (Range + StartIndex > NumOfPages) StartIndex = NumOfPages - Range; // Ajust startindex for high ActiveLinkNum
+
+        // StartIndex = Math.round((NumOfPages - Range)/2);
+        console.log("StartIndex : " + StartIndex);
+
+
+        if (StartIndex == 2) { // Ugly special case...
+            // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-default"> 1 </a></li>';
+        }
+        if (StartIndex > 2)
+            // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li><li> ... </li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-default"> 1 </a></li><li> ... </li>';
+        for (var j = StartIndex; j < Range + StartIndex; j++) {
+            // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + j + '</a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-default">' + j + '</a></li>';
+        }
+        if (Range + StartIndex == NumOfPages)
+            for (var k = Range + StartIndex; k <= NumOfPages; k++) {
+                // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + k + '</a></li>';
+                HTML += '<li><a href="#" class="PagerButton btn btn-default">' + k + '</a></li>';
+            } else
+                // HTML += '<li> ... </li><li><a href="#" class="PagerButton btn btn-default">Kilde ' + NumOfPages + '</a></li>';
+                HTML += '<li> ... </li><li><a href="#" class="PagerButton btn btn-default">' + NumOfPages + '</a></li>';
+
+    }
+    HTML += '</ul>';
+
+    // Generate the pager:
+    $(PagerSelector).html(HTML);
+
+    $(TargetSelectorChild).removeClass("dshow");
+    $(TargetSelectorChild + ":eq(" + (parseInt(ActiveLinkNum) - 1) + ")").addClass("dshow"); // TargetSelectorChild
+
+    // 
+    $("#" + CssId + " .PagerButton").click(function(e) {
+        e.preventDefault(); // Prevent the link-nature of the anchor-tag.
+        $("#" + CssId + " .PagerButton").removeClass("btn-default btn-primary");
+        $("#" + CssId + " .PagerButton").addClass("btn-default");
+        $(this).toggleClass("btn-default btn-primary");
+
+        ActiveLinkNum = $(this).text().replace("Kilde","").trim();
+        console.log("ActiveLinkNum 2: " + ActiveLinkNum);
+
+        // TargetSelectorChildText = $(TargetSelectorChild).text();
+        // console.log("TargetSelectorChildText: " + TargetSelectorChildText);
+
+
+        Pager(PagerSelector, TargetSelectorChild, CssId); // Update the pager by recursive call
+    });
+
+    var LastElement = null;
+
+    // Set the chosen color if the pager-button is showen:
+    $(PagerSelector + " li a").each(function(index, element) {
+        if ($(element).text().replace("Kilde","").trim() == ActiveLinkNum) {
+            $(element).toggleClass("btn-default btn-primary");
+        }
+        LastElement = element;
+    });
+
+    // If the last STOP (n) is selected, and the user deletes the current STOP (n), then the user needs to "routed" to the second-last STOP (n-1):
+    if ( ActiveLinkNum > NumOfPages){
+        ActiveLinkNum = NumOfPages;
+        $(LastElement).toggleClass("btn-default btn-primary");
+        $(TargetSelectorChild + ":eq(" + (parseInt(ActiveLinkNum) - 1) + ")").addClass("dshow"); // TargetSelectorChild
+    }
+
+    console.log("ActiveLinkNum 1: " + ActiveLinkNum + ", NumOfPages: " + NumOfPages);
 }
 
 
 
 $(document).ready(function() {
-// $(window).load(function() {
-
-    var CssProp = ["background-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "color"];
-    getCss([".StudentAnswer", ".CorrectAnswer", ".WrongAnswer", ".btnPressed", ".WrongAnswer_hover"], CssProp);
-    console.log("CSS_OBJECT: " + CSS_OBJECT);
 
 
     var UlrVarObj = {"file" : ""};   // Define a default file-refrence (empty) ---> "QuizData.json"
@@ -496,13 +370,8 @@ $(document).ready(function() {
 
 	ReturnAjaxData("GET", "json/QuizData"+UlrVarObj.file+".json", false, "json");
 
-	// returnCarouselHtml(0, jsonData, UlrVarObj);  // TEST
 
-	// returnCarouselItem(3, jsonData);  // TEST
-
-	// returnCarouseList(jsonData);      // TEST
-
-    $("#DataInput").html(returnCarouselHtml(0, jsonData, UlrVarObj));  // Insert carousel HTML
+    $("#DataInput").html(returnSourcePages(jsonData));
 
     console.log("jsonData: " + JSON.stringify(jsonData) );
 
@@ -512,15 +381,10 @@ $(document).ready(function() {
         $("#header").append('<img class="TaskNumberImg" src="../library/img/TaskNumbers_'+jsonData[0].userInterface.taskNumber+'.svg">');
     $("#subHeader").html(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
 
-    $(".btnContainer").hide();      // Hides all button containers.
-    $("#btnContainer_"+0).show();   // Shows the first button container.
 
     $(".QuestionCounter").text(correct_total+'/'+jsonData.length);   // Counts the initial number of correctly answered questions and total number questions and displays them.
 
-    CheckStudentAnswers(jsonData);
+    Pager("#PagerContainer", "#DataInput > div", "Pager");
 
-	userInterfaceChanger(jsonData);
-
-    hoverCss([".CorrectAnswer_hover", ".WrongAnswer_hover"]);
 
 });
