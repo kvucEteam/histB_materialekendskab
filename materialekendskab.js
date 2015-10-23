@@ -13,19 +13,19 @@ function returnBtnContainer(jsonData, SourceId){
 		HTML += '<div id="btnContainer_'+String(SourceId)+'" class="btnContainer">';
         HTML += (( (jsonData[SourceId].quizData.hasOwnProperty("taskText")) && (jsonData[SourceId].quizData.taskText !='') )?'<h4>'+jsonData[SourceId].quizData.taskText+'</h4>':'');
 		for (n in btnArray){
-			HTML += '<span class="btn btn-default StudentAnswer" href="#">'+btnArray[n]+'</span>';
+			HTML += '<span class="btn btn-info StudentAnswer" href="#">'+btnArray[n]+'</span>';
 		}
 		HTML += '</div>';
 	// }
-    HTML += '<span class="checkAnswer btn btn-primary" href="#"> Tjek svar </span>';
-    HTML += '<h5>Korrekte svar: <span class="QuestionCounter QuestionTask">0/0</span> Fejl: <span class="ErrorCount QuestionTask">0</span> </h5>';
+    HTML += '<div class="checkAnswer btn btn-lg btn-primary" href="#"> Tjek svar </div>';
+    HTML += '<h5><span class="QuestionTask">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="QuestionTask ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5>';
 	return HTML;
 }
 
 
 
 function elementInArray(tArray, element){
-    for (x in tArray){
+    for (var x in tArray){
         if (tArray[x] == element) return true 
     }
     return false;
@@ -41,7 +41,7 @@ function countCorrectAnswers(jsonData){
 	error_total = 0;
     var error_displayed_total = 0;
     var numOfQuestions = 0;
-	for (k in jsonData){
+	for (var k in jsonData){
 		var correct = 0; var error_missed = 0; var error_wrong = 0; var error_displayed = 0;
 	    var answerArray = jsonData[k].quizData.correctAnswer;
 	    var numOfSrudentAnswers = $("#btnContainer_"+k+" > .btnPressed").length;
@@ -86,7 +86,7 @@ function countCorrectAnswers(jsonData){
         ++numOfQuestions;
 	}
 
-    $(".QuestionCounter").text(correct_total+'/'+numOfQuestions);
+    $(".QuestionCounter").text(correct_total+' ud af '+numOfQuestions);
     $(".ErrorCount").text(error_displayed_total);
 	console.log("countCorrectAnswers - correct_total: " + correct_total + ", error_total: " + error_total + ", error_displayed_total: " + error_displayed_total);
 
@@ -171,7 +171,7 @@ function UserMsgBox_SetWidth(TargetSelector, WidthPercent){
 
 function returnSourcePages(jsonData){
     var HTML = '';
-    for (n in jsonData) {
+    for (var n in jsonData) {
         HTML += '<div class="SourcePage">';
         HTML += returnBtnContainer(jsonData, n);
         HTML +=     '<div class="Source">'+returnSourcelItem(n, jsonData)+'</div>';
@@ -229,6 +229,8 @@ $( document ).on('click', ".StudentAnswer", function(event){
 $(document).on('click', ".checkAnswer", function(event) {
     event.preventDefault(); // Prevents sending the user to "href".
 
+    console.log("ZZZZ - ActiveLinkNum: " + ActiveLinkNum);
+
     if (!$("#btnContainer_"+String(ActiveLinkNum-1)+" > .StudentAnswer").hasClass("btnPressed")) {
         UserMsgBox("body", "Du skal svare på et spørgsmål før du tjekker svar.");
         UserMsgBox_SetWidth(".container-fluid", 0.7);
@@ -275,13 +277,13 @@ function Pager(PagerSelector, TargetSelectorChild, CssId) {
 
     if (NumOfPages == 1) {
         // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li>';
-        HTML += '<li><a href="#" class="PagerButton btn btn-default"> 1 </a></li>';
+        HTML += '<li><a href="#" class="PagerButton btn-sm btn-info"> 1 </a></li>';
     }
 
     if ((1 < NumOfPages) && (NumOfPages <= Range + 1)) {
         for (var i = 1; i <= NumOfPages; i++) {
             // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + i + '</a></li>';
-            HTML += '<li><a href="#" class="PagerButton btn btn-default">' + i + '</a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info">' + i + '</a></li>';
         }
     }
 
@@ -296,22 +298,22 @@ function Pager(PagerSelector, TargetSelectorChild, CssId) {
 
         if (StartIndex == 2) { // Ugly special case...
             // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li>';
-            HTML += '<li><a href="#" class="PagerButton btn btn-default"> 1 </a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info"> 1 </a></li>';
         }
         if (StartIndex > 2)
             // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li><li> ... </li>';
-            HTML += '<li><a href="#" class="PagerButton btn btn-default"> 1 </a></li><li> ... </li>';
+            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info"> 1 </a></li><li> ... </li>';
         for (var j = StartIndex; j < Range + StartIndex; j++) {
             // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + j + '</a></li>';
-            HTML += '<li><a href="#" class="PagerButton btn btn-default">' + j + '</a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info">' + j + '</a></li>';
         }
         if (Range + StartIndex == NumOfPages)
             for (var k = Range + StartIndex; k <= NumOfPages; k++) {
                 // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + k + '</a></li>';
-                HTML += '<li><a href="#" class="PagerButton btn btn-default">' + k + '</a></li>';
+                HTML += '<li><a href="#" class="PagerButton btn-sm btn-info">' + k + '</a></li>';
             } else
                 // HTML += '<li> ... </li><li><a href="#" class="PagerButton btn btn-default">Kilde ' + NumOfPages + '</a></li>';
-                HTML += '<li> ... </li><li><a href="#" class="PagerButton btn btn-default">' + NumOfPages + '</a></li>';
+                HTML += '<li> ... </li><li><a href="#" class="PagerButton btn-sm btn-info">' + NumOfPages + '</a></li>';
 
     }
     HTML += '</ul>';
@@ -325,9 +327,9 @@ function Pager(PagerSelector, TargetSelectorChild, CssId) {
     // 
     $("#" + CssId + " .PagerButton").click(function(e) {
         e.preventDefault(); // Prevent the link-nature of the anchor-tag.
-        $("#" + CssId + " .PagerButton").removeClass("btn-default btn-primary");
-        $("#" + CssId + " .PagerButton").addClass("btn-default");
-        $(this).toggleClass("btn-default btn-primary");
+        $("#" + CssId + " .PagerButton").removeClass("btn-info btn-primary");
+        $("#" + CssId + " .PagerButton").addClass("btn-info");
+        $(this).toggleClass("btn-info btn-primary");
 
         ActiveLinkNum = $(this).text().replace("Kilde","").trim();
         console.log("ActiveLinkNum 2: " + ActiveLinkNum);
@@ -344,7 +346,7 @@ function Pager(PagerSelector, TargetSelectorChild, CssId) {
     // Set the chosen color if the pager-button is showen:
     $(PagerSelector + " li a").each(function(index, element) {
         if ($(element).text().replace("Kilde","").trim() == ActiveLinkNum) {
-            $(element).toggleClass("btn-default btn-primary");
+            $(element).toggleClass("btn-info btn-primary");
         }
         LastElement = element;
     });
@@ -352,7 +354,7 @@ function Pager(PagerSelector, TargetSelectorChild, CssId) {
     // If the last STOP (n) is selected, and the user deletes the current STOP (n), then the user needs to "routed" to the second-last STOP (n-1):
     if ( ActiveLinkNum > NumOfPages){
         ActiveLinkNum = NumOfPages;
-        $(LastElement).toggleClass("btn-default btn-primary");
+        $(LastElement).toggleClass("btn-info btn-primary");
         $(TargetSelectorChild + ":eq(" + (parseInt(ActiveLinkNum) - 1) + ")").addClass("dshow"); // TargetSelectorChild
     }
 
@@ -377,12 +379,12 @@ $(document).ready(function() {
 
     $("title").html(jsonData[0].userInterface.header);
     $("#header").html(jsonData[0].userInterface.header);   // Shows the initial heading.
-    if (jsonData[0].userInterface.hasOwnProperty("taskNumber")) 
-        $("#header").append('<img class="TaskNumberImg" src="../library/img/TaskNumbers_'+jsonData[0].userInterface.taskNumber+'.svg">');
+    // if (jsonData[0].userInterface.hasOwnProperty("taskNumber")) 
+    //     $("#header").append('<img class="TaskNumberImg" src="../library/img/TaskNumbers_'+jsonData[0].userInterface.taskNumber+'.svg">');
     $("#subHeader").html(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
 
 
-    $(".QuestionCounter").text(correct_total+'/'+jsonData.length);   // Counts the initial number of correctly answered questions and total number questions and displays them.
+    $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);   // Counts the initial number of correctly answered questions and total number questions and displays them.
 
     Pager("#PagerContainer", "#DataInput > div", "Pager");
 

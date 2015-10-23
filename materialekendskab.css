@@ -14,6 +14,10 @@ h2 {
 h4 {
 	margin: 0px 0px 20px 0px; 
 	line-height: 1em;
+	color: #333;
+}
+h5{
+	color: #333;
 }
 
 #questionCarousel{margin-top: 10px; }
@@ -23,7 +27,6 @@ h4 {
     background-color: #e7e6e2;
     border: 1px solid #e7e6e2;
     color: #000;
-    margin-bottom: 20px;
 }
 
 
@@ -34,7 +37,7 @@ h4 {
 }
 
 .Source{
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 }
 
 .PagerClass{display: inline-block; margin-bottom: 0px;}
@@ -50,7 +53,7 @@ h4 {
 .MsgBox_bgr{z-index: 20;}  /* Dette fixer problemet med at .carousel-indicators har z-index: 15 */
 
 
-.TextHolder{margin-left: auto; margin-right: auto; width: 80%; min-height: 200px;} 
+.TextHolder{width: 66%; min-height: 100px;} 
 
 .indent{margin-left: 10px}
 /*
@@ -80,8 +83,8 @@ h4 {
 
 .QuestionTask{
 	color: #000;
+	font-weight: 600;
 }
-
 
 .CorrectAnswer{
 	background-color: #0dcea0;
@@ -100,17 +103,22 @@ h4 {
 }
 
 
-.btn-primary{
+.PagerClass .btn-primary{
 	background-color: #666666;
     border: 1px solid #666666;
     color: #fff;
 }
-.btn-primary:hover{
+.PagerClass .btn-primary:hover{
 	background-color: #969696;
     border: 1px solid #969696;
     color: #FFF;
 }
 
+.checkAnswer {
+	margin-bottom: 30px;
+}
+
+/*
 .checkAnswer {
 	background-color: #05a0a8;
     border-color: #05a0a8;
@@ -121,6 +129,8 @@ h4 {
     border-color: #047176;
     color: #fff;
 }
+*/
+.ml15{margin-left: 15px;}
 
 
 .TaskNumberImg {
