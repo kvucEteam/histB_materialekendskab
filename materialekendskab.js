@@ -2,6 +2,7 @@ var jsonData = "<h1>OK</h1>";
 var CurrentQuestionId = 0;
 var correct_total = 0;
 var error_total = 0;
+var error_displayed_total = 0;
 
 
 
@@ -12,7 +13,7 @@ function returnBtnContainer(jsonData, SourceId){
 		var btnArray = jsonData[SourceId].userInterface.btn;   // ActiveLinkNum
 		HTML += '<div id="btnContainer_'+String(SourceId)+'" class="btnContainer">';
         HTML += (( (jsonData[SourceId].quizData.hasOwnProperty("taskText")) && (jsonData[SourceId].quizData.taskText !='') )?'<h4>'+jsonData[SourceId].quizData.taskText+'</h4>':'');
-		for (n in btnArray){
+		for (var n in btnArray){
 			HTML += '<span class="btn btn-info StudentAnswer" href="#">'+btnArray[n]+'</span>';
 		}
 		HTML += '</div>';
@@ -39,7 +40,7 @@ function countCorrectAnswers(jsonData){
 	correct_total = 0;
     window.FirstTime = true;
 	error_total = 0;
-    var error_displayed_total = 0;
+    // var error_displayed_total = 0;
     var numOfQuestions = 0;
 	for (var k in jsonData){
 		var correct = 0; var error_missed = 0; var error_wrong = 0; var error_displayed = 0;
@@ -174,10 +175,7 @@ function returnSourcePages(jsonData){
     for (var n in jsonData) {
         HTML += '<div class="SourcePage">';
         HTML += returnBtnContainer(jsonData, n);
-        HTML +=     '<div class="Source">'+returnSourcelItem(n, jsonData)+'</div>';
-        // HTML +=     '<div id="btnContainer_'+n+'" class="BtnContainer">';
-        // HTML += returnBtnContainer(jsonData);
-        // HTML +=     '</div>';
+        HTML +=     '<div class="Source">'+returnSourcelItem(n, jsonData)+'</div>'; 
         HTML += '</div>';
     }
     return HTML;
@@ -204,6 +202,19 @@ function returnSourcelItem(questionNum, jsonData){
     }
     console.log("returnSourcelItem: " + HTML);
     return HTML;
+}
+
+
+function FindNonAnswerdQuestions(){
+    var Count = 1; var Found = false;
+    $(".btnContainer").each(function(index, element) {
+        console.log("FindNonAnswerdQuestions - index: " + index + ", length: " + $(element).find(".CorrectAnswer").length);
+        if (($(element).find(".CorrectAnswer").length === 0) && (Found === false)) {
+            Count = index + 1;
+            Found = true;
+        }
+    });
+    return Count;
 }
 
 
@@ -247,10 +258,11 @@ $(document).on('click', ".checkAnswer", function(event) {
 });
 
 
-// $( document ).on('click', ".StudentAnswer", function(event){
-//     $(this).addClass("btnPressed");
-//     console.log("interfaceChanger - ActiveLinkNum: " + ActiveLinkNum);
-// });
+$( document ).on('click', ".MsgBox_bgr", function(event){
+    ActiveLinkNum = FindNonAnswerdQuestions(); // (ActiveLinkNum < $(".SourcePage").length)? ActiveLinkNum+1:$(".SourcePage").length;
+    Pager("#PagerContainer", "#DataInput > div", "Pager");
+    console.log("FindNonAnswerdQuestions - ActiveLinkNum: " + ActiveLinkNum);
+});
 
 
 // ================================
