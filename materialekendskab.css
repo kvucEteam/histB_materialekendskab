@@ -22,13 +22,14 @@ h5{
 
 #questionCarousel{margin-top: 10px; }
 
-
+/* AKTIVER! */
+/*
 .StudentAnswer {
     background-color: #e7e6e2;
     border: 1px solid #e7e6e2;
     color: #000;
 }
-
+*/
 
 .SourcePage{/*border: 1px solid #C0C0C0;*/ /*padding: 10px 10px 0px 10px;*/ display: none;}
 
@@ -87,7 +88,12 @@ h5{
 }
 
 .CorrectAnswer{
-	background-color: #0dcea0;
+	background-color: #2abb2a;
+	color: #FFF;
+}
+
+.CorrectAnswer:hover{
+	background-color: #4adb4a;
 	color: #FFF;
 }
 
@@ -144,3 +150,55 @@ h5{
 }
 
 .mb10{margin-bottom: 10px;}
+
+
+/*********************************************************************/
+
+.label-success { 
+	background-color: #2abb2a;
+	border-radius: 4px;
+	/*padding-top: 0.5em;*/
+	padding-bottom: -0.1em;
+} 
+
+.label-danger { 
+	background-color: #ed3e3a;
+	border-radius: 4px;
+	/*padding-top: 0.5em;*/
+	padding-bottom: -0.1em;
+}
+
+.GoOn{
+	background-color: #e7e6e2;
+    border-color: #e7e6e2;
+    color: #000;
+}
+
+
+/*
+	CSS spm til ATO:
+		1. Kan "X" i UserMsgBox gøres smallere? (se MAMs tegning)
+		2. Hvordan variere vi højden på BootStrap labels? (label-success og label-danger skal være 33px)
+		3. Er fixet - tak for hintet TLY! Hvordan sætter vi en hover-effekt på "X" i UserMsgBox? 
+*/
+
+#UserMsgBox{
+	background-color: #FFF;
+}
+
+#UserMsgBox h3 {
+	font-weight: 400;
+}
+
+/*********************************************************************/
+
+
+.ScoreBox{
+	background-color: #F8F8F6;
+	border-radius: 4px;
+}
+.ScoreBox h5{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+}
