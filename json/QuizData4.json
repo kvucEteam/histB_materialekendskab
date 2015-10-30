@@ -6,8 +6,13 @@
 			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
 		},
 		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "img", "src": "http://www.danskmoent.dk/meyer/j001-c.gif", "alt": "Eksternt billede..."},
+			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+			"slideData" : {
+				"type": "img", 
+				"src": "http://www.danskmoent.dk/meyer/j001-c.gif", 
+				"alt": "Eksternt billede...",
+            	"sourceRef": {"showSrc" : true, "sourceInfo": "Jellingesten"}
+			},
 			"correctAnswer" : ["0"],
 			"feedbackData" : ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."] 
 		}
@@ -19,8 +24,13 @@
 			"btn" : ["Kilde?", "Fremstilling? (rigtig)"]
 		},
 		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "img", "src": "img/Jellingsten_stor_3.jpg", "alt": "Lokalt billede..."},
+			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+			"slideData" : {
+				"type": "img", 
+				"src": "img/Jellingsten_stor_3.jpg", 
+				"alt": "Lokalt billede...",
+            	"sourceRef": {"showSrc" : true, "sourceInfo": "Jellingesten"}
+			},
 			"correctAnswer" : ["1"],
 			"feedbackData" : ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..." ] 
 		}
@@ -32,7 +42,7 @@
 			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
 		},
 		"quizData" : {
-			"taskText" : "",
+			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
 			"slideData" : {"type": "text", "text": "<b>Citat 1:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam..."},
 			"correctAnswer" : ["0"],
 			"feedbackData" : ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."] 
@@ -45,8 +55,12 @@
 			"btn" : ["Kilde?", "Fremstilling? (rigtig)"]
 		},
 		"quizData" : {
-			"taskText" : "",
-			"slideData" : {"type": "video", "src": "https://www.youtube.com/embed/QnDUiIRUSo8?rel=0"},
+			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+			"slideData" : {
+				"type": "video", 
+				"src": "https://www.youtube.com/embed/QnDUiIRUSo8?rel=0",
+            	"sourceRef": {"showSrc" : true, "sourceInfo": "Jellingesten"}
+			},
 			"correctAnswer" : ["1"],
 			"feedbackData" : ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."] 
 		}

@@ -9,7 +9,8 @@
         "slideData": {
             "type": "img",
             "src": "http://www.aargang0.dk/media/d758f72c-a90a-4a64-ab8c-adc7a6cda900/d7YTVw/Kilder/Elna/06_Elna,%20Statistisk%20%C3%85rbog%201920,%20side%2027_js.jpg",
-            "alt": "Lokalt billede..."
+            "alt": "Lokalt billede...",
+            "sourceRef": {"showSrc" : true, "sourceInfo": "Statistisk årbog 1920"}
         },
         "correctAnswer": ["0"],
         "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]

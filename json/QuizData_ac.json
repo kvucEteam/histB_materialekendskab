@@ -1,0 +1,97 @@
+[{
+    "userInterface": {
+        "taskNumber" : "1",
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
+    },
+    "quizData": {
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+        "slideData": {
+            "type": "text",
+            "text": "Hvordan forløb industrialiseringen i Danmark (i korte træk) fra 1860 og frem?"
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["(Redegørende) Korrekt...", "(Analyserende) Forkert...", "(Vurderende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "taskNumber" : "1",
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
+    },
+    "quizData": {
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+        "slideData": {
+            "type": "text",
+            "text": "Hvad betød industrialiseringen for den danske befolkning?"
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert... ", "(Analyserende) Korrekt...", "(Vurderende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "taskNumber" : "1",
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
+    },
+    "quizData": {
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+        "slideData": {
+            "type": "text",
+            "text": "Hvilken betydning havde industrialiseringen for forholdet mellem land og by på kort - og lang sigt?"
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Vurderende) Korrekt..."]
+    }
+}, {
+    "userInterface": {
+        "taskNumber" : "1",
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
+    },
+    "quizData": {
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+        "slideData": {
+            "type": "text",
+            "text": "Hvordan udviklede familiemønstrene sig i Danmark i 50’erne og 60’erne?"
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": ["(Redegørende) Korrekt", "(Analyserende) Forkert...", "(Vurderende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "taskNumber" : "2",
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
+    },
+    "quizData": {
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+        "slideData": {
+            "type": "text",
+            "text": "Hvilke grunde var der til det ændrede syn på familien?"
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Vurderende) Forkert..."]
+    }
+}, {
+    "userInterface": {
+        "taskNumber" : "1",
+        "header": "Terminologi og taksonomi",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
+    },
+    "quizData": {
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+        "slideData": {
+            "type": "text",
+            "text": "Hvilke konsekvenser havde det nye syn på familien på kort – og lang sigt?"
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Vurderende) Korrekt..."]
+    }
+}]

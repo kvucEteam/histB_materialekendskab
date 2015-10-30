@@ -20,7 +20,7 @@ function returnBtnContainer(jsonData, SourceId){
 		HTML += '</div>';
 	// }
     HTML += '<div class="checkAnswer btn btn-lg btn-primary" href="#"> Tjek svar </div>';
-    HTML += '<h5><span class="QuestionTask">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="QuestionTask ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5>';
+    HTML += '<h5><span class="scoreText">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="scoreText ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5>';
 	return HTML;
 }
 
@@ -186,6 +186,9 @@ function returnSourcePages(jsonData){
         HTML += '<div class="SourcePage">';
         HTML += returnBtnContainer(jsonData, n);
         HTML +=     '<div class="Source">'+returnSourcelItem(n, jsonData)+'</div>'; 
+
+        HTML += returnSourceInfo(n, jsonData);
+
         HTML += '</div>';
     }
     return HTML;
@@ -197,13 +200,13 @@ function returnSourcelItem(questionNum, jsonData){
     switch(itemData.slideData.type) {
         case "img":
             // HTML += '<div class="SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.kildeData.src+'" alt="'+itemData.kildeData.alt+'"/> </div>';
-            HTML += '<div class="SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.slideData.src+'" alt="'+itemData.slideData.alt+'"/> </div>';
+            HTML += '<div class="ImgHolder SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.slideData.src+'" alt="'+itemData.slideData.alt+'"/> </div>';
             break;
         case "text":
             HTML += '<div class="TextHolder SourceWrapper">'+itemData.slideData.text+'</div>';
             break;
         case "video":
-            HTML += '<div class="SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
+            HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
                         '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
                     '</div>';
             break;
@@ -211,6 +214,22 @@ function returnSourcelItem(questionNum, jsonData){
             alert('Invalid "type"');
     }
     console.log("returnSourcelItem: " + HTML);
+    return HTML;
+}
+
+
+function returnSourceInfo(n, jsonData){
+    var HTML = '';
+    var JQS = jsonData[n].quizData.slideData;
+    console.log("returnSourceInfo - JQS: " + JSON.stringify(JQS));
+    if (JQS.hasOwnProperty("sourceRef")){
+        var JQSS = JQS.sourceRef;
+        console.log("returnSourceInfo - OK -");
+        HTML +=     '<div class="kilde_henvisning">';
+        HTML +=     (JQSS.hasOwnProperty("sourceInfo") && (JQSS.sourceInfo != ""))?'<div class="sourceInfo">'+JQSS.sourceInfo+'</div>' : ''; 
+        HTML +=     (JQSS.hasOwnProperty("showSrc") && (JQSS.showSrc == true))?'<div class="showSrc"><a href="'+JQS.src+'">'+JQS.src+'</a></div>' : ''; 
+        HTML +=     '</div>'; 
+    }
     return HTML;
 }
 
@@ -234,8 +253,8 @@ function ReturnEndGamesenario(){
     if (($(".SourcePage").length == $(".btn-success").length)) {
         if (ShowUserMsg){
             var HTML = "";
-            HTML += '<h4 class="QuestionTask">Flot klaret </h4>';
-            HTML += 'Her er dit resultat: <span class="ScoreBox"><h5><span class="QuestionTask">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="QuestionTask ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5></span>';
+            HTML += '<h4 class="scoreText">Flot klaret </h4>';
+            HTML += 'Her er dit resultat: <span class="ScoreBox"><h5><span class="scoreText">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="scoreText ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5></span>';
             // UserMsgBox("body", "<h4 class='QuestionTask'>Flot klaret </h4><br/>Her er dit resultat: "+String($(".SourcePage").length)+" opgaver korrekt. <br/> Du havde " + error_displayed_total + ' fejl undervejs. <br/><br/> Klik denne besked væk for at prøve igen.'); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
             UserMsgBox("body", HTML); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
             UserMsgBox_SetWidth(".container-fluid", 0.7);
@@ -266,6 +285,9 @@ function ShowStudentScore(Use_UserMsgBox){
 // DETTE HAR INGEN FUNKTIONALITET ENDNU
 $( document ).on('click', ".PagerButton", function(event){
     var PagerNum = $(this).text().replace("kilde","").trim();
+
+    $(".SourcePage").hide(); // Tweening-effect: Hide all SourcePages!
+    $(".SourcePage:eq("+String(parseInt(PagerNum)-1)+")").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
     
     console.log("interfaceChanger - PagerNum: " + PagerNum); // + ' - ' + jsonData[parseInt(PagerNum)-1].userInterface.header);
 
@@ -305,6 +327,12 @@ $(document).on('click', ".checkAnswer", function(event) {
 
 $( document ).on('click', ".MsgBox_bgr", function(event){
     ActiveLinkNum = FindNonAnswerdQuestions(); // (ActiveLinkNum < $(".SourcePage").length)? ActiveLinkNum+1:$(".SourcePage").length;
+    if (typeof Old_ActiveLinkNum === "undefined") window.Old_ActiveLinkNum = ActiveLinkNum;
+    if (ActiveLinkNum != Old_ActiveLinkNum){ // Prevents the tweening effect to happen on wrong answers.
+        $(".SourcePage").hide(); // Tweening-effect: Hide all SourcePages!
+        $(".SourcePage:eq("+String(parseInt(ActiveLinkNum)-1)+")").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
+    }
+    Old_ActiveLinkNum = ActiveLinkNum;
     ReturnEndGamesenario();
     Pager("#PagerContainer", "#DataInput > div", "Pager");
     console.log("FindNonAnswerdQuestions - ActiveLinkNum: " + ActiveLinkNum);
