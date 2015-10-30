@@ -12,7 +12,7 @@
             "alt": "Lokalt billede..."
         },
         "correctAnswer": ["0"],
-        "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]
+        "feedbackData": ["Korrekt, der er tale om en kilde da...","Forkert, der er ikke tale om en fremstilling da..."]
     }
 }, {
     "userInterface": {
@@ -41,8 +41,8 @@
             "type": "text",
             "text": "<p>N&aring;r jeg ser et r&oslash;dt flag sm&aelig;lde<br> p&aring; en blank og v&aring;rfrisk dag,<br> kan jeg h&oslash;re det s&aelig;lsomt fort&aelig;lle<br> om min verden, mit folk og min sag.<br> Og jeg rejser mig trodsigt i vrimlen,<br> mens det kogler af kraft i mit mod,<br> thi det flag, der nu sm&aelig;ldende n&aring;r himlen,<br> er jo r&oslash;dt som mit brusende blod</p> <p>Jeg har anet sl&aelig;gters striden<br> imod fremtids fjerne m&aring;l.<br> Jeg har set tr&aelig;lletoget i tiden<br> blive m&aelig;nd bag ved kampfanens b&aring;l.<br> Jeg har set den i blafrende storme,-<br> jeg har elsket dens flammer i strid,<br> og bag den s&aring; jeg arbejdsh&aelig;nder forme<br> verden om til en lysere tid.</p> <p>Jeg har set min fader ranke<br> ryggen op i flagets brus.<br> Jeg har lyttet og h&oslash;rt hjertet banke<br> i dets stolte, befriende sus.<br> Jeg har elsket dets farve fra lille,<br> da min mor tog mig op p&aring; sit sk&oslash;d<br> og fortalte mig manende og stille<br> om en fane s&aring; knitrende r&oslash;d.</p> <p>Det er sliddets sl&aelig;gters fane<br> over fronten vid og bred.<br> Den skal ungdommen ildne og mane,<br> den skal knuse hvert gr&aelig;nsernes led.<br> Den var forrest i fredelig f&aelig;rden,<br> den var forrest i stormklokkens klemt<br> den er fanen, der favner hele verden -<br> i dens folder er fremtiden gemt.</p>"
         },
-        "correctAnswer": ["1"],
-        "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]
+        "correctAnswer": ["0"],
+        "feedbackData": ["Korrekt, der er tale om en kilde da...","Forkert, der er ikke tale om en fremstilling da..."]
     }
 }, {
     "userInterface": {
@@ -57,7 +57,7 @@
             "src": "https://player.vimeo.com/video/129639593"
         },
         "correctAnswer": ["1"],
-        "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]
+        "feedbackData": ["Forkert, der er ikke tale om en kilde da...", "Korrekt, der er tale om en fremstilling da..."]
     }
 }]
 
