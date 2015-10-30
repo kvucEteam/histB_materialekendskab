@@ -141,10 +141,18 @@ function giveFeedback(jsonData, questionNum){
     // var feedbackArray = jsonData[questionNum].quizData.feedbackData;
     var feedbackArray = jsonData.quizData[questionNum].feedbackData;   // NEW_XXX
 
+    // var kildeFeedback = "Kilder er spor eller levn fra fortiden, som kan give et billede af den tid kilden er fra.";
+    // var fremstillingFeedback = "Fremstillinger er historikerens fortolkning af fortiden, som er blevet til på baggrund af en analyse af kilder.";
+
+    // ((jsonData.userInterface.hasOwnProperty("kildeEllerFremstillingsOpg")) && kildeEllerFremstillingsOpg)? "Kilder er spor eller levn fra fortiden, som kan give et billede af den tid kilden er fra.";
+
     for (var n in questionArray){
-        if ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("btn-success")){
+        if ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("btn-success")) {
             HTML += '<h3>Du har svaret <span class="label label-success">Korrekt!</span> </h3>';
-            HTML += "<p>"+feedbackArray[n]+"</p>";
+            HTML += "<p>";
+            HTML += returnKildeEllerFremstilling(jsonData, questionNum, n);  // This function only returns content if btn contains "Kilde" or "Fremstilling".
+            HTML += feedbackArray[n];
+            HTML += "</p>";
             HTML += '<span class="btn btn-lg btn-info GoOn">GÅ VIDERE</span>';
 
             // UserMsgBox_no_X("body", HTML);
@@ -153,13 +161,26 @@ function giveFeedback(jsonData, questionNum){
         }
         if ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("btn-danger")){
             HTML += '<h3>Du har svaret <span class="label label-danger">Forkert</span> </h3>';
-            HTML += "<p>"+feedbackArray[n]+"</p>";
+            HTML += "<p>";
+            HTML += returnKildeEllerFremstilling(jsonData, questionNum, n);
+            HTML += feedbackArray[n];
+            HTML += "</p>";
 
             UserMsgBox("body", HTML);
             // UserMsgBox_SetWidth(".container-fluid", 0.7);
         }
     }
     console.log("giveFeedback - CurrentQuestionId: " + CurrentQuestionId + ", HTML: " + JSON.stringify(HTML));
+}
+
+
+function returnKildeEllerFremstilling(jsonData, questionNum, n){
+    var HTML = ""
+    if (jsonData.userInterface.btn[n].trim() == "Kilde")
+        HTML = "Kilder er spor eller levn fra fortiden, som kan give et billede af den tid kilden er fra. <br/>";
+    if (jsonData.userInterface.btn[n].trim() == "Fremstilling")
+        HTML = "Fremstillinger er historikerens fortolkning af fortiden, som er blevet til på baggrund af en analyse af kilder. <br/>";
+    return HTML;
 }
 
 
@@ -324,8 +345,12 @@ function ShowStudentScore(Use_UserMsgBox){
 $( document ).on('click', ".PagerButton", function(event){
     var PagerNum = $(this).text().replace("kilde","").trim();
 
-    $(".SourcePage").hide(); // Tweening-effect: Hide all SourcePages!
-    $(".SourcePage:eq("+String(parseInt(PagerNum)-1)+")").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
+    // $(".SourcePage").hide(); // Tweening-effect: Hide all SourcePages!
+    // $(".SourcePage:eq("+String(parseInt(PagerNum)-1)+")").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
+    $("#DataInput").hide(); // Tweening-effect: Hide all SourcePages!
+    $("#DataInput").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
+
+    console.log("PagerButton - Tweening: " + PagerNum);
     
     console.log("interfaceChanger - PagerNum: " + PagerNum); // + ' - ' + jsonData[parseInt(PagerNum)-1].userInterface.header);
 
@@ -367,12 +392,15 @@ $(document).on('click', ".checkAnswer", function(event) {
 
 $( document ).on('click', ".MsgBox_bgr", function(event){
     ActiveLinkNum = FindNonAnswerdQuestions(); // (ActiveLinkNum < $(".SourcePage").length)? ActiveLinkNum+1:$(".SourcePage").length;
-    if (typeof Old_ActiveLinkNum === "undefined") window.Old_ActiveLinkNum = ActiveLinkNum;
+    if (typeof window.Old_ActiveLinkNum === "undefined") window.Old_ActiveLinkNum = ActiveLinkNum;
     if (ActiveLinkNum != Old_ActiveLinkNum){ // Prevents the tweening effect to happen on wrong answers.
-        $(".SourcePage").hide(); // Tweening-effect: Hide all SourcePages!
-        $(".SourcePage:eq("+String(parseInt(ActiveLinkNum)-1)+")").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
+        // $(".SourcePage").hide(); // Tweening-effect: Hide all SourcePages!
+        // $(".SourcePage:eq("+String(ActiveLinkNum-1)+")").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
+        $("#DataInput").hide(); // Tweening-effect: Hide all SourcePages!
+        $("#DataInput").fadeIn( "slow" ); // Tweening-effect: Show the choosen SourcePage.
+        console.log("MsgBox_bgr - Tweening");
     }
-    Old_ActiveLinkNum = ActiveLinkNum;
+    window.Old_ActiveLinkNum = ActiveLinkNum;
     ReturnEndGamesenario();
     Pager("#PagerContainer", "#DataInput > div", "Pager");
     console.log("FindNonAnswerdQuestions - ActiveLinkNum: " + ActiveLinkNum);

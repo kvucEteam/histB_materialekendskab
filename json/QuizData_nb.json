@@ -1,97 +1,57 @@
-[{
-    "userInterface": {
+{
+"userInterface": {
         "taskNumber" : "1",
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
         "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+"quizData": [{
         "slideData": {
             "type": "text",
             "text": "Hvordan var kvindens stilling økonomisk, socialt og politisk i slutningen af 1800 tallet i Danmark?"
         },
         "correctAnswer": ["0"],
         "feedbackData": ["(Redegørende) Korrekt...", "(Analyserende) Forkert...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvorfor og med hvilke midler kæmpede kvinderne for deres rettigheder?"
         },
         "correctAnswer": ["1"],
         "feedbackData": ["(Redegørende) Forkert... ", "(Analyserende) Korrekt...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvilken konsekvenser fik kvindernes kamp for det danske samfund?"
         },
         "correctAnswer": ["2"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Vurderende) Korrekt..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvordan var ungdommens stilling i Danmark i slutningen af 1960erne?"
         },
         "correctAnswer": ["0"],
         "feedbackData": ["(Redegørende) Korrekt", "(Analyserende) Forkert...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "2",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvorfor kom der et oprør mod såvel samfundet som forældregenerationen?"
         },
         "correctAnswer": ["1"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvilke konsekvenser fik oprøret for det dansk samfund?"
         },
         "correctAnswer": ["2"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Vurderende) Korrekt..."]
-    }
-}]
+    }]
+}

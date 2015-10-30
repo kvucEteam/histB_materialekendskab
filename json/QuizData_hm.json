@@ -1,145 +1,81 @@
-[{
-    "userInterface": {
+{
+"userInterface": {
         "taskNumber" : "1",
         "header": "Terminologi og taksonomi",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
         "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+"quizData": [{
         "slideData": {
             "type": "text",
             "text": "Hvordan var kvinders leve- og politiske vilkår i England i 1800-tallet?"
         },
         "correctAnswer": ["0"],
         "feedbackData": ["(Redegørende) Korrekt...", "(Analyserende) Forkert...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvorfor og med hvilke argumenter og metoder kæmpede de engelske suffragetter for stemmeret til kvinder?"
         },
         "correctAnswer": ["1"],
         "feedbackData": ["(Redegørende) Forkert... ", "(Analyserende) Korrekt...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvilken betydning fik de engelske suffragetters kamp for kampen for kvindelig stemmeret i andre lande?"
         },
         "correctAnswer": ["2"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Vurderende) Korrekt..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvordan udviklede det nazistiske koncentrationslejrsystem sig før og under 2. verdenskrig?"
         },
         "correctAnswer": ["0"],
         "feedbackData": ["(Redegørende) Korrekt", "(Analyserende) Forkert...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "2",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvilken logik lå bag opbygningen af lejrene og deres funktion?"
         },
         "correctAnswer": ["1"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "På hvilke måder kan man karakterisere Holocaust som en sammenhængende og velovervejet nazistisk strategi?"
         },
         "correctAnswer": ["2"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Vurderende) Korrekt..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvad var baggrunden for og forløbet af den 2. slesvigske krig i 1864?"
         },
         "correctAnswer": ["0"],
         "feedbackData": ["(Redegørende) Korrekt", "(Analyserende) Forkert...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "2",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvorfor tabte Danmark krigen?"
         },
         "correctAnswer": ["1"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Korrekt...", "(Vurderende) Forkert..."]
-    }
-}, {
-    "userInterface": {
-        "taskNumber" : "1",
-        "header": "Terminologi og taksonomi",
-        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
-    "quizData": {
-        "taskText": "Hvilket taksonomisk niveau er denne tekst på?",
+    {
         "slideData": {
             "type": "text",
             "text": "Hvilke konsekvenser fik nederlaget for Danmark herunder særligt for befolkningen i det nuværende Sønderjylland?"
         },
         "correctAnswer": ["2"],
         "feedbackData": ["(Redegørende) Forkert...", "(Analyserende) Forkert...", "(Vurderende) Korrekt..."]
-    }
-}]
+    }]
+}

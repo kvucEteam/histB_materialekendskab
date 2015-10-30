@@ -1,12 +1,11 @@
-[
-	{ 
-		"userInterface" : { 
+{
+"userInterface" : { 
 			"header" : "Kend forskel på kilde og fremstilling: &quot;Ungdomoprøret&quot;",
 			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
+			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
 			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
 		},
-		"quizData" : {
-			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+"quizData" : [{
 			"slideData" : {
 				"type": "img", 
 				"src": "http://www.danskmoent.dk/meyer/j001-c.gif", 
@@ -15,42 +14,18 @@
 			},
 			"correctAnswer" : ["0"],
 			"feedbackData" : ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Kend forskel på kilde og fremstilling: &quot;Ungdomoprøret&quot;",
-			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
-			"btn" : ["Kilde?", "Fremstilling? (rigtig)"]
 		},
-		"quizData" : {
-			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+		{
 			"slideData" : {"type": "img", "src": "img/Jellingsten_stor_3.jpg", "alt": "Lokalt billede..."},
 			"correctAnswer" : ["1"],
 			"feedbackData" : ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..." ] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Kend forskel på kilde og fremstilling: &quot;Ungdomoprøret&quot;",
-			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
-			"btn" : ["Kilde? (rigtig)", "Fremstilling?"]
 		},
-		"quizData" : {
-			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+		{
 			"slideData" : {"type": "text", "text": "<b>Citat 1:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam..."},
 			"correctAnswer" : ["0"],
 			"feedbackData" : ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."] 
-		}
-	},
-	{ 
-		"userInterface" : {
-			"header" : "Kend forskel på kilde og fremstilling: &quot;Ungdomoprøret&quot;",
-			"subHeader" : "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
-			"btn" : ["Kilde?", "Fremstilling? (rigtig)"]
 		},
-		"quizData" : {
-			"taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+		{
 			"slideData" : {
 				"type": "video", 
 				"src": "https://www.youtube.com/embed/QnDUiIRUSo8?rel=0",
@@ -58,6 +33,5 @@
 			},
 			"correctAnswer" : ["1"],
 			"feedbackData" : ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."] 
-		}
-	}
-]
+		}]
+}
