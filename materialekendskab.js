@@ -3,6 +3,7 @@ var CurrentQuestionId = 0;
 var correct_total = 0;
 var error_total = 0;
 var error_displayed_total = 0;
+var ShowUserMsg = true;
 
 
 
@@ -51,12 +52,12 @@ function countCorrectAnswers(jsonData){
 	    for (var n in answerArray){
 	        // if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
             if ( ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")) || 
-                  $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("CorrectAnswer")){  // NY
+                  $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btn-success")){  // NY
                 // if ((typeof jsonData_old !== "undefined") && ())
 	            correct++;   // Counting correct answers.
                 jsonData[k].StudentAnswers.Correct.push(n);
                 // $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
-                $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").addClass("CorrectAnswer").removeClass("btnPressed");
+                $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").addClass("btn-success").removeClass("btn-info btnPressed");
 	       } else {
 	    		error_missed++;  // Counting missed correct answers, eg. if there are two or more correct answers and the student does not answer all of the answers, then this counter counts the missed correct answers.
 	       }
@@ -70,11 +71,11 @@ function countCorrectAnswers(jsonData){
 
         $("#btnContainer_"+k+" > .StudentAnswer").each(function( index, element ) {
             // if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index))){
-            if ((($(element).hasClass("btnPressed")) || ($(element).hasClass("WrongAnswer"))) && !(elementInArray(answerArray, index))){  // NY
+            if ((($(element).hasClass("btnPressed")) || ($(element).hasClass("btn-danger"))) && !(elementInArray(answerArray, index))){  // NY
                 ++error_displayed;
                 jsonData[k].StudentAnswers.Wrong.push(index);
                 // $(element).toggleClass("WrongAnswer");
-                $(element).addClass("WrongAnswer").removeClass("btnPressed");
+                $(element).addClass("btn-danger").removeClass("btn-info btnPressed");
             }
         });
 
@@ -111,19 +112,28 @@ console.log("CompareArrays: " + CompareArrays([1,2,3,4,5], [1,2,3,4,5]));
 
 
 function giveFeedback(jsonData, questionNum){
-    var HTML = "<h2>Feedback</h2>";
+    var HTML = "";
     var questionArray = jsonData[questionNum].userInterface.btn;
     var feedbackArray = jsonData[questionNum].quizData.feedbackData; 
     for (var n in questionArray){
-        if (($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("CorrectAnswer")) || 
-            ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("WrongAnswer")) )
+        if ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("btn-success")){
+            HTML += '<h3>Du har svaret <span class="label label-success">Korrekt!</span> </h3>';
             HTML += "<p>"+feedbackArray[n]+"</p>";
+            HTML += '<span class="btn btn-info GoOn">GÅ VIDERE</span>';
+
+            // UserMsgBox_no_X("body", HTML);
+            UserMsgBox("body", HTML);
+            UserMsgBox_SetWidth(".container-fluid", 0.7);
+        }
+        if ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("btn-danger")){
+            HTML += '<h3>Du har svaret <span class="label label-danger">Forkert</span> </h3>';
+            HTML += "<p>"+feedbackArray[n]+"</p>";
+
+            UserMsgBox("body", HTML);
+            UserMsgBox_SetWidth(".container-fluid", 0.7);
+        }
     }
-
     console.log("giveFeedback - CurrentQuestionId: " + CurrentQuestionId + ", HTML: " + JSON.stringify(HTML));
-
-    UserMsgBox("body", HTML);
-    UserMsgBox_SetWidth(".container-fluid", 0.7);
 }
 
 
@@ -208,13 +218,48 @@ function returnSourcelItem(questionNum, jsonData){
 function FindNonAnswerdQuestions(){
     var Count = 1; var Found = false;
     $(".btnContainer").each(function(index, element) {
-        console.log("FindNonAnswerdQuestions - index: " + index + ", length: " + $(element).find(".CorrectAnswer").length);
-        if (($(element).find(".CorrectAnswer").length === 0) && (Found === false)) {
+        console.log("FindNonAnswerdQuestions - index: " + index + ", length: " + $(element).find(".btn-success").length);
+        if (($(element).find(".btn-success").length === 0) && (Found === false)) {
             Count = index + 1;
             Found = true;
         }
     });
+    console.log("FindNonAnswerdQuestions - Count: " + Count);
     return Count;
+}
+
+
+function ReturnEndGamesenario(){
+    console.log("ReturnEndGamesenario - SourcePage: " + $(".SourcePage").length + ", btn-success: " + $(".btn-success").length )
+    if (($(".SourcePage").length == $(".btn-success").length)) {
+        if (ShowUserMsg){
+            var HTML = "";
+            HTML += '<h4 class="QuestionTask">Flot klaret </h4>';
+            HTML += 'Her er dit resultat: <span class="ScoreBox"><h5><span class="QuestionTask">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="QuestionTask ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5></span>';
+            // UserMsgBox("body", "<h4 class='QuestionTask'>Flot klaret </h4><br/>Her er dit resultat: "+String($(".SourcePage").length)+" opgaver korrekt. <br/> Du havde " + error_displayed_total + ' fejl undervejs. <br/><br/> Klik denne besked væk for at prøve igen.'); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
+            UserMsgBox("body", HTML); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
+            UserMsgBox_SetWidth(".container-fluid", 0.7);
+            $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);
+            $(".ErrorCount").text(error_displayed_total);
+            ShowUserMsg = false;
+            console.log("ReturnEndGamesenario - TRUE");
+        } else {
+            console.log("ReturnEndGamesenario - FALSE");
+            location.reload();
+        }
+    }
+}
+
+
+// ShowStudentScore(true);
+function ShowStudentScore(Use_UserMsgBox){
+    var HTML = '';  
+
+    if (Use_UserMsgBox){
+        // UserMsgBox("body", "Du klarede det med " + TotScoreObj.TotNumOfWrongAnswers + " fejl Se resultaterne her <br/>");
+        UserMsgBox("body", "<span class='feedbackbox_txtstyle_overskrift'>Flot</span><br/>Du har lavet "+String($(".SourcePage").length)+" opgaver korrekt. <br/> Du havde " + error_displayed_total + ' fejl undervejs. <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.');
+        UserMsgBox_SetWidth(".container-fluid", 0.7);
+    }
 }
 
 
@@ -231,7 +276,7 @@ $( document ).on('click', ".PagerButton", function(event){
 
 $( document ).on('click', ".StudentAnswer", function(event){
     var ParentObj = $(this).parent();
-    $(".StudentAnswer", ParentObj).removeClass("btnPressed CorrectAnswer WrongAnswer"); // Removes all previous answers in the view
+    $(".StudentAnswer", ParentObj).removeClass("btnPressed btn-success btn-danger").addClass("btn-info"); // Removes all previous answers in the view
     $(this).toggleClass("btnPressed");                                                  // Marks the pressed button as selected.
     console.log("interfaceChanger - ActiveLinkNum: " + ActiveLinkNum);
 });
@@ -243,7 +288,7 @@ $(document).on('click', ".checkAnswer", function(event) {
     console.log("ZZZZ - ActiveLinkNum: " + ActiveLinkNum);
 
     if (!$("#btnContainer_"+String(ActiveLinkNum-1)+" > .StudentAnswer").hasClass("btnPressed")) {
-        UserMsgBox("body", "Du skal svare på et spørgsmål før du tjekker svar.");
+        UserMsgBox("body", "Du skal markere et spørgsmål før du tjekker svar.");
         UserMsgBox_SetWidth(".container-fluid", 0.7);
         return 0;
     }
@@ -260,6 +305,7 @@ $(document).on('click', ".checkAnswer", function(event) {
 
 $( document ).on('click', ".MsgBox_bgr", function(event){
     ActiveLinkNum = FindNonAnswerdQuestions(); // (ActiveLinkNum < $(".SourcePage").length)? ActiveLinkNum+1:$(".SourcePage").length;
+    ReturnEndGamesenario();
     Pager("#PagerContainer", "#DataInput > div", "Pager");
     console.log("FindNonAnswerdQuestions - ActiveLinkNum: " + ActiveLinkNum);
 });
@@ -400,5 +446,5 @@ $(document).ready(function() {
 
     Pager("#PagerContainer", "#DataInput > div", "Pager");
 
-
+    // ReturnEndGamesenario();  // TEST
 });
