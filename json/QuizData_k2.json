@@ -13,7 +13,7 @@
             "sourceRef": {"showSrc" : true, "sourceInfo": "The Beatles ankommer til JFK lufthavnen"}
         },
         "correctAnswer": ["1"],
-        "feedbackData": ["Korrekt, der er tale om en kilde da...", "Forkert, der er ikke tale om en fremstilling da..."]
+        "feedbackData": ["Forkert, der er ikke tale om en kilde da...","Korrekt, der er tale om en fremstilling da..."]
     }
 }, {
     "userInterface": {
@@ -30,7 +30,7 @@
             "sourceRef": {"showSrc" : true, "sourceInfo": "Thylejeren"}
         },
         "correctAnswer": ["0"],
-        "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]
+        "feedbackData": ["Korrekt, der er tale om en kilde da...","Forkert, der er ikke tale om en fremstilling da..."]
     }
 }, {
     "userInterface": {
@@ -61,6 +61,6 @@
             "sourceRef": {"showSrc" : true, "sourceInfo": "Stig Møller - Thylejeren 1970"}
         },
         "correctAnswer": ["1"],
-        "feedbackData": ["Forkert, der er ikke tale om en fremstilling da...", "Korrekt, der er tale om en kilde da..."]
+        "feedbackData": [ "Forkert, der er ikke tale om en kilde da...","Korrekt, der er tale om en fremstilling da..."]
     }
 }]
