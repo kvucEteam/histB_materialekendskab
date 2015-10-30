@@ -11,16 +11,10 @@ function returnBtnContainer(jsonData, SourceId){
     var Num = parseInt(ActiveLinkNum) - 1;
 	var HTML = '';
 	// for (k in jsonData){
-
-		// var btnArray = jsonData[SourceId].userInterface.btn;  
-        var btnArray = jsonData.userInterface.btn;  // NEW_XXX 
-
+		var btnArray = jsonData[SourceId].userInterface.btn;   // ActiveLinkNum
 		HTML += '<div id="btnContainer_'+String(SourceId)+'" class="btnContainer">';
-
-        // HTML += (( (jsonData[SourceId].quizData.hasOwnProperty("taskText")) && (jsonData[SourceId].quizData.taskText !='') )?'<h4>'+jsonData[SourceId].quizData.taskText+'</h4>':'');
-        HTML += (( (jsonData.userInterface.hasOwnProperty("taskText")) && (jsonData.userInterface.taskText !='') )?'<h4>'+jsonData.userInterface.taskText+'</h4>':'');  // NEW_XXX 
-		
-        for (var n in btnArray){
+        HTML += (( (jsonData[SourceId].quizData.hasOwnProperty("taskText")) && (jsonData[SourceId].quizData.taskText !='') )?'<h4>'+jsonData[SourceId].quizData.taskText+'</h4>':'');
+		for (var n in btnArray){
 			HTML += '<span class="btn btn-info StudentAnswer" href="#">'+btnArray[n]+'</span>';
 		}
 		HTML += '</div>';
@@ -49,31 +43,19 @@ function countCorrectAnswers(jsonData){
 	error_total = 0;
     // var error_displayed_total = 0;
     var numOfQuestions = 0;
-
-	// for (var k in jsonData){
-    for (var k in jsonData.quizData){  // NEW_XXX
-
+	for (var k in jsonData){
 		var correct = 0; var error_missed = 0; var error_wrong = 0; var error_displayed = 0;
-
-	    // var answerArray = jsonData[k].quizData.correctAnswer;
-        var answerArray = jsonData.quizData[k].correctAnswer;  // NEW_XXX
-
+	    var answerArray = jsonData[k].quizData.correctAnswer;
 	    var numOfSrudentAnswers = $("#btnContainer_"+k+" > .btnPressed").length;
 	    var numOfCorrectAnswers = answerArray.length;
-
-        // jsonData[k].StudentAnswers = {Correct : [], Wrong: []};
-        jsonData.quizData[k].StudentAnswers = {Correct : [], Wrong: []};  // NEW_XXX
-
+        jsonData[k].StudentAnswers = {Correct : [], Wrong: []};
 	    for (var n in answerArray){
 	        // if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
             if ( ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")) || 
                   $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btn-success")){  // NY
                 // if ((typeof jsonData_old !== "undefined") && ())
 	            correct++;   // Counting correct answers.
-                
-                // jsonData[k].StudentAnswers.Correct.push(n);
-                jsonData.quizData[k].StudentAnswers.Correct.push(n);  // NEW_XXX
-
+                jsonData[k].StudentAnswers.Correct.push(n);
                 // $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
                 $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").addClass("btn-success").removeClass("btn-info btnPressed");
 	       } else {
@@ -91,10 +73,7 @@ function countCorrectAnswers(jsonData){
             // if (($(element).hasClass("btnPressed")) && !(elementInArray(answerArray, index))){
             if ((($(element).hasClass("btnPressed")) || ($(element).hasClass("btn-danger"))) && !(elementInArray(answerArray, index))){  // NY
                 ++error_displayed;
-
-                // jsonData[k].StudentAnswers.Wrong.push(index);
-                jsonData.quizData[k].StudentAnswers.Wrong.push(index); // NEW_XXX
-
+                jsonData[k].StudentAnswers.Wrong.push(index);
                 // $(element).toggleClass("WrongAnswer");
                 $(element).addClass("btn-danger").removeClass("btn-info btnPressed");
             }
@@ -134,13 +113,8 @@ console.log("CompareArrays: " + CompareArrays([1,2,3,4,5], [1,2,3,4,5]));
 
 function giveFeedback(jsonData, questionNum){
     var HTML = "";
-
-    // var questionArray = jsonData[questionNum].userInterface.btn;
-    var questionArray = jsonData.userInterface.btn;   // NEW_XXX
-
-    // var feedbackArray = jsonData[questionNum].quizData.feedbackData;
-    var feedbackArray = jsonData.quizData[questionNum].feedbackData;   // NEW_XXX
-
+    var questionArray = jsonData[questionNum].userInterface.btn;
+    var feedbackArray = jsonData[questionNum].quizData.feedbackData; 
     for (var n in questionArray){
         if ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("btn-success")){
             HTML += '<h3>Du har svaret <span class="label label-success">Korrekt!</span> </h3>';
@@ -208,10 +182,7 @@ function UserMsgBox_SetWidth(TargetSelector, WidthPercent){
 
 function returnSourcePages(jsonData){
     var HTML = '';
-
-    // for (var n in jsonData) {
-    for (var n in jsonData.quizData) {   // NEW_XXX
-
+    for (var n in jsonData) {
         HTML += '<div class="SourcePage">';
         HTML += returnBtnContainer(jsonData, n);
         HTML +=     '<div class="Source">'+returnSourcelItem(n, jsonData)+'</div>'; 
@@ -224,10 +195,7 @@ function returnSourcePages(jsonData){
 }
 
 function returnSourcelItem(questionNum, jsonData){
-    
-    // var itemData = jsonData[questionNum].quizData;
-    var itemData = jsonData.quizData[questionNum];  // NEW_XXX
-
+    var itemData = jsonData[questionNum].quizData;
     var HTML = '';
     switch(itemData.slideData.type) {
         case "img":
@@ -252,10 +220,7 @@ function returnSourcelItem(questionNum, jsonData){
 
 function returnSourceInfo(n, jsonData){
     var HTML = '';
-
-    // var JQS = jsonData[n].quizData.slideData;
-    var JQS = jsonData.quizData[n].slideData;  // NEW_XXX
-
+    var JQS = jsonData[n].quizData.slideData;
     console.log("returnSourceInfo - JQS: " + JSON.stringify(JQS));
     if (JQS.hasOwnProperty("sourceRef")){
         var JQSS = JQS.sourceRef;
@@ -293,10 +258,7 @@ function ReturnEndGamesenario(){
             // UserMsgBox("body", "<h4 class='QuestionTask'>Flot klaret </h4><br/>Her er dit resultat: "+String($(".SourcePage").length)+" opgaver korrekt. <br/> Du havde " + error_displayed_total + ' fejl undervejs. <br/><br/> Klik denne besked væk for at prøve igen.'); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
             UserMsgBox("body", HTML); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
             // UserMsgBox_SetWidth(".container-fluid", 0.7);
-
-            // $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);
-            $(".QuestionCounter").text(correct_total+' ud af '+jsonData.quizData.length);  // NEW_XXX 
-
+            $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);
             $(".ErrorCount").text(error_displayed_total);
             ShowUserMsg = false;
             console.log("ReturnEndGamesenario - TRUE");
@@ -353,9 +315,7 @@ $(document).on('click', ".checkAnswer", function(event) {
         return 0;
     }
 
-    // if (jsonData[ActiveLinkNum-1].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
-    if (jsonData.quizData[ActiveLinkNum-1].hasOwnProperty("answered")) {  // NEW_XXX
-
+    if (jsonData[ActiveLinkNum-1].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
         UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
         // UserMsgBox_SetWidth(".container-fluid", 0.7);
     } else {
@@ -503,20 +463,14 @@ $(document).ready(function() {
 
     console.log("jsonData: " + JSON.stringify(jsonData) );
 
-    // $("title").html(jsonData[0].userInterface.header);
-    $("title").html(jsonData.userInterface.header);  // NEW_XXX 
-
-    // $("#header").html(jsonData[0].userInterface.header);   // Shows the initial heading.
-    $("#header").html(jsonData.userInterface.header);   // NEW_XXX 
-
+    $("title").html(jsonData[0].userInterface.header);
+    $("#header").html(jsonData[0].userInterface.header);   // Shows the initial heading.
     // if (jsonData[0].userInterface.hasOwnProperty("taskNumber")) 
     //     $("#header").append('<img class="TaskNumberImg" src="../library/img/TaskNumbers_'+jsonData[0].userInterface.taskNumber+'.svg">');
-    
-    // $("#subHeader").html(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
-    $("#subHeader").html(jsonData.userInterface.subHeader);    // NEW_XXX 
+    $("#subHeader").html(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
 
-    // $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);   // Counts the initial number of correctly answered questions and total number questions and displays them.
-    $(".QuestionCounter").text(correct_total+' ud af '+jsonData.quizData.length); // NEW_XXX
+
+    $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);   // Counts the initial number of correctly answered questions and total number questions and displays them.
 
     Pager("#PagerContainer", "#DataInput > div", "Pager");
 

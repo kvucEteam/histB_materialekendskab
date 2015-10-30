@@ -1,0 +1,47 @@
+{
+    "userInterface": {
+            "header": "Ungdomsoprør - kilde eller fremstilling?",
+            "subHeader": "Du skal angive hvilket svar der bedst passet til spørgsmålet i karrusellen ved at trykke på nedenstående knapper...",
+            "taskText": "Svar på om der er tale om en kilde eller en fremstilling",
+            "btn": ["Kilde", "Fremstilling"]
+    },
+    "quizData" : [
+        {
+            "slideData": {
+                "type": "img",
+                "src": "https://upload.wikimedia.org/wikipedia/commons/6/61/The_Beatles_arrive_at_JFK_Airport.jpg",
+                "alt": "Eksternt billede...",
+                "sourceRef": {"showSrc" : true, "sourceInfo": "The Beatles ankommer til JFK lufthavnen"}
+            },
+            "correctAnswer": ["1"],
+            "feedbackData": ["Forkert, der er ikke tale om en kilde da...","Korrekt, der er tale om en fremstilling da..."]
+
+    }, {
+            "slideData": {
+                "type": "img",
+                "src": "http://www.kulturarv.dk/1001fortaellinger/uploads/images/editions/thylejren-jpg/690x_.jpg",
+                "alt": "Lokalt billede...",
+                "sourceRef": {"showSrc" : true, "sourceInfo": "Thylejeren"}
+            },
+            "correctAnswer": ["0"],
+            "feedbackData": ["Korrekt, der er tale om en kilde da...","Forkert, der er ikke tale om en fremstilling da..."]
+        
+    }, {
+            "slideData": {
+                "type": "text",
+                "text": "<h2>Familiens historie</h2> Udviklingen af den nye familie hang sammen med den fremvoksende kapitalisme. Individets rolle i markedsøkonomien gav anledning til udviklingen af den borgerlige individualistiske ideologi, som fremhævede individets betydning og ret på alle områder fra det juridiske til det kulturelle. Privatiseringen i familien med fremhævelse af privatlivets fred og tilbagetrækning fra det sociale liv i øvrigt må ses i sammenhæng med den moderne individualisme. Desuden blev familien en vigtig enhed i det økonomiske liv i og med at den tidligere handelskapitalisme baserede sig direkte på familiebedriften. Handelsborgerskabets familieform repræsenterede højdepunktet for kernefamilien. Familien var stærk, fordi den var en enhed i det økonomiske liv. Indgåelsen af fordelagtige ægteskaber var en økonomisk strategi for at sikre familiekapitalen. Men denne familieform stod først og fremmest stærkt blandt byborgerskabet. Familien hos bønder som ejede deres egen jord, havde lignende træk. Men i landsbyen var der før industrialiseringen en betydelig del af befolkningen, som var ejendomsløse: husmænd, tjenestefolk, daglejere, omstrejfere, osv. Der var en høj andel af ugifte i disse grupper, og et slående tegn på hvor svagt familien stod var skikken med at «auktionere familiemedlemmer bort» til arbejdskraft på gårdene, når en familie led økonomisk nød. Det blev ikke anset som noget grusomt eller umoralsk at adskille forældre fra børn og ægtefæller fra hinanden. Industrialiseringen trak skarer af ejendomsløse og småbønder fra landsbyerne ind til byerne, og førte til en yderligere svækkelse af familien i underklassen. Især under den oprindelige industrialisering i England i slutningen af 1700- og begyndelsen af 1800-tallet var dette slående. Når både mand, kvinde og barn havde en arbejdsdag på op imod 20 timer, var et familieliv i almindelig betydning ikke muligt. I Norden havde overbefolkningen i landbruget i 1700- og 1800-tallet ført til en stigning i antallet af husmænd, tjenestefolk og landarbejdere, mens andelen af selvejende bønder var gået tilbage. Der var tale om grupper, som i mindre grad end bønderne stiftede familie, og som en følge af det sank andelen af den voksne befolkning over 15 år som var gift, til omkring 50 % i århundredet før industrialiseringen slog igennem. Industrialiseringen fortsatte denne svækkelse af familien i underklassen, og tallet fortsatte med at vise en svagt faldende tendens frem til 1930. Men fra midten af 30'erne vendte udviklingen. Det blev mere almindeligt at gifte sig, og andelen af gifte i befolkningen steg. Stigningen fortsatte i efterkrigstiden frem til 1970. I 1999 var 62 % af befolkningen over 18 år gifte eller samboende (de viede udgjorde 48 %). Det er interessant, at omslaget i 30'erne kom samtidig med de første offentlige tilskud til børnefamilierne (børneforsorg m.m.). Efterhånden har der fundet en stadig mere omfattende indtægtsoverførsel sted via staten fra enlige og barnløse til børnefamilierne.<br/>Selv om kernefamilien fik sit gennembrud i lønarbejderklassen i denne periode, skete det på en anden måde end for den klassiske borgerlige familie. Mens den borgerlige familie var en stærk enhed med basis i det økonomiske liv, blev sikringen af lønarbejderfamilien en statslig opgave. Denne familie er ret fattig på selvstændige funktioner. Det gælder for øvrigt også til en vis grad i borgerskabet, hvor familievirksomheden er et fænomen der er ved at forsvinde til fordel for aktieselskaberne og de store koncerner. Den moderne families funktioner er knyttet til forbrug og reproduktionen af arbejdskraft."
+            },
+            "correctAnswer": ["1"],
+            "feedbackData": ["Forkert, der er ikke tale om en kilde da...", "Rigtigt, der er tale om en fremstilling da..."]
+        
+    }, {
+            "slideData": {
+                "type": "video",
+                "src": "https://www.youtube.com/embed/q5-6V_Ur084?rel=0",
+                "sourceRef": {"showSrc" : true, "sourceInfo": "Stig Møller - Thylejeren 1970"}
+            },
+            "correctAnswer": ["1"],
+            "feedbackData": [ "Forkert, der er ikke tale om en kilde da...","Korrekt, der er tale om en fremstilling da..."]
+        }
+    ]
+}

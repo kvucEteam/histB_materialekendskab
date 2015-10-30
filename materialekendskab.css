@@ -166,6 +166,10 @@ h5{
 
 /*********************************************************************/
 
+.label {
+	margin-left: 10px;
+}
+
 .label-success { 
 	background-color: #2abb2a;
 	border-radius: 4px;
@@ -194,6 +198,7 @@ h5{
 	background-color: #e7e6e2;
     border-color: #e7e6e2;
     color: #000;
+    margin-bottom: 0px;
 }
 
 
@@ -209,7 +214,8 @@ h5{
 }
 
 #UserMsgBox h3 {
-	font-weight: 400;
+	font-weight: 700;
+	margin-top: 0px;
 }
 
 /*********************************************************************/
