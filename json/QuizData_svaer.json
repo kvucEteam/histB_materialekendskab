@@ -1,0 +1,156 @@
+{
+"userInterface": {
+        "taskNumber" : "1",
+        "header": "Taksonomisk niveau - svær (DATA MANGLER)",
+        "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
+        "taskText": "Hvilket taksonomisk niveau skal dette spørgsmål besvares på?",
+        "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
+    },
+"quizData": [{
+        "slideData": {
+            "type": "text",
+            "text": "Hvordan forløb industrialiseringen i Danmark fra 1860 til 1914?."
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": [
+            "Korrekt, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvad fortæller kildematerialet om, hvordan industrialiseringen påvirkede den danske befolknings levevilkår?."
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvilken betydning havde industrialiseringen for forholdet mellem land og by på kort - og lang sigt?."
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Korrekt, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvordan udviklede familiemønstrene sig i Danmark i 50’erne og 60’erne?"
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": [
+            "Korrekt, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvilke ændringer i familiesynet kommer til udtryk i de vedlagte kilder?"
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.",
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.",  
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvilke konsekvenser havde det nye syn på familien på kort – og lang sigt?"
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Korrekt, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvordan var kvinders leve- og politiske vilkår i England i 1800-tallet?"
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": [
+            "Korrekt, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvorfor og med hvilke argumenter og metoder kæmpede de engelske suffragetter for stemmeret til kvinder?"
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvilken betydning fik de engelske suffragetter for kampen for kvindelig stemmeret i andre lande?"
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Korrekt, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvad var baggrunden for og forløbet af den 2. slesvigske krig i 1864?"
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": [
+            "Korrekt, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår.", 
+            "Forkert, spørgsmålet skal besvares på det redegørende niveau, som ofte giver en kronologisk fremstilling af begivenheder, udviklingstræk og vilkår."
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvilke forklaringer gav samtidens politikere på Danmarks nederlag i krigen?"
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.  ", 
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.  "
+            ]
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "Hvilke konsekvenser fik nederlaget for Danmark herunder særligt for befolkningen i det nuværende Sønderjylland?"
+        },
+        "correctAnswer": ["2"],
+        "feedbackData": [
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Forkert, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling.", 
+            "Korrekt, spørgsmålet skal besvares på det vurderende niveau, som fører analysen frem mod en konklusion ved at diskutere argumenter, trække paralleller eller tage begrundet stilling til konsekvenserne af en udvikling."
+            ]
+    }]
+}
+
+
+
