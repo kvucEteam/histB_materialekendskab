@@ -4,6 +4,7 @@ var correct_total = 0;
 var error_total = 0;
 var error_displayed_total = 0;
 var ShowUserMsg = true;
+var StudentAnswerWasFalse = false;
 
 
 
@@ -171,6 +172,8 @@ function giveFeedback(jsonData, questionNum){
             HTML += feedbackArray[n];
             HTML += "</p>";
 
+            StudentAnswerWasFalse = true;
+
             UserMsgBox("body", HTML);
             // UserMsgBox_SetWidth(".container-fluid", 0.7);
         }
@@ -299,9 +302,15 @@ function FindNonAnswerdQuestions(){
         if (($(element).find(".btn-success").length === 0) && (Found === false)) {
             Count = index + 1;
             Found = true;
-        }
+        }  
     });
+
+    if (StudentAnswerWasFalse) { // This if-clause ensures that the student stays on the question they answered wrong.
+        Count = ActiveLinkNum;
+        StudentAnswerWasFalse = false;
+    }
     console.log("FindNonAnswerdQuestions - Count: " + Count);
+    console.log("FindNonAnswerdQuestions - ActiveLinkNum: " + ActiveLinkNum);
     return Count;
 }
 
