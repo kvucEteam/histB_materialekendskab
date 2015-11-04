@@ -11,14 +11,12 @@ function returnBtnContainer(jsonData, SourceId){
     var Num = parseInt(ActiveLinkNum) - 1;
 	var HTML = '';
 	// for (k in jsonData){
-
-		// var btnArray = jsonData[SourceId].userInterface.btn;  
-        var btnArray = jsonData.userInterface.btn;  // NEW_XXX 
+ 
+        var btnArray = jsonData.userInterface.btn;  
 
 		HTML += '<div id="btnContainer_'+String(SourceId)+'" class="btnContainer">';
 
-        // HTML += (( (jsonData[SourceId].quizData.hasOwnProperty("taskText")) && (jsonData[SourceId].quizData.taskText !='') )?'<h4>'+jsonData[SourceId].quizData.taskText+'</h4>':'');
-        HTML += (( (jsonData.userInterface.hasOwnProperty("taskText")) && (jsonData.userInterface.taskText !='') )?'<h4>'+jsonData.userInterface.taskText+'</h4>':'');  // NEW_XXX 
+        HTML += (( (jsonData.userInterface.hasOwnProperty("taskText")) && (jsonData.userInterface.taskText !='') )?'<h4>'+jsonData.userInterface.taskText+'</h4>':''); 
 		
         for (var n in btnArray){
 			HTML += '<span class="btn btn-info StudentAnswer" href="#">'+btnArray[n]+'</span>';
@@ -30,6 +28,20 @@ function returnBtnContainer(jsonData, SourceId){
 	return HTML;
 }
 
+
+function ShuffelArray(ItemArray){
+    var NumOfItems = ItemArray.length;
+    var NewArray = ItemArray.slice();  // Copy the array...
+    var Item2; var TempItem1; var TempItem2;
+    for (var Item1 = 0; Item1 < NumOfItems; Item1++) {
+        Item2 = Math.floor( Math.random() * NumOfItems);
+        TempItem1 = NewArray[Item1];
+        TempItem2 = NewArray[Item2];
+        NewArray[Item2] = TempItem1;
+        NewArray[Item1] = TempItem2;
+    }
+    return NewArray;
+}
 
 
 function elementInArray(tArray, element){
@@ -50,19 +62,16 @@ function countCorrectAnswers(jsonData){
     // var error_displayed_total = 0;
     var numOfQuestions = 0;
 
-	// for (var k in jsonData){
-    for (var k in jsonData.quizData){  // NEW_XXX
+    for (var k in jsonData.quizData){ 
 
 		var correct = 0; var error_missed = 0; var error_wrong = 0; var error_displayed = 0;
 
-	    // var answerArray = jsonData[k].quizData.correctAnswer;
-        var answerArray = jsonData.quizData[k].correctAnswer;  // NEW_XXX
+        var answerArray = jsonData.quizData[k].correctAnswer;  
 
 	    var numOfSrudentAnswers = $("#btnContainer_"+k+" > .btnPressed").length;
 	    var numOfCorrectAnswers = answerArray.length;
 
-        // jsonData[k].StudentAnswers = {Correct : [], Wrong: []};
-        jsonData.quizData[k].StudentAnswers = {Correct : [], Wrong: []};  // NEW_XXX
+        jsonData.quizData[k].StudentAnswers = {Correct : [], Wrong: []}; 
 
 	    for (var n in answerArray){
 	        // if ($("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").hasClass("btnPressed")){
@@ -71,8 +80,7 @@ function countCorrectAnswers(jsonData){
                 // if ((typeof jsonData_old !== "undefined") && ())
 	            correct++;   // Counting correct answers.
                 
-                // jsonData[k].StudentAnswers.Correct.push(n);
-                jsonData.quizData[k].StudentAnswers.Correct.push(n);  // NEW_XXX
+                jsonData.quizData[k].StudentAnswers.Correct.push(n); 
 
                 // $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").toggleClass("CorrectAnswer");
                 $("#btnContainer_"+k+" > .StudentAnswer:eq("+answerArray[n]+")").addClass("btn-success").removeClass("btn-info btnPressed");
@@ -92,8 +100,7 @@ function countCorrectAnswers(jsonData){
             if ((($(element).hasClass("btnPressed")) || ($(element).hasClass("btn-danger"))) && !(elementInArray(answerArray, index))){  // NY
                 ++error_displayed;
 
-                // jsonData[k].StudentAnswers.Wrong.push(index);
-                jsonData.quizData[k].StudentAnswers.Wrong.push(index); // NEW_XXX
+                jsonData.quizData[k].StudentAnswers.Wrong.push(index); 
 
                 // $(element).toggleClass("WrongAnswer");
                 $(element).addClass("btn-danger").removeClass("btn-info btnPressed");
@@ -135,11 +142,9 @@ console.log("CompareArrays: " + CompareArrays([1,2,3,4,5], [1,2,3,4,5]));
 function giveFeedback(jsonData, questionNum){
     var HTML = "";
 
-    // var questionArray = jsonData[questionNum].userInterface.btn;
-    var questionArray = jsonData.userInterface.btn;   // NEW_XXX
+    var questionArray = jsonData.userInterface.btn; 
 
-    // var feedbackArray = jsonData[questionNum].quizData.feedbackData;
-    var feedbackArray = jsonData.quizData[questionNum].feedbackData;   // NEW_XXX
+    var feedbackArray = jsonData.quizData[questionNum].feedbackData; 
 
     // var kildeFeedback = "Kilder er spor eller levn fra fortiden, som kan give et billede af den tid kilden er fra.";
     // var fremstillingFeedback = "Fremstillinger er historikerens fortolkning af fortiden, som er blevet til på baggrund af en analyse af kilder.";
@@ -230,8 +235,7 @@ function UserMsgBox_SetWidth(TargetSelector, WidthPercent){
 function returnSourcePages(jsonData){
     var HTML = '';
 
-    // for (var n in jsonData) {
-    for (var n in jsonData.quizData) {   // NEW_XXX
+    for (var n in jsonData.quizData) {  
 
         HTML += '<div class="SourcePage">';
         HTML += returnBtnContainer(jsonData, n);
@@ -246,8 +250,7 @@ function returnSourcePages(jsonData){
 
 function returnSourcelItem(questionNum, jsonData){
     
-    // var itemData = jsonData[questionNum].quizData;
-    var itemData = jsonData.quizData[questionNum];  // NEW_XXX
+    var itemData = jsonData.quizData[questionNum]; 
 
     var HTML = '';
     switch(itemData.slideData.type) {
@@ -274,8 +277,7 @@ function returnSourcelItem(questionNum, jsonData){
 function returnSourceInfo(n, jsonData){
     var HTML = '';
 
-    // var JQS = jsonData[n].quizData.slideData;
-    var JQS = jsonData.quizData[n].slideData;  // NEW_XXX
+    var JQS = jsonData.quizData[n].slideData;  
 
     console.log("returnSourceInfo - JQS: " + JSON.stringify(JQS));
     if (JQS.hasOwnProperty("sourceRef")){
@@ -315,8 +317,7 @@ function ReturnEndGamesenario(){
             UserMsgBox("body", HTML); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
             // UserMsgBox_SetWidth(".container-fluid", 0.7);
 
-            // $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);
-            $(".QuestionCounter").text(correct_total+' ud af '+jsonData.quizData.length);  // NEW_XXX 
+            $(".QuestionCounter").text(correct_total+' ud af '+jsonData.quizData.length);  
 
             $(".ErrorCount").text(error_displayed_total);
             ShowUserMsg = false;
@@ -378,8 +379,7 @@ $(document).on('click', ".checkAnswer", function(event) {
         return 0;
     }
 
-    // if (jsonData[ActiveLinkNum-1].hasOwnProperty("answered")) {  // Prevent the students from altering their first/initial answer.
-    if (jsonData.quizData[ActiveLinkNum-1].hasOwnProperty("answered")) {  // NEW_XXX
+    if (jsonData.quizData[ActiveLinkNum-1].hasOwnProperty("answered")) { 
 
         UserMsgBox("body", "Du har allerede svaret på denne opgave, og kan derfor ikke lave en ny besvarelse.");
         // UserMsgBox_SetWidth(".container-fluid", 0.7);
@@ -526,25 +526,22 @@ $(document).ready(function() {
 
 	ReturnAjaxData("GET", "json/QuizData"+UlrVarObj.file+".json", false, "json");
 
+    // jsonData.quizData = ShuffelArray(jsonData.quizData);
 
     $("#DataInput").html(returnSourcePages(jsonData));
 
     console.log("jsonData: " + JSON.stringify(jsonData) );
 
-    // $("title").html(jsonData[0].userInterface.header);
-    $("title").html(jsonData.userInterface.header);  // NEW_XXX 
-
-    // $("#header").html(jsonData[0].userInterface.header);   // Shows the initial heading.
-    $("#header").html(jsonData.userInterface.header);   // NEW_XXX 
+    $("title").html(jsonData.userInterface.header); 
+    
+    $("#header").html(jsonData.userInterface.header);  
 
     // if (jsonData[0].userInterface.hasOwnProperty("taskNumber")) 
     //     $("#header").append('<img class="TaskNumberImg" src="../library/img/TaskNumbers_'+jsonData[0].userInterface.taskNumber+'.svg">');
     
-    // $("#subHeader").html(jsonData[0].userInterface.subHeader);    // Shows the initial subheading.
-    $("#subHeader").html(jsonData.userInterface.subHeader);    // NEW_XXX 
+    $("#subHeader").html(jsonData.userInterface.subHeader);   // Shows the initial subheading.
 
-    // $(".QuestionCounter").text(correct_total+' ud af '+jsonData.length);   // Counts the initial number of correctly answered questions and total number questions and displays them.
-    $(".QuestionCounter").text(correct_total+' ud af '+jsonData.quizData.length); // NEW_XXX
+    $(".QuestionCounter").text(correct_total+' ud af '+jsonData.quizData.length);  // Counts the initial number of correctly answered questions and total number questions and displays them.
 
     Pager("#PagerContainer", "#DataInput > div", "Pager");
 

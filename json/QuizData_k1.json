@@ -8,11 +8,11 @@
 "quizData": [{
         "slideData": {
             "type": "img",
-            "src": "img/06_Elna,%20Statistisk%20%C3%85rbog%201920,%20side%2027_js.jpg",
+            "src": "img/06_Elna_Statistisk_aarbog_1920_side_27_js.jpg",
             "alt": "Lokalt billede...",
             "sourceRef": {
-                "showSrc": true,
-                "sourceInfo": "Statistisk årbog 1920"
+                "showSrc": false,
+                "sourceInfo": "Statistisk årbog 1920 <br/> <a href='http://www.dst.dk/Site/Dst/Udgivelser/GetPubFile.aspx?id=13170&sid=hele'>http://www.dst.dk/Site/Dst/Udgivelser/GetPubFile.aspx?id=13170&sid=hele</a>"
             }
         },
         "correctAnswer": ["0"],
