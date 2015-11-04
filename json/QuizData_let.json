@@ -9,7 +9,11 @@
 "quizData": [{
         "slideData": {
             "type": "text",
-            "text": "Hvordan forløb industrialiseringen i Danmark fra 1860 til 1914?."
+            "text": "Hvordan forløb industrialiseringen i Danmark fra 1860 til 1914?.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["0"],
         "feedbackData": [
@@ -21,7 +25,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvad fortæller kildematerialet om, hvordan industrialiseringen påvirkede den danske befolknings levevilkår?."
+            "text": "Hvad fortæller kildematerialet om, hvordan industrialiseringen påvirkede den danske befolknings levevilkår?.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -33,7 +41,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvilken betydning havde industrialiseringen for forholdet mellem land og by på kort - og lang sigt?."
+            "text": "Hvilken betydning havde industrialiseringen for forholdet mellem land og by på kort - og lang sigt?.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -45,7 +57,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvordan udviklede familiemønstrene sig i Danmark i 50’erne og 60’erne?"
+            "text": "Hvordan udviklede familiemønstrene sig i Danmark i 50’erne og 60’erne?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["0"],
         "feedbackData": [
@@ -57,7 +73,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvilke ændringer i familiesynet kommer til udtryk i de vedlagte kilder?"
+            "text": "Hvilke ændringer i familiesynet kommer til udtryk i de vedlagte kilder?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -69,7 +89,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvilke konsekvenser havde det nye syn på familien på kort – og lang sigt?"
+            "text": "Hvilke konsekvenser havde det nye syn på familien på kort – og lang sigt?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -81,7 +105,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvordan var kvinders leve- og politiske vilkår i England i 1800-tallet?"
+            "text": "Hvordan var kvinders leve- og politiske vilkår i England i 1800-tallet?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["0"],
         "feedbackData": [
@@ -93,7 +121,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvorfor og med hvilke argumenter og metoder kæmpede de engelske suffragetter for stemmeret til kvinder?"
+            "text": "Hvorfor og med hvilke argumenter og metoder kæmpede de engelske suffragetter for stemmeret til kvinder?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -105,7 +137,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvilken betydning fik de engelske suffragetter for kampen for kvindelig stemmeret i andre lande?"
+            "text": "Hvilken betydning fik de engelske suffragetter for kampen for kvindelig stemmeret i andre lande?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -117,7 +153,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvad var baggrunden for og forløbet af den 2. slesvigske krig i 1864?"
+            "text": "Hvad var baggrunden for og forløbet af den 2. slesvigske krig i 1864?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["0"],
         "feedbackData": [
@@ -129,7 +169,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvilke forklaringer gav samtidens politikere på Danmarks nederlag i krigen?"
+            "text": "Hvilke forklaringer gav samtidens politikere på Danmarks nederlag i krigen?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -141,7 +185,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvilke konsekvenser fik nederlaget for Danmark herunder særligt for befolkningen i det nuværende Sønderjylland?"
+            "text": "Hvilke konsekvenser fik nederlaget for Danmark herunder særligt for befolkningen i det nuværende Sønderjylland?",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [

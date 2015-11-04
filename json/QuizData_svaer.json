@@ -3,13 +3,17 @@
         "taskNumber" : "1",
         "header": "Taksonomisk niveau - svær",
         "subHeader": "Klik og vælg om der er tale om en redegørende, analyserende eller vurderende fremstilling?",
-        "taskText": "Hvilket taksonomisk niveau skal dette spørgsmål besvares på?",
+        "taskText": "Hvilket taksonomisk niveau befinder dette tekstuddrag sig på?",
         "btn": ["Redegørende?", "Analyserende?", "Vurderende?"]
     },
 "quizData": [{
         "slideData": {
             "type": "text",
-            "text": "Fra omkring 1870 begyndte danske arbejdere at organisere sig på socialistisk grundlag efter inspiration fra udviklingen i andre lande i Europa. I spidsen for processen stod den velformulerede, intellektuelle Louis Pio. Trods voldsom fordømmelse i pressen fik den danske afdeling af Internationale i løbet af et halvt år 4-5000 medlemmer i København og halvt så mange i de større provinsbyer. I maj 1872 indkaldte Louis Pio til et møde for arbejdere i Fælledparken i København. Politiet forbød mødet, og Pio blev sammen med de to andre ledere i arbejderbevægelsen, Harald Brix og Paul Geleff, arresteret og idømt lange fængselsdomme."
+            "text": "Fra omkring 1870 begyndte danske arbejdere at organisere sig på socialistisk grundlag efter inspiration fra udviklingen i andre lande i Europa. I spidsen for processen stod den velformulerede, intellektuelle Louis Pio. Trods voldsom fordømmelse i pressen fik den danske afdeling af Internationale i løbet af et halvt år 4-5000 medlemmer i København og halvt så mange i de større provinsbyer. I maj 1872 indkaldte Louis Pio til et møde for arbejdere i Fælledparken i København. Politiet forbød mødet, og Pio blev sammen med de to andre ledere i arbejderbevægelsen, Harald Brix og Paul Geleff, arresteret og idømt lange fængselsdomme.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/arbejderbevaegelsen-1872-1940/?no_cache=1&cHash=763b36f1b54f6bfa05d0675d79c62093'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/arbejderbevaegelsen-1872-1940/?no_cache=1&cHash=763b36f1b54f6bfa05d0675d79c62093</a>"
+            }
         },
         "correctAnswer": ["0"],
         "feedbackData": [
@@ -21,7 +25,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Middelalderens ægteskaber var et samarbejde mellem mand og kvinde. Udover moderrollen havde kvinden ansvar for husholdet, herunder madlavning, vask, produktion af tøj m.m. Andre sysler kunne være brodering, og der er fundet fingerbøl fra middelalderen netop til dette formål. Inden for samfundets øverste lag samarbejdede det adelige ægtepar om administrationen af godser. Der var også egentlige erhverv, der blev anset for at være kvindehverv. Det var eksempelvis kvinderne, der bryggede øllet. På de mange kroer var der krokoner, og kvinder har formentlig i nogle tilfælde selv drevet kroer. I byerne fandt man desuden småhandlende kvinder i boder."
+            "text": "Middelalderens ægteskaber var et samarbejde mellem mand og kvinde. Udover moderrollen havde kvinden ansvar for husholdet, herunder madlavning, vask, produktion af tøj m.m. Andre sysler kunne være brodering, og der er fundet fingerbøl fra middelalderen netop til dette formål. Inden for samfundets øverste lag samarbejdede det adelige ægtepar om administrationen af godser. Der var også egentlige erhverv, der blev anset for at være kvindehverv. Det var eksempelvis kvinderne, der bryggede øllet. På de mange kroer var der krokoner, og kvinder har formentlig i nogle tilfælde selv drevet kroer. I byerne fandt man desuden småhandlende kvinder i boder.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvinder-i-middelalderen/?no_cache=1&cHash=83ad9b57c503a07967732e7230868b68'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvinder-i-middelalderen/?no_cache=1&cHash=83ad9b57c503a07967732e7230868b68</a>"
+            }
         },
         "correctAnswer": ["0"],
         "feedbackData": [
@@ -33,7 +41,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Kvinder blev langt op i 1800-tallet betragtet som værende uden en kønsdrift, det vil sige uden seksuelle lyster og drifter. Opfattelsen af kvindens (manglende) seksualitet betød, at kvinder i store dele af 1800-tallet relativt uproblematisk kunne leve sammen, fordi de i fællesskab forenede og sublimerede de feminine, aseksuelle og åndelige dyder. Periodens borgerlige kvinder, som boede sammen med en anden borgerlig kvinde, opfattede ikke sig selv som homoseksuelle, fordi de gik med på den præmis, at de ingen seksualitet havde. Under disse forudsætninger kunne de leve et respektabelt liv sammen med en anden kvinde."
+            "text": "Kvinder blev langt op i 1800-tallet betragtet som værende uden en kønsdrift, det vil sige uden seksuelle lyster og drifter. Opfattelsen af kvindens (manglende) seksualitet betød, at kvinder i store dele af 1800-tallet relativt uproblematisk kunne leve sammen, fordi de i fællesskab forenede og sublimerede de feminine, aseksuelle og åndelige dyder. Periodens borgerlige kvinder, som boede sammen med en anden borgerlig kvinde, opfattede ikke sig selv som homoseksuelle, fordi de gik med på den præmis, at de ingen seksualitet havde. Under disse forudsætninger kunne de leve et respektabelt liv sammen med en anden kvinde.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/homoseksualitetsbegrebet-i-danmark/?no_cache=1&cHash=1c3640f328cc6bea8572e6cac591e421'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/homoseksualitetsbegrebet-i-danmark/?no_cache=1&cHash=1c3640f328cc6bea8572e6cac591e421</a>"
+            }
         },
         "correctAnswer": ["0"],
         "feedbackData": [
@@ -45,7 +57,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Den danske politiker og jurist A.F. Krieger var medlem af grundlovsudvalget i 1849. I forbindelse med dette arbejde udtalte han ”Overalt erkender man jo saaledes, at umyndige, børn, fruentimmere, forbrydere ikke bør have valgret”. Dette citat understreger den tids opfattelse af kvinden, som værende ude af stand til at deltage i demokratiet på lige fod med mænd."
+            "text": "Den danske politiker og jurist A.F. Krieger var medlem af grundlovsudvalget i 1849. I forbindelse med dette arbejde udtalte han ”Overalt erkender man jo saaledes, at umyndige, børn, fruentimmere, forbrydere ikke bør have valgret”. Dette citat understreger den tids opfattelse af kvinden, som værende ude af stand til at deltage i demokratiet på lige fod med mænd.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://www.arbejdermuseet.dk/index.php?option=com_content&view=article&id=908:arbejderkvinderne-og-stemmeretten-den-seje-kamp&catid=73:om-emner-og-personer&Itemid=13'>http://www.arbejdermuseet.dk/index.php?option=com_content&view=article&id=908:arbejderkvinderne-og-stemmeretten-den-seje-kamp&catid=73:om-emner-og-personer&Itemid=13</a>"
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -57,7 +73,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Ægteparret var i fællesskab ansvarlige for husholdningen og måtte fæste lid til partnerens samarbejdsvillighed. Et tilsyneladende særlig godt forhold herskede mellem det svenske ægtepar Holmgaut og Odendisa, da Holmgaut med runer lod riste en mindeindskrift efter sin hustru: &quot;Ingen bedre husfrue vil komme til Hassmyra, at se efter gården&quot;. Denne indskrift vidner om kvindens rolle for driften af gården, organiseringen af husholdning og måske kontrol over mennesker, dyr og ressourcer. Var husbonden ude på vikingetogt, kunne ansvaret for gården tilfalde kvinden."
+            "text": "Ægteparret var i fællesskab ansvarlige for husholdningen og måtte fæste lid til partnerens samarbejdsvillighed. Et tilsyneladende særlig godt forhold herskede mellem det svenske ægtepar Holmgaut og Odendisa, da Holmgaut med runer lod riste en mindeindskrift efter sin hustru: &quot;Ingen bedre husfrue vil komme til Hassmyra, at se efter gården&quot;. Denne indskrift vidner om kvindens rolle for driften af gården, organiseringen af husholdning og måske kontrol over mennesker, dyr og ressourcer. Var husbonden ude på vikingetogt, kunne ansvaret for gården tilfalde kvinden.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvinder-i-danmarks-vikingetid/?no_cache=1&cHash=4817179cbfcbee3cecdbfe83019434ff'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvinder-i-danmarks-vikingetid/?no_cache=1&cHash=4817179cbfcbee3cecdbfe83019434ff</a>"
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -69,7 +89,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Som 23-årig begyndte Marie Christensen at sætte ord på sine tanker og skrev i 1894: &quot;Gid jeg en Dag kunde løsne Danmarks Slavinders Lænker.&quot; Hun ophørte i 1895 sit arbejde som tjenestepige og ernærede sig i nogle år ved at undervise. Hun fulgte samtidig selv kurser på handelsskole og højskole."
+            "text": "Som 23-årig begyndte Marie Christensen at sætte ord på sine tanker og skrev i 1894: &quot;Gid jeg en Dag kunde løsne Danmarks Slavinders Lænker.&quot; Hun ophørte i 1895 sit arbejde som tjenestepige og ernærede sig i nogle år ved at undervise. Hun fulgte samtidig selv kurser på handelsskole og højskole.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/marie-christensen-1871-1945/?no_cache=1'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/marie-christensen-1871-1945/?no_cache=1</a>"
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -81,7 +105,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "&quot;Allerede i en Tid af 6 á 7 Aar er jeg af min Mand Slagtermester Johan Georg Lödel paa den mest foragtelige Maade bleven mishandlet og ilde tracteret uden at jeg med mit vidende dertil har givet ham nogen Anledning og jeg har i denne Tid flere Gange havt i sinde at søge Skilsmisse fra ham i Henseende til Bord og Seng.&quot; <br/> Sådan skriver Catrine Lödel i sin anmodning om separation til Københavns Magistrat tidligt i januar 1810. Men hun trækker sin anmodning tilbage i håb om, at manden ville forbedre sig. Det sker åbenbart ikke. For allerede året efter foreligger der endnu en anmodning fra Catrine Lödel om separation."
+            "text": "&quot;Allerede i en Tid af 6 á 7 Aar er jeg af min Mand Slagtermester Johan Georg Lödel paa den mest foragtelige Maade bleven mishandlet og ilde tracteret uden at jeg med mit vidende dertil har givet ham nogen Anledning og jeg har i denne Tid flere Gange havt i sinde at søge Skilsmisse fra ham i Henseende til Bord og Seng.&quot; <br/> Sådan skriver Catrine Lödel i sin anmodning om separation til Københavns Magistrat tidligt i januar 1810. Men hun trækker sin anmodning tilbage i håb om, at manden ville forbedre sig. Det sker åbenbart ikke. For allerede året efter foreligger der endnu en anmodning fra Catrine Lödel om separation.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://www.kbharkiv.dk/images/files/Soeg/inspiration-for-studerende/Hustruvold-Historier-til-arkivinspiration-for-studerende.pdf'>http://www.kbharkiv.dk/images/files/Soeg/inspiration-for-studerende/Hustruvold-Historier-til-arkivinspiration-for-studerende.pdf</a>"
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -93,7 +121,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Som Gallup selv anførte i en meningsmåling fra 1960, så er det almindeligt kendt, at hver generation har det med at opfatte de efterfølgende generationer som uopdragne og dovne. <br/> I meningsmålingen spurgte Gallup danskerne om deres holdning til mængden af ungdommens fritid, lommepenge og moral. Overodnet set var danskerne noget kritisk over for ungdommen. Således mente over halvdelen, at de unge havde for meget fritid og for mange lommepenge. 40 % mente at de havde lav moral, mens kun 11 % mente moralen var høj blandt de unge. Gallup opdelte også svarene efter bopæl, køn og alder. Det mest bemærkelsesværdige ved denne opdeling er måske, at danskernes svar ikke varierede særligt meget ud fra disse parametre."
+            "text": "Som Gallup selv anførte i en meningsmåling fra 1960, så er det almindeligt kendt, at hver generation har det med at opfatte de efterfølgende generationer som uopdragne og dovne. <br/> I meningsmålingen spurgte Gallup danskerne om deres holdning til mængden af ungdommens fritid, lommepenge og moral. Overodnet set var danskerne noget kritisk over for ungdommen. Således mente over halvdelen, at de unge havde for meget fritid og for mange lommepenge. 40 % mente at de havde lav moral, mens kun 11 % mente moralen var høj blandt de unge. Gallup opdelte også svarene efter bopæl, køn og alder. Det mest bemærkelsesværdige ved denne opdeling er måske, at danskernes svar ikke varierede særligt meget ud fra disse parametre.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/gallup-1960-har-ungdommen-for-loese-toejler/?no_cache=1&cHash=f31f4905b126a57a6fa43b7f8bbd0dce'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/gallup-1960-har-ungdommen-for-loese-toejler/?no_cache=1&cHash=f31f4905b126a57a6fa43b7f8bbd0dce</a>"
+            }
         },
         "correctAnswer": ["1"],
         "feedbackData": [
@@ -105,7 +137,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Det er sikkert, at kalkmalerierne i langt de fleste danske kirker på et tidspunkt er blevet kalket over. Men skete det i forbindelse med Reformationen, som traditionen lyder – og som det stadig fremgår af mange bøger og beskrivelser? <br/><br/> Grundlæggende lyder det mest sandsynligt, at man i forbindelse med Reformationen fjernede i hvert fald de billeder, der havde med katolske helgener at gøre, for nu var det slut med helgendyrkelse. <br/><br/> Imidlertid findes der i enkelte kirker kalkmalerier, som aldrig har været overkalkede, og i ganske mange kirker findes der kalkmalerier, som er malede efter Reformationen. Disse findes fortrinsvis i kirker, som ikke havde fået (nye) kalkmalerier i tiden op mod Reformationen. Sagen forstås vist bedst, hvis man gør sig klart, at kalkmalerierne langt op i tiden blev anset som en selvfølge. Det var noget, der hørte sig til, og helt op til begyndelsen af 1800-tallet blev der malet nye kalkmalerier - ofte oven på gamle malerier, som så først blev overhvidtede. I øvrigt blev der også lavet kalkmalede dekorationer på væggene på mange slotte og herregårde."
+            "text": "Det er sikkert, at kalkmalerierne i langt de fleste danske kirker på et tidspunkt er blevet kalket over. Men skete det i forbindelse med Reformationen, som traditionen lyder – og som det stadig fremgår af mange bøger og beskrivelser? <br/><br/> Grundlæggende lyder det mest sandsynligt, at man i forbindelse med Reformationen fjernede i hvert fald de billeder, der havde med katolske helgener at gøre, for nu var det slut med helgendyrkelse. <br/><br/> Imidlertid findes der i enkelte kirker kalkmalerier, som aldrig har været overkalkede, og i ganske mange kirker findes der kalkmalerier, som er malede efter Reformationen. Disse findes fortrinsvis i kirker, som ikke havde fået (nye) kalkmalerier i tiden op mod Reformationen. Sagen forstås vist bedst, hvis man gør sig klart, at kalkmalerierne langt op i tiden blev anset som en selvfølge. Det var noget, der hørte sig til, og helt op til begyndelsen af 1800-tallet blev der malet nye kalkmalerier - ofte oven på gamle malerier, som så først blev overhvidtede. I øvrigt blev der også lavet kalkmalede dekorationer på væggene på mange slotte og herregårde.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/myte-blev-de-danske-kirkers-kalkmalerier-overkalket-efter-reformationen-i-1536/?no_cache=1&cHash=8771cfc707758724a2a3c6cfca8e8f3e'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/myte-blev-de-danske-kirkers-kalkmalerier-overkalket-efter-reformationen-i-1536/?no_cache=1&cHash=8771cfc707758724a2a3c6cfca8e8f3e</a>"
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -117,7 +153,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Endnu i dag diskuterer historikere, hvorvidt Danmark blev et demokrati i 1849. <br/><br/> Et ofte anvendt argument mod at datere det danske demokratis fødsel til Junigrundloven er, at Danmark først blev et egentligt demokrati i forbindelse med systemskiftet i 1901, hvor folketingsparlamentarismen som princip blev dansk statsskik... <br/><br/> Et andet argument, som taler mod opfattelsen af Danmark som demokrati allerede fra 1849 er, at det først var med grundlovsændringen i 1915, at størstedelen af de hidtil ekskluderede grupper – kvinder og tjenestefolk uden egen husstand – fik stemmeret. <br/><br/> Mod dette argument kan man indvende, at Junigrundloven for første gang i danmarkshistorien indførte et parlament med reel politisk beslutningskraft, og at stemmeretten omfattede et i datidens øjne meget bredt udsnit af befolkningen. Dette kan udlægges som første skridt i en demokratiseringsproces."
+            "text": "Endnu i dag diskuterer historikere, hvorvidt Danmark blev et demokrati i 1849. <br/><br/> Et ofte anvendt argument mod at datere det danske demokratis fødsel til Junigrundloven er, at Danmark først blev et egentligt demokrati i forbindelse med systemskiftet i 1901, hvor folketingsparlamentarismen som princip blev dansk statsskik... <br/><br/> Et andet argument, som taler mod opfattelsen af Danmark som demokrati allerede fra 1849 er, at det først var med grundlovsændringen i 1915, at størstedelen af de hidtil ekskluderede grupper – kvinder og tjenestefolk uden egen husstand – fik stemmeret. <br/><br/> Mod dette argument kan man indvende, at Junigrundloven for første gang i danmarkshistorien indførte et parlament med reel politisk beslutningskraft, og at stemmeretten omfattede et i datidens øjne meget bredt udsnit af befolkningen. Dette kan udlægges som første skridt i en demokratiseringsproces.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/junigrundloven-1849-og-demokratiet/?no_cache=1&cHash=d4cf0bcc3f79f16df22e967e3ee7791e'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/junigrundloven-1849-og-demokratiet/?no_cache=1&cHash=d4cf0bcc3f79f16df22e967e3ee7791e</a>"
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -129,7 +169,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Ungdomsoprøret havde tre drivkræfter: et generationsoprør mod forældrene og senere mod det politiske og den kapitalistiske private sektor med kravet om ligestilling, seksuel frigørelse og større medarbejderindflydelse i virksomhederne, men ikke mindst i uddannelsesinstitutionerne.For det andet fascinationen af en politisk ideologi – her de socialistiske og kommunistiske tankesystemer som det nye svar på fremtidens samfund med regimerne i USSR, DDR, Cuba og Kina som forbilleder."
+            "text": "Ungdomsoprøret havde tre drivkræfter: et generationsoprør mod forældrene og senere mod det politiske og den kapitalistiske private sektor med kravet om ligestilling, seksuel frigørelse og større medarbejderindflydelse i virksomhederne, men ikke mindst i uddannelsesinstitutionerne.For det andet fascinationen af en politisk ideologi – her de socialistiske og kommunistiske tankesystemer som det nye svar på fremtidens samfund med regimerne i USSR, DDR, Cuba og Kina som forbilleder.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://politiken.dk/debat/debatindlaeg/ECE2017074/er-et-nyt-ungdomsoproer-paa-vej/'>http://politiken.dk/debat/debatindlaeg/ECE2017074/er-et-nyt-ungdomsoproer-paa-vej/</a>"
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -141,7 +185,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Internationale begivenheder og erfaringer kom til at påvirke den danske debat om kvinders valgret. Gennemførelse af valgretten i andre lande fungerede som 'eksemplets magt' og banede vej for, at man kunne forstille sig, at både kvinder og mænd deltog i politik. Desuden kom der fra den internationale bevægelse stærk inspiration til valgretsbevægelsens argumentation, retorik, pressestrategi og mobilisering. Den danske vej mod kvindelig valgret, der blev gennemført på kommunalt plan i 1908 og til Rigsdagen med grundlovsændringen i 1915, er derfor også et led i en samtidig international udvikling og gensidig påvirkning."
+            "text": "Internationale begivenheder og erfaringer kom til at påvirke den danske debat om kvinders valgret. Gennemførelse af valgretten i andre lande fungerede som 'eksemplets magt' og banede vej for, at man kunne forstille sig, at både kvinder og mænd deltog i politik. Desuden kom der fra den internationale bevægelse stærk inspiration til valgretsbevægelsens argumentation, retorik, pressestrategi og mobilisering. Den danske vej mod kvindelig valgret, der blev gennemført på kommunalt plan i 1908 og til Rigsdagen med grundlovsændringen i 1915, er derfor også et led i en samtidig international udvikling og gensidig påvirkning.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvindelig-valgret-den-internationale-inspiration/?no_cache=1&cHash=be9f324f9bdcddbe23cc508126d4b0a8'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvindelig-valgret-den-internationale-inspiration/?no_cache=1&cHash=be9f324f9bdcddbe23cc508126d4b0a8</a>"
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -153,7 +201,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Ungdommens udvikling fra 1945-1965 kan betegnes som et ikke-politisk ungdomsoprør. Det skal ikke forveksles med det politiske ungdomsoprør i slutningen af 1960'erne, da det var en udvikling uden politiske formål. De unge i efterkrigstiden blev til en ny samfundsgruppe, fordi de kom til at dele mange af de samme trends, interesser og forbrugsvaner."
+            "text": "Ungdommens udvikling fra 1945-1965 kan betegnes som et ikke-politisk ungdomsoprør. Det skal ikke forveksles med det politiske ungdomsoprør i slutningen af 1960'erne, da det var en udvikling uden politiske formål. De unge i efterkrigstiden blev til en ny samfundsgruppe, fordi de kom til at dele mange af de samme trends, interesser og forbrugsvaner.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/teenagere-i-efterkrigstiden-forbrug-og-kultur/?no_cache=1&cHash=4a90c20b41638d791419d0839ab7878a'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/teenagere-i-efterkrigstiden-forbrug-og-kultur/?no_cache=1&cHash=4a90c20b41638d791419d0839ab7878a</a>"
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
@@ -165,7 +217,11 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Den nye socialreform markerede et vigtigt skift i forhold til tidligere tiders syn på og håndtering af mindrebemidlede og arbejdsløse. De første spadestik til den velfærdsstat, vi kender i dag, var således taget. Men det var ikke kun disse mere langsigtede perspektiver, der kendetegnede den nye socialreform."
+            "text": "Den nye socialreform markerede et vigtigt skift i forhold til tidligere tiders syn på og håndtering af mindrebemidlede og arbejdsløse. De første spadestik til den velfærdsstat, vi kender i dag, var således taget. Men det var ikke kun disse mere langsigtede perspektiver, der kendetegnede den nye socialreform.",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://www.arbejdermuseet.dk/index.php?option=com_content&view=article&id=684&Itemid=854'>http://www.arbejdermuseet.dk/index.php?option=com_content&view=article&id=684&Itemid=854</a>"
+            }
         },
         "correctAnswer": ["2"],
         "feedbackData": [
