@@ -9,7 +9,7 @@
 "quizData": [{
         "slideData": {
             "type": "text",
-            "text": "Hvordan forløb industrialiseringen i Danmark fra 1860 til 1914?.",
+            "text": "Hvordan forløb industrialiseringen i Danmark fra 1860 til 1914?",
             "sourceRef": {
                 "showSrc": false,
                 "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
@@ -25,7 +25,7 @@
     {
         "slideData": {
             "type": "text",
-            "text": "Hvad fortæller kildematerialet om, hvordan industrialiseringen påvirkede den danske befolknings levevilkår?.",
+            "text": "Hvordan fortæller kildematerialet om industrialiseringens påvirkning af den danske befolknings levevilkår?",
             "sourceRef": {
                 "showSrc": false,
                 "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
@@ -33,15 +33,15 @@
         },
         "correctAnswer": ["1"],
         "feedbackData": [
-            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
-            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
-            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder."
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.", 
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.", 
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten."
             ]
     },
     {
-        "slideData": {
+        "slideData": { 
             "type": "text",
-            "text": "Hvilken betydning havde industrialiseringen for forholdet mellem land og by på kort - og lang sigt?.",
+            "text": "Hvorfor havde industrialiseringen betydning for forholdet mellem land og by på kort og lang sigt? ",
             "sourceRef": {
                 "showSrc": false,
                 "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "
@@ -81,9 +81,9 @@
         },
         "correctAnswer": ["1"],
         "feedbackData": [
-            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.",
-            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.",  
-            "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder."
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.",
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.",  
+            "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten."
             ]
     },
     {
@@ -119,9 +119,9 @@
             ]
     },
     {
-        "slideData": {
+        "slideData": { 
             "type": "text",
-            "text": "Hvorfor og med hvilke argumenter og metoder kæmpede de engelske suffragetter for stemmeret til kvinder?",
+            "text": "Hvilke argumenter og metoder brugte de engelske suffragetter i kampen for stemmeret til kvinder?",
             "sourceRef": {
                 "showSrc": false,
                 "sourceInfo": "Disse tekstuddrag er eksempler på problemformuleringer. "

@@ -60,7 +60,10 @@ h5{
 .MsgBox_bgr{z-index: 20;}  /* Dette fixer problemet med at .carousel-indicators har z-index: 15 */
 
 
-.TextHolder{min-height: 100px;} 
+.TextHolder{
+	min-height: 100px;
+	width: 70%;
+} 
 
 .indent{margin-left: 10px}
 
