@@ -262,7 +262,7 @@ function returnSourcelItem(questionNum, jsonData){
             HTML += '<div class="ImgHolder SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.slideData.src+'" alt="'+itemData.slideData.alt+'"/> </div>';
             break;
         case "text":
-            HTML += '<div class="TextHolder SourceWrapper">'+itemData.slideData.text+'</div>';
+            HTML += '<div class="TextHolder SourceWrapper col-xs-12 col-sm-8">'+itemData.slideData.text+'</div>';
             break;
         case "video":
             HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
@@ -286,10 +286,10 @@ function returnSourceInfo(n, jsonData){
     if (JQS.hasOwnProperty("sourceRef")){
         var JQSS = JQS.sourceRef;
         console.log("returnSourceInfo - OK -");
-        HTML +=     '<div class="kilde_henvisning">';
+        HTML +=     '<div class="kilde_henvisning col-xs-12 col-sm-12"><h6>';
         HTML +=     (JQSS.hasOwnProperty("sourceInfo") && (JQSS.sourceInfo != ""))?'<div class="sourceInfo">'+JQSS.sourceInfo+'</div>' : ''; 
         HTML +=     (JQSS.hasOwnProperty("showSrc") && (JQSS.showSrc == true))?'<div class="showSrc"><a href="'+JQS.src+'">'+JQS.src+'</a></div>' : ''; 
-        HTML +=     '</div>'; 
+        HTML +=     '</h6></div>'; 
     }
     return HTML;
 }
@@ -421,7 +421,7 @@ $( document ).on('click', ".MsgBox_bgr", function(event){
 // ================================
 
 
-var Range = 9;
+var Range = 5;
 var ActiveLinkNum = 1;
 
 // Pager("#PagerContainer", "#FormsContainer > div", "Pager");
@@ -440,13 +440,13 @@ function Pager(PagerSelector, TargetSelectorChild, CssId) {
 
     if (NumOfPages == 1) {
         // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li>';
-        HTML += '<li><a href="#" class="PagerButton btn-sm btn-info"> 1 </a></li>';
+        HTML += '<li><a href="#" class="PagerButton btn btn-sm btn-info"> 1 </a></li>';
     }
 
     if ((1 < NumOfPages) && (NumOfPages <= Range + 1)) {
         for (var i = 1; i <= NumOfPages; i++) {
             // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + i + '</a></li>';
-            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info">' + i + '</a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-sm btn-info">' + i + '</a></li>';
         }
     }
 
@@ -461,22 +461,22 @@ function Pager(PagerSelector, TargetSelectorChild, CssId) {
 
         if (StartIndex == 2) { // Ugly special case...
             // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li>';
-            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info"> 1 </a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-sm btn-info"> 1 </a></li>';
         }
         if (StartIndex > 2)
             // HTML += '<li><a href="#" class="PagerButton btn btn-default"> Kilde 1 </a></li><li> ... </li>';
-            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info"> 1 </a></li><li> ... </li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-sm btn-info"> 1 </a></li><li> ... </li>';
         for (var j = StartIndex; j < Range + StartIndex; j++) {
             // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + j + '</a></li>';
-            HTML += '<li><a href="#" class="PagerButton btn-sm btn-info">' + j + '</a></li>';
+            HTML += '<li><a href="#" class="PagerButton btn btn-sm btn-info">' + j + '</a></li>';
         }
         if (Range + StartIndex == NumOfPages)
             for (var k = Range + StartIndex; k <= NumOfPages; k++) {
                 // HTML += '<li><a href="#" class="PagerButton btn btn-default">Kilde ' + k + '</a></li>';
-                HTML += '<li><a href="#" class="PagerButton btn-sm btn-info">' + k + '</a></li>';
+                HTML += '<li><a href="#" class="PagerButton btn btn-sm btn-info">' + k + '</a></li>';
             } else
                 // HTML += '<li> ... </li><li><a href="#" class="PagerButton btn btn-default">Kilde ' + NumOfPages + '</a></li>';
-                HTML += '<li> ... </li><li><a href="#" class="PagerButton btn-sm btn-info">' + NumOfPages + '</a></li>';
+                HTML += '<li> ... </li><li><a href="#" class="PagerButton btn btn-sm btn-info">' + NumOfPages + '</a></li>';
 
     }
     HTML += '</ul>';

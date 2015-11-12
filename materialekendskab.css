@@ -47,6 +47,15 @@ h5{
 }
 
 
+.kilde_henvisning h6 {
+	margin: 0px;
+}
+
+
+#PagerWrapper{ /*The pourpose with this wrapper is to prevent the pager from "breaking" at small viewports*/
+	width: 400px;  
+}
+
 .PagerClass{display: inline-block; margin-bottom: 0px;}
 #PagerContainer{display: inline-block;}
 #PagerContainer ul {padding: 0px;}
@@ -59,10 +68,16 @@ h5{
 
 .MsgBox_bgr{z-index: 20;}  /* Dette fixer problemet med at .carousel-indicators har z-index: 15 */
 
+.ImgHolder{
+	overflow: auto;  /* Adds scrollbar if needed */
+}
 
 .TextHolder{
 	min-height: 100px;
-	width: 70%;
+	max-height: 390px;
+	/*width: 70%;*/
+	padding: 20px 40px 20px 20px;
+	overflow: auto;  /* Adds scrollbar if needed */
 } 
 
 .indent{margin-left: 10px}
