@@ -34,7 +34,7 @@
         "correctAnswer": ["1"],
         "feedbackData": [
             "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.", 
-            "Korrekt, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.", 
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, fordi du arbejder med, hvordan en tekst argumenterer, bruger sproget, samt hvilke holdninger der kommer til udtryk i teksten.", 
             "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten."
             ]
     },
@@ -82,7 +82,7 @@
         "correctAnswer": ["1"],
         "feedbackData": [
             "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.",
-            "Korrekt, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten.",  
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, fordi du arbejder med, hvordan en tekst argumenterer, bruger sproget, samt hvilke holdninger der kommer til udtryk i teksten.",  
             "Forkert, spørgsmålet skal besvares på det analyserende niveau fordi, du arbejder med hvordan en tekst argumenterer, bruger sproget og hvilke holdninger der kommer til udtryk i teksten."
             ]
     },
@@ -130,7 +130,7 @@
         "correctAnswer": ["1"],
         "feedbackData": [
             "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
-            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, fordi du arbejder med, hvordan en tekst argumenterer, bruger sproget, samt hvilke holdninger der kommer til udtryk i teksten.", 
             "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder."
             ]
     },
@@ -178,7 +178,7 @@
         "correctAnswer": ["1"],
         "feedbackData": [
             "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.  ", 
-            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.", 
+            "Korrekt, spørgsmålet skal besvares på det analyserende niveau, fordi du arbejder med, hvordan en tekst argumenterer, bruger sproget, samt hvilke holdninger der kommer til udtryk i teksten.", 
             "Forkert, spørgsmålet skal besvares på det analyserende niveau, som baserer sig på arbejde med kilder.  "
             ]
     },
