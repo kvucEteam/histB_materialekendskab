@@ -20,11 +20,11 @@ function returnBtnContainer(jsonData, SourceId){
         HTML += (( (jsonData.userInterface.hasOwnProperty("taskText")) && (jsonData.userInterface.taskText !='') )?'<h4>'+jsonData.userInterface.taskText+'</h4>':''); 
 		
         for (var n in btnArray){
-			HTML += '<span class="btn btn-info StudentAnswer" href="#">'+btnArray[n]+'</span>';
+			HTML += '<span class="btn btn-info StudentAnswer">'+btnArray[n]+'</span>';
 		}
 		HTML += '</div>';
 	// }
-    HTML += '<div class="checkAnswer btn btn-lg btn-primary" href="#"> Tjek svar </div>';
+    HTML += '<div class="checkAnswer btn btn-lg btn-primary"> Tjek svar </div>';
     HTML += '<h5><span class="scoreText">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="scoreText ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5>';
 	return HTML;
 }
