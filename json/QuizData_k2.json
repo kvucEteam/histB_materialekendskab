@@ -47,6 +47,55 @@
             },
             "correctAnswer": ["1"],
             "feedbackData": [ "",""]
-        }
+    }, {
+            "slideData": {
+                "type": "text",
+                "text": "<p>Ungdomsoprørets deltagere eksperimenterede med familieformer, seksualitet, religion, påklædning og euforiserende stoffer. En slags kulmination på det eksperimenterende var foreningen Det ny Samfunds oprettelse af Frøstrup-lejren i Thy i sommeren 1970. Ikke lang tid efter skiftede ungdomsoprøret karakter, i den forstand at mere alvorlige politiske organisationer kom til at dominere det - ofte med erklæret marxistiske holdninger. </p><p> Opbruddet i 1960’erne gav også modreaktioner. Et tidligt eksempel var rindalismen, som i midten af 1960’erne opponerede mod den nye kunstfond, der var dannet med det formål at støtte kunstnere økonomisk. Det var for mange uforståeligt, at de via deres skat skulle støtte såkaldte kunstnere, hvis værker man ikke engang kunne se, hvad forestillede.</p>",
+                "sourceRef": {
+                    "showSrc" : false, 
+                    "sourceInfo": "<a href='http://danmarkshistorien.dk/perioder/kold-krig-og-velfaerdsstat-1945-1973/ungdomsoproer-og-kulturliv-i-1960erne/'>http://danmarkshistorien.dk/perioder/kold-krig-og-velfaerdsstat-1945-1973/ungdomsoproer-og-kulturliv-i-1960erne/</a>"
+                }
+            },
+            "correctAnswer": ["1"],
+            "feedbackData": [
+                "Dette er en <i>fremstilling</i> der har til formål at introducere ungdomsoprøret og kulturlivet i 1969’erne. Du kan blandt andet se det ved at teksten beskriver en masse begivenheder meget overordnet.", 
+                "Dette er en overordnet <i>fremstilling</i> af ungdomsoprøret og kulturlivet i 1960 ’erne.  En fremstilling bygger på historiske kilder eller andre fremstillinger. En fremstilling som denne er god til at få et overblik over et emne eller en periode og kan især bruges hvis du skal skrive et redegørende afsnit i en opgave."
+            ]
+    }, {
+            "slideData": {
+                "type": "img",
+                "src": "img/olaf_soendborg_danmarks_historie_2001.png",
+                "alt": "Lokalt billede...",
+                "sourceRef": {"showSrc" : false, "sourceInfo": "Udsnit af Olaf Søndborg. &quot;Danmarks historie&quot; 2001 - modul 7 i flexhistorie"}
+            },
+            "correctAnswer": ["1"],
+            "feedbackData": [
+                "Dette er ikke en kilde men en <i>fremstilling</i>. Udsnittet her er fra bogen &quot;Danmarks historie&quot; hvor historiker Olaf Søndborg fremstiller Danmarks historie.",
+                "Dette er en helt klassisk <i>fremstilling</i> i form af et udsnit fra en historiebog. I fremstillingen beskrives og formidles et emne af en historiker."
+            ]
+    }, {
+            "slideData": {
+                "type": "img",
+                "src": "img/kvinde_kend_din_krop.jpg",
+                "alt": "Lokalt billede...",
+                "sourceRef": {"showSrc" : false, "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvinde-kend-din-krop-1975-nu/'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/kvinde-kend-din-krop-1975-nu/</a>"}
+            },
+            "correctAnswer": ["0"],
+            "feedbackData": [
+                "&quot;Kvinde kend din krop&quot; blev 1. gang udgivet i 1975 som følge af kvindernes kamp for ligestilling i ungdomsoprøret. Som kilde kan den bruges til at belyse kvindernes og kvindekampens forhold i 70’erne.",
+                "En fremstillingstekst er typisk forfattet af en historiker, og rummer hans/hendes version af en fortidig begivenhed eller udvikling. Her er der tale om en håndbog for kvinder og den kan bruges som <i>kilde</i> til at belyse kvindes rolle og position i samfundet."
+            ]
+    }, {
+            "slideData": {
+                "type": "video",
+                "src": "https://www.youtube.com/embed/MTqWHbcGfeo?rel=0",
+                "sourceRef": {"showSrc" : true, "sourceInfo": "Røde Wilfred - Arne Würgler"}
+            },
+            "correctAnswer": ["0"],
+            "feedbackData": [ 
+                "&quot;Røde Wilfred&quot; er en <i>kilde</i> til de politiske strømninger på venstrefløjen under ungdomsoprøret. Ud fra sangen kan man belyse hvilket syn forfatteren havde på samfundet.",
+                "Dette er ikke en fremstilling men en <i>kilde</i> der blandt andet kan bruges til at belyse de politiske strømninger i ungdomsoprører og eller Arne Würglers holdning til samfundet."
+            ]
+    }
     ]
 }
