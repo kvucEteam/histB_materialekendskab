@@ -54,5 +54,81 @@
         },
         "correctAnswer": ["1"],
         "feedbackData": ["",""]
+    }, 
+    {
+        "slideData": {
+            "type": "text",
+            "text": "<p>Gimleprogrammet fra 1876 anses for at være Socialdemokratiets første principprogram. Programmet blev vedtaget på arbejderbevægelsens første kongres, Gimlekongressen, i forsamlingsbygningen Gimle på Frederiksberg. Baggrunden var, at der i første halvdel af 1870'erne var sket en stigende organisering af de danske arbejdere.<br/><br/>En af foregangsmændene bag denne begyndende organisering var Louis Pio, der med inspiration fra andre europæiske lande oprettede Den Internationale Arbejderforening for Danmark i 1871 som en afdeling af den første socialistiske Internationale. Under Pios efterfølgende fængsling gik flere fagforeninger i 1874 sammen i De Frie Fagforeningers Centralstyrelse. Da Pio blev løsladt, overtog han formandsposten i Centralstyrelsen, han var dog mere engageret i den politiske end den faglige kamp.<br/><br/>Dette skabte en del uenighed i fagforeningerne, hvilket resulterede i afholdelsen af Gimlekongressen. Her blev de fremtidige principper og organisationsformer vedtaget og altså også det politiske program (Gimleprogrammet) for Det socialdemokratiske Arbejderparti. Selve programmet mindede meget om de tyske socialisters Gothaprogram fra 1875. Gimleprogrammet er inddelt i tre dele, de første to redegør for, hvad man vil på længere sigt, mens det tredje rummer de mere aktuelle krav.</p>",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/gimleprogrammet-6-8-juni-1876/'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/gimleprogrammet-6-8-juni-1876/</a>"
+            }
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": [
+                "Gimleprogrammet stammer fra 1876, og opfattes som Socialdemokratiets første principprogram. Som <i>kilde</i> til fortiden fortæller programmet os noget om de allerførste retningslinjer man i det nystartede parti blev enige om.",
+                "En fremstillingstekst er typisk forfattet af en historiker, og rummer hans/hendes version af en fortidig begivenhed eller udvikling. Her er der tale om en kilde fra 1876, ikke en fortolkende tekst."
+            ]  
+    },
+    {
+        "slideData": {
+            "type": "img",
+            "src": "img/1872slaget-002MK-box.jpg",
+            "alt": "Lokalt billede...",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://www.historiefaget.dk/uploads/tx_cliopolaroidphotoflex/Slaget_paa_Faelleden.jpg'>http://www.historiefaget.dk/uploads/tx_cliopolaroidphotoflex/Slaget_paa_Faelleden.jpg</a>"
+            }
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": [
+            "Billedet stammer fra det socialistiske ugeblad ’Ravnen’, og blev bragt i bladet umiddelbart efter et sammenstød mellem myndigheder og arbejdere på Nørre Fælled d. 5. maj 1872 (Slaget på Fælleden). Det er således en kilde til hvad der skete den dag – set gennem tegnerens briller.",
+            "Her er ikke tale om en historikers fortolkning og fremstilling af en begivenhed, men om et øjenvidne der gengiver sin oplevelse af begivenhederne på Nørre Fælled gennem en tegning. Naturligvis er gengivelsen farvet af den person der laver tegningen – han arbejder for det socialistiske ugeblad ’Ravnen’."
+        ]
+    }, 
+    {
+        "slideData": {
+            "type": "text",
+            "text": "<p>Som sædvanlig blev Elna og jeg vækket, så snart far gik på arbejde ved halvsekstiden. Mor og Elna ønskede mig tillykke. Efter en rugbrødsklemme til noget tynd piskaffe gik den på hovedet i ildtænderne. Arbejdet med dem fortsatte lige til en kvart i otte. Så et par fedteklemmer med i skole og så af sted så rask vi kunne løbe, for at nå frem inden skoleklokken ringede op. Formiddagen i skolen var som sædvanlig. Sammen med nogle andre drenge fik jeg fem af spanskrøret over røven af viceinspektør Mortensen - så fik man da noget på sin fødselsdag. Det blæste jeg på. Det der optog mig meget mere var, om jeg kunne nå vor kaserne til en kl. kvart over et, hvor jeg skulle følges med tobaksspinder Larsen for at finde fabrikken. Men det gik godt. På ti minutter nåede jeg fra Jagtvej til kasernen. Jeg havde ikke tid at spise, men så ramlede gaverne ind. Mor gav mig et stort sækkelærredsforklæde med smæk, hvori jeg kunne have mine fire fedteklemmer. Hun stak mig tillige en stor femøre. Elna gav mig en stor hvid blyant og Marius et lille rødt æble, som mor måtte vriste fra ham, fordi han selv ville æde det. Med femøren i hånden og gaver og klemmer i forklædesmækken sprang jeg i firspring ned ad trappen til første sal. Og meget rigtigt, der stod tobaksspinder Larsen og ventede på mig. &quot;Nåh&quot;, sagde han, &quot;vi må nok skynde os, ellers når vi ikke derind til halvto.&quot; Og det kan nok være, vi skyndte os. Den langbenede tobaksspinder tog nogle skridt så lange og så hurtige, at jeg næsten ikke kunne følge med. Jeg blev helt træt i benene, og over broen inde i Ørstedsparken gik det galt. Den var glat og gruset og jeg faldt og slog hænderne ned i broen, så det smertede. Men det værste var, at femøren trillede ned i vandet og det røde æble røg samme vej. Mine klemmer fløj adskilte rundt i gruset. Der var ingen tid at spilde. Larsen var langt forude, og jeg samlede i rasende fart klemmerne sammen og smed dem ned i smækken.</p>",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/christian-christensen-om-boernearbejde-paa-tobaksfabrik-i-1890erne/'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/christian-christensen-om-boernearbejde-paa-tobaksfabrik-i-1890erne/</a>"
+            }
+        },
+        "correctAnswer": ["0"],
+        "feedbackData": [
+                "Teksten er en erindringstekst, nedskrevet i Christian Christensens sidste leveår. Han husker tilbage til sin barndom i 1890’erne, og er naturligvis <i>kilde</i> til fortællingen om sit eget liv/sin egen barndom. Tror du det betyder noget at den skrivende skal huske <i>så</i> langt tilbage?",
+                "En fremstillingstekst er typisk forfattet af en historiker, og rummer hans/hendes version af en fortidig begivenhed eller udvikling. Her er det en personlig beretning, en mand der fortæller om sit eget liv, sine egne oplevelser som kun han og hans nærmeste kender til."
+            ]  
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "<p>Fra omkring 1870 begyndte danske arbejdere at organisere sig på socialistisk grundlag efter inspiration fra udviklingen i andre lande i Europa. Bevægelsen byggede på Karl Marx’ idéer og var organiseret som en sektion af Første Internationale (IAA). I spidsen for processen stod den velformulerede, intellektuelle Louis Pio. Trods voldsom fordømmelse i pressen fik den danske afdeling af Internationale i løbet af et halvt år 4-5000 medlemmer i København og halvt så mange i de større provinsbyer.</p><p>I maj 1872 indkaldte Louis Pio til et møde for arbejdere i Fælledparken i København. Politiet forbød mødet, og Pio blev sammen med de to andre ledere i arbejderbevægelsen, Harald Brix og Paul Geleff, arresteret og idømt lange fængselsdomme, mens Internationale blev forbudt. Dette knækkede dog ikke bevægelsen, og i sommeren 1875 blev de tre ledere benådet, mens udviklingen kulminerede året efter med vedtagelsen af program og love for Det Socialdemokratiske Arbejderparti. I 1876 blev det første partiprogram vedtaget, og i 1884 lykkedes det at få to socialdemokrater valgt ind i Folketinget. Socialdemokratiet blev dermed det første &quot;moderne&quot; parti med program, presse og basisforeninger og konsoliderede sig i de følgende årtier sammen med fagbevægelsen som en af de bedst organiserede arbejderbevægelser i verden.</p><p> I tiden op mod 1. verdenskrig mente mange internt i Socialdemokratiet, at der fandt en afideologisering af partiet sted, efter at det var slået ind på en mere reformvenlig kurs i Rigsdagen. Denne diskussion fortsatte med det nye arbejdsprogram i 1923, der var udtryk for partiets leder Thorvald Staunings langsigtede strategi om at blive et regeringsbærende parti. I samme periode oplevede Socialdemokratiet en stærk vækst, og i 1924 overhalede det Venstre som det største parti. Samtidig opnåede partiet regeringsmagten i en i første omgang kort periode fra 1924-1926 og igen fra 1929-1942, med Stauning som statsminister.</p><p> Utilfredshed med Socialdemokratiets linje efter 1. verdenskrig førte til dannelsen af Danmarks Venstresocialistiske Parti (VSP) i 1919, der året efter skiftede navn til Danmarks Kommunistiske Parti (DKP). Partiets stiftelse havde sin rod i den radikalisering af venstrefløjen som fandt sted under og efter 1. verdenskrig, og som især blev præget af den russiske revolution i 1917. At dele af arbejderbevægelsen på den måde søgte inspiration hos Sovjetunionen ses eksempelvis også i 1932, hvor daværende medlem af partiet, Aksel Larsen, agiterede for, at det sovjetiske styre klart var at foretrække frem for det danske, fordi det tjente arbejderklassens interesser bedst. Samme Larsen argumenterede op til valget i 1936 endvidere for, at arbejderklassens politiske ønsker bedst kunne gennemføres, hvis Landstinget blev afskaffet. Dette skete dog først i 1953.</p>",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/arbejderbevaegelsen-1872-1940/?no_cache=1'>http://danmarkshistorien.dk/leksikon-og-kilder/vis/materiale/arbejderbevaegelsen-1872-1940/?no_cache=1</a>"
+            }
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": [
+                "Her er tale om en fremstillingstekst, hvor fagfolk på baggrund af historiske kilder og andre fremstillingstekster har sammenskrevet en tekst om hvordan arbejderne begyndte at organisere sig, da industrialiseringen kom til Danmark i 1870’erne.",
+                "Teksten er skrevet af professionelle historikere, og fortæller om hvordan arbejderne begyndte at organisere sig, da industrialiseringen kom til Danmark i 1870’erne. Teksten er kort og bliver en meget overordnet <i>fremstilling</i> af denne udvikling."
+            ]  
+    },
+    {
+        "slideData": {
+            "type": "text",
+            "text": "<p>Mellem 1855 og 1885 fremvoksede også et stort antal bymæssige bebyggelser i tilknytning til jernbanestationer, ofte anlagte på bar mark, i begyndelsen meget små, ofte med kun 50-100 indbyggere, men også i nærheden af landsbyer, hvorved der opstod dobbeltbyer, idet det gamle landsby- og det nye stationsbysamfund voksede sammen. En stor del af disse tidlige stationsbyer fik allerede straks fra begyndelsen kro, købmand og kornpakhus, sjældnere læge, apotek, dyrlæge, postsamlingssted, bageri, mølle, foruden en række håndværkere og handlende, undertiden desuden industri. Det manglende stedlige sammenfald mellem industri og jernbane omkring 1870 viser, at der endnu frem til denne tid var tale om to sideløbende og indbyrdes uafhængige udviklingsretninger, men netop omkring 1870 synes der at ske et skifte i retning en større samordning af industri og baneforbindelse således, at industristeder fik jernbaneforbindelse, ny industri blev lagt ved eller ældre industri omflyttet til stationsbyer, eller industri og jernbane blev anlagte omtrent samtidig og åbenbart under hensyn til hinanden.</p><p>For købstæderne var disse år en overgangstid, hvor de fleste købstæder fik jernbaneforbindelse, hvilket indebar bedre adgang til et større (landsomfattende) muligt marked men tillige større indbyrdes konkurrence købstæderne og deres industrier imellem – dog således, at fremgangen almindeligvis var mere udtalt en tilbagegangen. Tiden kan derfor opfattes som en overgangstid til et moderne industrisamfund, idet gamle virksomheder afvikledes eller blev sammenlagt til tidssvarende virksomheder samtidig, som nye virksomheder blev oprettede.</p><p>En del tidlige industristeder udviklede sig efterhånden til større eller mindre bymæssige bebyggelser, men forholdsvis sjældent synes anlæggelsen af tidlig industri at have været eneårsag til byudvikling. Mere specielt var det, at i Assens ved Mariager Fjord oprettedes 1875 portlandcementfabrikken &quot;Cimbria&quot;, og 1889 fulgte &quot;Dania&quot;, hvilket førte til en voldsom stedlig befolkningsvækst.</p>",
+            "sourceRef": {
+                "showSrc": false,
+                "sourceInfo": "<a href='https://da.wikipedia.org/wiki/Industrialiseringen_i_Danmark'>https://da.wikipedia.org/wiki/Industrialiseringen_i_Danmark</a>"
+            }
+        },
+        "correctAnswer": ["1"],
+        "feedbackData": [
+                "Her er tale om en fremstillingstekst fra et åbent leksikon, hvor forskellige bidragsydere kan bidrage med tekst til en samlet fremstilling om et givent emne – i dette tilfælde industrialiseringen i Danmark. Bidragsyderne er ikke nødvendigvis fagfolk.",
+                "Teksten er en fremstillingstekst, der kortfattet beskriver hvordan udbygningen af jernbanen var med til at danne grundlag for den spirende industrialisering i Danmark i en periode over 30 år. Teksten er fra Wikipedia, der er et åbent leksikon."
+            ]  
     }]
 }

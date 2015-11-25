@@ -259,13 +259,13 @@ function returnSourcelItem(questionNum, jsonData){
     switch(itemData.slideData.type) {
         case "img":
             // HTML += '<div class="SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.kildeData.src+'" alt="'+itemData.kildeData.alt+'"/> </div>';
-            HTML += '<div class="ImgHolder SourceWrapper" data-toggle="modal" data-target="#myModal"> <img class="img-responsive SourceImg" src="'+itemData.slideData.src+'" alt="'+itemData.slideData.alt+'"/> </div>';
+            HTML += '<div class="ImgHolder SourceWrapper col-xs-12 col-md-8"> <img class="img-responsive SourceImg" src="'+itemData.slideData.src+'" alt="'+itemData.slideData.alt+'"/> </div>';
             break;
         case "text":
-            HTML += '<div class="TextHolder SourceWrapper col-xs-12 col-sm-8">'+itemData.slideData.text+'</div>';
+            HTML += '<div class="TextHolder SourceWrapper col-xs-12 col-md-8">'+itemData.slideData.text+'</div>';
             break;
         case "video":
-            HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
+            HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-8">' + 
                         '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
                     '</div>';
             break;
