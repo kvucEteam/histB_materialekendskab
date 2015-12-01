@@ -26,6 +26,10 @@ h5{
 	display: inline-block;
 }
 
+.txt_title{
+	margin-bottom: 30px;
+}
+
 /*
 .Source{
 	background-color: #fff;
@@ -61,7 +65,7 @@ h5{
 #PagerContainer ul {padding: 0px;}
 #PagerContainer ul li {display: inline;}
 
-.PagerButton{margin-right: 10px;}
+.PagerButton{margin-top: 0px; margin-bottom: 0px; margin-right: 10px;}
 
 .dshow{display: block}
 
@@ -93,6 +97,7 @@ h5{
 .PagerHeader{
 	font-weight: 700;
 	display: inline-block;
+	margin-top: 0px;
 	margin-right: 15px;
 	margin-bottom: 0px;
 }
