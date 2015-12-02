@@ -57,7 +57,7 @@ h5{
 
 
 #PagerWrapper{ /*The pourpose with this wrapper is to prevent the pager from "breaking" at small viewports*/
-	width: 400px;  
+	width: 450px;  
 }
 
 .PagerClass{display: inline-block; margin-bottom: 0px;}
