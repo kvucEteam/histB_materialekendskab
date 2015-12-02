@@ -14,7 +14,7 @@
                 "alt": "Eksternt billede...",
                 "sourceRef": {"showSrc" : true, "sourceInfo": "The Beatles ankommer til JFK lufthavnen"}
             },
-            "correctAnswer": ["1"],
+            "correctAnswer": ["0"],
             "feedbackData": ["",""]
 
     }, {
@@ -25,7 +25,7 @@
                 "sourceRef": {"showSrc" : true, "sourceInfo": "Thylejeren"}
             },
             "correctAnswer": ["0"],
-            "feedbackData": ["Korrekt, der er tale om en kilde da...","Forkert, der er ikke tale om en fremstilling da..."]
+            "feedbackData": ["",""]
         
     }, {
             "slideData": {
@@ -45,7 +45,7 @@
                 "src": "https://www.youtube.com/embed/q5-6V_Ur084?rel=0",
                 "sourceRef": {"showSrc" : true, "sourceInfo": "Stig Møller - Thylejeren 1970"}
             },
-            "correctAnswer": ["1"],
+            "correctAnswer": ["0"],
             "feedbackData": [ "",""]
     }, {
             "slideData": {
