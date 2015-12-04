@@ -265,7 +265,7 @@ function returnSourcelItem(questionNum, jsonData){
             HTML += '<div class="TextHolder SourceWrapper col-xs-12 col-md-8">'+itemData.slideData.text+'</div>';
             break;
         case "video":
-            HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-8">' + 
+            HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
                         '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
                     '</div>';
             break;
