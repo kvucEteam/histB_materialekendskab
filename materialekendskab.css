@@ -90,9 +90,9 @@ h5{
 	margin-bottom: 10px;
 }
 
-.btn-lg{
+/*.btn-lg{
 	margin-top: 10px;
-}
+}*/
 
 .PagerHeader{
 	font-weight: 700;
@@ -117,11 +117,11 @@ h5{
     color: #FFF;
 }
 
-.QuestionTask{
+/*.QuestionTask{
 	color: #000;
 	font-weight: 600;
 }
-
+*/
 .CorrectAnswer{
 	background-color: #2abb2a;
 	color: #FFF;
@@ -232,6 +232,7 @@ h5{
 		3. Er fixet - tak for hintet TLY! Hvordan sætter vi en hover-effekt på "X" i UserMsgBox? 
 */
 
+/*
 #UserMsgBox{
 	background-color: #FFF;
 }
@@ -240,6 +241,7 @@ h5{
 	font-weight: 700;
 	margin-top: 0px;
 }
+*/
 
 /*********************************************************************/
 
@@ -254,7 +256,8 @@ h5{
 	padding-right: 20px;
 }
 
+/*
 .scoreText{
     color: #000;
     font-weight: 600;
-}
+}*/

@@ -24,10 +24,20 @@ function returnBtnContainer(jsonData, SourceId){
 		}
 		HTML += '</div>';
 	// }
-    HTML += '<div class="checkAnswer btn btn-lg btn-primary"> Tjek svar </div>';
-    HTML += '<h5><span class="scoreText">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="scoreText ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5>';
+        HTML += '<div class="PointFeedback">';
+        HTML +=     '<a href="#" class="btn btn-lg btn-primary checkAnswer"> Tjek svar </a>';
+        HTML +=     '<div class="score_container">';
+        HTML +=         '<span class="scoreText">Korrekte svar: </span>';
+        HTML +=         '<span class="QuestionCounter QuestionTask">0 ud af 0</span>';
+        HTML +=         '<span class="scoreText"> Fejl: </span>';
+        HTML +=         '<span class="ErrorCount QuestionTask">0</span>';
+        HTML +=     '</div>';
+        HTML +=     '<div class="clear"></div>';
+        HTML += '</div>';
 	return HTML;
 }
+
+
 
 
 function ShuffelArray(ItemArray){
@@ -154,7 +164,7 @@ function giveFeedback(jsonData, questionNum){
 
     for (var n in questionArray){
         if ($("#btnContainer_"+questionNum+" > .StudentAnswer:eq("+n+")").hasClass("btn-success")) {
-            HTML += '<h3>Du har svaret <span class="label label-success">Korrekt!</span> </h3>';
+            HTML += '<h3>Du har svaret <span class="label label-success">Korrekt!</span> </h3>';  
             HTML += "<p>";
             HTML += returnKildeEllerFremstilling(jsonData, questionNum, n);  // This function only returns content if btn contains "Kilde" or "Fremstilling".
             HTML += feedbackArray[n];
@@ -286,7 +296,7 @@ function returnSourceInfo(n, jsonData){
     if (JQS.hasOwnProperty("sourceRef")){
         var JQSS = JQS.sourceRef;
         console.log("returnSourceInfo - OK -");
-        HTML +=     '<div class="kilde_henvisning col-xs-12 col-sm-12"><h6>';
+        HTML +=     '<div class="kilde_henvisning col-xs-12 col-md-8"><h6>';
         HTML +=     (JQSS.hasOwnProperty("sourceInfo") && (JQSS.sourceInfo != ""))?'<div class="sourceInfo">'+JQSS.sourceInfo+'</div>' : ''; 
         HTML +=     (JQSS.hasOwnProperty("showSrc") && (JQSS.showSrc == true))?'<div class="showSrc"><a href="'+JQS.src+'">'+JQS.src+'</a></div>' : ''; 
         HTML +=     '</h6></div>'; 
@@ -321,7 +331,13 @@ function ReturnEndGamesenario(){
         if (ShowUserMsg){
             var HTML = "";
             HTML += '<h4 class="scoreText">Flot klaret </h4>';
-            HTML += 'Her er dit resultat: <span class="ScoreBox"><h5><span class="scoreText">Korrekte svar: </span><span class="QuestionCounter">0 ud af 0</span><span class="scoreText ml15"> Fejl: </span><span class="ErrorCount">0</span> </h5></span>';
+
+            HTML += '<div>';
+            HTML +=     '<span class="resultText">Her er dit resultat:</span>';
+            HTML +=     '<div class="score_container"><span class="scoreText">Korrekte svar: </span> <span class="QuestionCounter QuestionTask">3 ud af 5</span> <span class="scoreText"> Fejl: </span><span class="ErrorCount QuestionTask">0</span></div>';
+            HTML +=     '<div class="clear"></div>';
+            HTML += '</div>';
+            HTML += '<div class="btn btn-primary">Prøve igen</div>';
             // UserMsgBox("body", "<h4 class='QuestionTask'>Flot klaret </h4><br/>Her er dit resultat: "+String($(".SourcePage").length)+" opgaver korrekt. <br/> Du havde " + error_displayed_total + ' fejl undervejs. <br/><br/> Klik denne besked væk for at prøve igen.'); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
             UserMsgBox("body", HTML); //  <br/><br/>Klik på "Prøv igen" knappen for at løse '+MaxNumOfElements+' nye opgaver.
             // UserMsgBox_SetWidth(".container-fluid", 0.7);
@@ -535,7 +551,7 @@ $(document).ready(function() {
 
 	ReturnAjaxData("GET", "json/QuizData"+UlrVarObj.file+".json", false, "json");
 
-    // jsonData.quizData = ShuffelArray(jsonData.quizData);
+    jsonData.quizData = ShuffelArray(jsonData.quizData);
 
     $("#DataInput").html(returnSourcePages(jsonData));
 
