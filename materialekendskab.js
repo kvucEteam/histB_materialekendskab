@@ -275,8 +275,13 @@ function returnSourcelItem(questionNum, jsonData){
             HTML += '<div class="TextHolder SourceWrapper col-xs-12 col-md-8">'+itemData.slideData.text+'</div>';
             break;
         case "video":
-            HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-12">' + 
-                        '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
+            // HTML += '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9 col-xs-12 col-md-8">' + 
+            //             '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
+            //         '</div>';
+            HTML += '<div class=" col-xs-12 col-md-8">' +  // Således skal col-md-8 angives ift embed-responsive-16by9, så det ikke giver problemer med sorte kanter i videoer.
+                        '<div class="VidHolder SourceWrapper embed-responsive embed-responsive-16by9">' +
+                                '<iframe class="embed-responsive-item" src="'+itemData.slideData.src+'?rel=0" allowfullscreen="1"></iframe>' + 
+                        '</div>' +
                     '</div>';
             break;
         default:
