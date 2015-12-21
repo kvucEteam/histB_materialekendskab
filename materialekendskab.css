@@ -20,6 +20,8 @@ h5{
 	color: #333;
 }
 
+
+
 .SourcePage{/*border: 1px solid #C0C0C0;*/ /*padding: 10px 10px 0px 10px;*/ display: none;}
 
 .SourcePage > h5 {
@@ -38,6 +40,11 @@ h5{
     box-shadow: 1px 2px 8px #999;
 }
 */
+
+.Source .col-xs-12, .Source .col-md-8{
+	padding-left: 0px;
+	padding-right: 0px;
+}
 
 .ImgHolder, .TextHolder{
 	background-color: #fff;
