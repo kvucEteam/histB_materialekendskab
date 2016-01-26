@@ -554,9 +554,12 @@ $(document).ready(function() {
     UlrVarObj = ReturnURLPerameters(UlrVarObj);  // Get URL file perameter.
     console.log("UlrVarObj: " + JSON.stringify(UlrVarObj) );
 
+    
 	ReturnAjaxData("GET", "json/QuizData"+UlrVarObj.file+".json", false, "json");
 
-    jsonData.quizData = ShuffelArray(jsonData.quizData);
+    if (!UlrVarObj.hasOwnProperty("fixed") || (UlrVarObj.fixed != "true")){  // If the student or a teacher writes "&fixed=true" in the URL, then the order of the questions remains fixed. If "&fixed=true" is NOT written in the URL, the questiona becomes randomized.
+        jsonData.quizData = ShuffelArray(jsonData.quizData);
+    }
 
     $("#DataInput").html(returnSourcePages(jsonData));
 
