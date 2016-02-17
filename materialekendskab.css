@@ -41,10 +41,15 @@ h5{
 }
 */
 
+
+/*  Nedenstående er udkommenteret d. 11/2-2016 før ATO og TLY skulle præsentere for styregruppen  */
+/*
 .Source .col-xs-12, .Source .col-md-8{
 	padding-left: 0px;
 	padding-right: 0px;
 }
+*/
+
 
 .ImgHolder, .TextHolder{
 	background-color: #fff;
@@ -159,6 +164,18 @@ h5{
 .PagerClass .btn-primary:hover{
 	background-color: #969696;
     border: 1px solid #969696;
+    color: #FFF;
+}
+
+.checkAnswer:visited{ /* Fix */
+	background-color: #05a0a8;
+    border: 1px solid #05a0a8;
+    color: #FFF;
+}
+
+.checkAnswer:active{ /* Fix */
+	background-color: #05a0a8;
+    border: 1px solid #05a0a8;
     color: #FFF;
 }
 
